@@ -1,0 +1,234 @@
+[
+  {
+    "country": "Algeria",
+    "city": "Alger"
+  },
+  {
+    "country": "Angola",
+    "city": "Luanda"
+  },
+  {
+    "country": "Benin",
+    "city": "Porto-Novo"
+  },
+  {
+    "country": "Botswana",
+    "city": "Gaborone"
+  },
+  {
+    "country": "Burkina Faso",
+    "city": "Ouagadougou"
+  },
+  {
+    "country": "Burundi",
+    "city": "Bujumbura"
+  },
+  {
+    "country": "Cameroon",
+    "city": "Yaounde"
+  },
+  {
+    "country": "Cape Verde",
+    "city": "Praia"
+  },
+  {
+    "country": "Central African Republic",
+    "city": "Bangui"
+  },
+  {
+    "country": "Chad",
+    "city": "N'Djamena"
+  },
+  {
+    "country": "Comoros",
+    "city": "Moroni"
+  },
+  {
+    "country": "Congo",
+    "city": "Brazzaville"
+  },
+  {
+    "country": "Djibouti",
+    "city": "Djibouti"
+  },
+  {
+    "country": "Egypt",
+    "city": "Cairo"
+  },
+  {
+    "country": "Equatorial Guinea",
+    "city": "Malabo"
+  },
+  {
+    "country": "Eritrea",
+    "city": "Asmara"
+  },
+  {
+    "country": "Ethiopia",
+    "city": "Addis Abeba"
+  },
+  {
+    "country": "Gabon",
+    "city": "Libreville"
+  },
+  {
+    "country": "Gambia",
+    "city": "Banjul"
+  },
+  {
+    "country": "Ghana",
+    "city": "Accra"
+  },
+  {
+    "country": "Guinea",
+    "city": "Conakry"
+  },
+  {
+    "country": "Guinea-Bissau",
+    "city": "Bissau"
+  },
+  {
+    "country": "Ivory Coast",
+    "city": "Yamoussoukro"
+  },
+  {
+    "country": "Kenya",
+    "city": "Nairobi"
+  },
+  {
+    "country": "Lesotho",
+    "city": "Maseru"
+  },
+  {
+    "country": "Liberia",
+    "city": "Monrovia"
+  },
+  {
+    "country": "Libyan Arab Jamahiriya",
+    "city": "Tripoli"
+  },
+  {
+    "country": "Madagascar",
+    "city": "Antananarivo"
+  },
+  {
+    "country": "Malawi",
+    "city": "Lilongwe"
+  },
+  {
+    "country": "Mali",
+    "city": "Bamako"
+  },
+  {
+    "country": "Mauritania",
+    "city": "Nouakchott"
+  },
+  {
+    "country": "Mauritius",
+    "city": "Port-Louis"
+  },
+  {
+    "country": "Mayotte",
+    "city": "Mamoutzou"
+  },
+  {
+    "country": "Morocco",
+    "city": "Rabat"
+  },
+  {
+    "country": "Mozambique",
+    "city": "Maputo"
+  },
+  {
+    "country": "Namibia",
+    "city": "Windhoek"
+  },
+  {
+    "country": "Niger",
+    "city": "Niamey"
+  },
+  {
+    "country": "Nigeria",
+    "city": "Abuja"
+  },
+  {
+    "country": "Reunion",
+    "city": "Saint-Denis"
+  },
+  {
+    "country": "Rwanda",
+    "city": "Kigali"
+  },
+  {
+    "country": "Saint Helena",
+    "city": "Jamestown"
+  },
+  {
+    "country": "Sao Tome and Principe",
+    "city": "So Tom"
+  },
+  {
+    "country": "Senegal",
+    "city": "Dakar"
+  },
+  {
+    "country": "Seychelles",
+    "city": "Victoria"
+  },
+  {
+    "country": "Sierra Leone",
+    "city": "Freetown"
+  },
+  {
+    "country": "Somalia",
+    "city": "Mogadishu"
+  },
+  {
+    "country": "South Africa",
+    "city": "Pretoria"
+  },
+  {
+    "country": "South Sudan",
+    "city": "Juba"
+  },
+  {
+    "country": "Sudan",
+    "city": "Khartum"
+  },
+  {
+    "country": "Swaziland",
+    "city": "Mbabane"
+  },
+  {
+    "country": "Tanzania",
+    "city": "Dodoma"
+  },
+  {
+    "country": "The Democratic Republic of Congo",
+    "city": "Kinshasa"
+  },
+  {
+    "country": "Togo",
+    "city": "Lome"
+  },
+  {
+    "country": "Tunisia",
+    "city": "Tunis"
+  },
+  {
+    "country": "Uganda",
+    "city": "Kampala"
+  },
+  {
+    "country": "Western Sahara",
+    "city": "Laayoune"
+  },
+  {
+    "country": "Zambia",
+    "city": "Lusaka"
+  },
+  {
+    "country": "Zimbabwe",
+    "city": "Harare"
+  }
+]

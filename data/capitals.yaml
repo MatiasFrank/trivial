@@ -1,0 +1,20 @@
+name: capitals
+type_: default
+data:
+  question_prefix: 'What is the capital of '
+  items:
+    - question: Denmark
+      answers: [Copenhagen]
+    - question: Norway
+      answers: [Oslo]
+    - question: Sweden
+      answers: [Stockholm]
+    - question: Germany
+      answers: [Berlin]
+    - question: England
+      answers: [London]
+    - question: Marshall Islands
+      answers: [Majuro]
+    - question: China
+      answers: [Beijing]
+

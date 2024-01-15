@@ -1,0 +1,86 @@
+data:
+  items:
+  - answers:
+    - Fagatogo
+    question: American Samoa
+  - answers:
+    - Canberra
+    question: Australia
+  - answers:
+    - Flying Fish Cove
+    question: Christmas Island
+  - answers:
+    - West Island
+    question: Cocos (Keeling) Islands
+  - answers:
+    - Avarua
+    question: Cook Islands
+  - answers:
+    - Suva
+    question: Fiji Islands
+  - answers:
+    - Papeete
+    question: French Polynesia
+  - answers:
+    - Aga
+    question: Guam
+  - answers:
+    - Bairiki
+    question: Kiribati
+  - answers:
+    - Majuro
+    question: Marshall Islands
+  - answers:
+    - Palikir
+    question: Micronesia, Federated States of
+  - answers:
+    - Yaren
+    question: Nauru
+  - answers:
+    - Noum
+    question: New Caledonia
+  - answers:
+    - Wellington
+    question: New Zealand
+  - answers:
+    - Alofi
+    question: Niue
+  - answers:
+    - Kingston
+    question: Norfolk Island
+  - answers:
+    - Garapan
+    question: Northern Mariana Islands
+  - answers:
+    - Ngerulmud
+    question: Palau
+  - answers:
+    - Port Moresby
+    question: Papua New Guinea
+  - answers:
+    - Adamstown
+    question: Pitcairn
+  - answers:
+    - Apia
+    question: Samoa
+  - answers:
+    - Honiara
+    question: Solomon Islands
+  - answers:
+    - Fakaofo
+    question: Tokelau
+  - answers:
+    - Nuku'alofa
+    question: Tonga
+  - answers:
+    - Funafuti
+    question: Tuvalu
+  - answers:
+    - Port-Vila
+    question: Vanuatu
+  - answers:
+    - Mata-Utu
+    question: Wallis and Futuna
+  question_prefix: 'What is the capital of '
+name: capitals
+type_: default

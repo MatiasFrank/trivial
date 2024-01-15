@@ -1,0 +1,150 @@
+[
+  {
+    "country": "Anguilla",
+    "city": "The Valley"
+  },
+  {
+    "country": "Antigua and Barbuda",
+    "city": "Saint John's"
+  },
+  {
+    "country": "Aruba",
+    "city": "Oranjestad"
+  },
+  {
+    "country": "Bahamas",
+    "city": "Nassau"
+  },
+  {
+    "country": "Barbados",
+    "city": "Bridgetown"
+  },
+  {
+    "country": "Belize",
+    "city": "Belmopan"
+  },
+  {
+    "country": "Bermuda",
+    "city": "Hamilton"
+  },
+  {
+    "country": "Canada",
+    "city": "Ottawa"
+  },
+  {
+    "country": "Cayman Islands",
+    "city": "George Town"
+  },
+  {
+    "country": "Costa Rica",
+    "city": "San Jos"
+  },
+  {
+    "country": "Cuba",
+    "city": "Havana"
+  },
+  {
+    "country": "Dominica",
+    "city": "Roseau"
+  },
+  {
+    "country": "Dominican Republic",
+    "city": "Santo Domingo"
+  },
+  {
+    "country": "El Salvador",
+    "city": "San Salvador"
+  },
+  {
+    "country": "Greenland",
+    "city": "Nuuk"
+  },
+  {
+    "country": "Grenada",
+    "city": "Saint George's"
+  },
+  {
+    "country": "Guadeloupe",
+    "city": "Basse-Terre"
+  },
+  {
+    "country": "Guatemala",
+    "city": "Guatemala City"
+  },
+  {
+    "country": "Haiti",
+    "city": "Port-au-Prince"
+  },
+  {
+    "country": "Honduras",
+    "city": "Tegucigalpa"
+  },
+  {
+    "country": "Jamaica",
+    "city": "Kingston"
+  },
+  {
+    "country": "Martinique",
+    "city": "Fort-de-France"
+  },
+  {
+    "country": "Mexico",
+    "city": "Mexico City"
+  },
+  {
+    "country": "Montserrat",
+    "city": "Plymouth"
+  },
+  {
+    "country": "Netherlands Antilles",
+    "city": "Willemstad"
+  },
+  {
+    "country": "Nicaragua",
+    "city": "Managua"
+  },
+  {
+    "country": "Panama",
+    "city": "Panama City"
+  },
+  {
+    "country": "Puerto Rico",
+    "city": "San Juan"
+  },
+  {
+    "country": "Saint Kitts and Nevis",
+    "city": "Basseterre"
+  },
+  {
+    "country": "Saint Lucia",
+    "city": "Castries"
+  },
+  {
+    "country": "Saint Pierre and Miquelon",
+    "city": "Saint-Pierre"
+  },
+  {
+    "country": "Saint Vincent and the Grenadines",
+    "city": "Kingstown"
+  },
+  {
+    "country": "Trinidad and Tobago",
+    "city": "Port-of-Spain"
+  },
+  {
+    "country": "Turks and Caicos Islands",
+    "city": "Cockburn Town"
+  },
+  {
+    "country": "United States",
+    "city": "Washington"
+  },
+  {
+    "country": "Virgin Islands, British",
+    "city": "Road Town"
+  },
+  {
+    "country": "Virgin Islands, U.S.",
+    "city": "Charlotte Amalie"
+  }
+]

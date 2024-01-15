@@ -1,0 +1,47 @@
+data:
+  items:
+  - answers:
+    - Buenos Aires
+    question: Argentina
+  - answers:
+    - La Paz
+    question: Bolivia
+  - answers:
+    - Braslia
+    question: Brazil
+  - answers:
+    - Santiago
+    question: Chile
+  - answers:
+    - Bogota
+    question: Colombia
+  - answers:
+    - Quito
+    question: Ecuador
+  - answers:
+    - Stanley
+    question: Falkland Islands
+  - answers:
+    - Cayenne
+    question: French Guiana
+  - answers:
+    - Georgetown
+    question: Guyana
+  - answers:
+    - Asuncin
+    question: Paraguay
+  - answers:
+    - Lima
+    question: Peru
+  - answers:
+    - Paramaribo
+    question: Suriname
+  - answers:
+    - Montevideo
+    question: Uruguay
+  - answers:
+    - Caracas
+    question: Venezuela
+  question_prefix: 'What is the capital of '
+name: capitals
+type_: default

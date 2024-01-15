@@ -1,0 +1,155 @@
+data:
+  items:
+  - answers:
+    - Kabul
+    question: Afghanistan
+  - answers:
+    - Yerevan
+    question: Armenia
+  - answers:
+    - Baku
+    question: Azerbaijan
+  - answers:
+    - al-Manama
+    question: Bahrain
+  - answers:
+    - Dhaka
+    question: Bangladesh
+  - answers:
+    - Thimphu
+    question: Bhutan
+  - answers:
+    - Bandar Seri Begawan
+    question: Brunei
+  - answers:
+    - Phnom Penh
+    question: Cambodia
+  - answers:
+    - Peking
+    question: China
+  - answers:
+    - Nicosia
+    question: Cyprus
+  - answers:
+    - Dili
+    question: East Timor
+  - answers:
+    - Tbilisi
+    question: Georgia
+  - answers:
+    - Victoria
+    question: Hong Kong
+  - answers:
+    - New Delhi
+    question: India
+  - answers:
+    - Jakarta
+    question: Indonesia
+  - answers:
+    - Tehran
+    question: Iran
+  - answers:
+    - Baghdad
+    question: Iraq
+  - answers:
+    - Jerusalem
+    question: Israel
+  - answers:
+    - Tokyo
+    question: Japan
+  - answers:
+    - Amman
+    question: Jordan
+  - answers:
+    - Astana
+    question: Kazakhstan
+  - answers:
+    - Kuwait
+    question: Kuwait
+  - answers:
+    - Bishkek
+    question: Kyrgyzstan
+  - answers:
+    - Vientiane
+    question: Laos
+  - answers:
+    - Beirut
+    question: Lebanon
+  - answers:
+    - Macao
+    question: Macao
+  - answers:
+    - Kuala Lumpur
+    question: Malaysia
+  - answers:
+    - Male
+    question: Maldives
+  - answers:
+    - Ulan Bator
+    question: Mongolia
+  - answers:
+    - Naypyidaw
+    question: Myanmar
+  - answers:
+    - Kathmandu
+    question: Nepal
+  - answers:
+    - Pyongyang
+    question: North Korea
+  - answers:
+    - Masqat
+    question: Oman
+  - answers:
+    - Islamabad
+    question: Pakistan
+  - answers:
+    - Ramallah
+    question: Palestine
+  - answers:
+    - Manila
+    question: Philippines
+  - answers:
+    - Doha
+    question: Qatar
+  - answers:
+    - Riyadh
+    question: Saudi Arabia
+  - answers:
+    - Singapore
+    question: Singapore
+  - answers:
+    - Seoul
+    question: South Korea
+  - answers:
+    - Colombo
+    question: Sri Lanka
+  - answers:
+    - Damascus
+    question: Syria
+  - answers:
+    - Dushanbe
+    question: Tajikistan
+  - answers:
+    - Bangkok
+    question: Thailand
+  - answers:
+    - Ankara
+    question: Turkey
+  - answers:
+    - Ashgabat
+    question: Turkmenistan
+  - answers:
+    - Abu Dhabi
+    question: United Arab Emirates
+  - answers:
+    - Toskent
+    question: Uzbekistan
+  - answers:
+    - Hanoi
+    question: Vietnam
+  - answers:
+    - Sanaa
+    question: Yemen
+  question_prefix: 'What is the capital of '
+name: capitals
+type_: default

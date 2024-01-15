@@ -1,0 +1,50 @@
+{
+  "name": "capitals",
+  "type_": "default",
+  "data": {
+    "items": [
+      {
+        "question": "Denmark",
+        "answers": [
+          "copenhagen"
+        ]
+      },
+      {
+        "question": "Norway",
+        "answers": [
+          "oslo"
+        ]
+      },
+      {
+        "question": "Sweden",
+        "answers": [
+          "stockholm"
+        ]
+      },
+      {
+        "question": "Germany",
+        "answers": [
+          "berlin"
+        ]
+      },
+      {
+        "question": "England",
+        "answers": [
+          "london"
+        ]
+      },
+      {
+        "question": "Marshall Islands",
+        "answers": [
+          "majuro"
+        ]
+      },
+      {
+        "question": "China",
+        "answers": [
+          "beijing"
+        ]
+      }
+    ]
+  }
+}

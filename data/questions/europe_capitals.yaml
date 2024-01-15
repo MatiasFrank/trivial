@@ -1,0 +1,158 @@
+data:
+  items:
+  - answers:
+    - Tirana
+    question: Albania
+  - answers:
+    - Andorra la Vella
+    question: Andorra
+  - answers:
+    - Wien
+    question: Austria
+  - answers:
+    - Minsk
+    question: Belarus
+  - answers:
+    - Brussels
+    question: Belgium
+  - answers:
+    - Sarajevo
+    question: Bosnia and Herzegovina
+  - answers:
+    - Sofia
+    question: Bulgaria
+  - answers:
+    - Zagreb
+    question: Croatia
+  - answers:
+    - Praha
+    question: Czech Republic
+  - answers:
+    - Copenhagen
+    question: Denmark
+  - answers:
+    - London
+    question: England
+  - answers:
+    - Tallinn
+    question: Estonia
+  - answers:
+    - Trshavn
+    question: Faroe Islands
+  - answers:
+    - Helsinki
+    question: Finland
+  - answers:
+    - Paris
+    question: France
+  - answers:
+    - Berlin
+    question: Germany
+  - answers:
+    - Gibraltar
+    question: Gibraltar
+  - answers:
+    - Athenai
+    question: Greece
+  - answers:
+    - Budapest
+    question: Hungary
+  - answers:
+    - Reykjavk
+    question: Iceland
+  - answers:
+    - Dublin
+    question: Ireland
+  - answers:
+    - Roma
+    question: Italy
+  - answers:
+    - Riga
+    question: Latvia
+  - answers:
+    - Vaduz
+    question: Liechtenstein
+  - answers:
+    - Vilnius
+    question: Lithuania
+  - answers:
+    - Luxembourg
+    question: Luxembourg
+  - answers:
+    - Valletta
+    question: Malta
+  - answers:
+    - Chisinau
+    question: Moldova
+  - answers:
+    - Monaco-Ville
+    question: Monaco
+  - answers:
+    - Podgorica
+    question: Montenegro
+  - answers:
+    - Amsterdam
+    question: Netherlands
+  - answers:
+    - Skopje
+    question: North Macedonia
+  - answers:
+    - Belfast
+    question: Northern Ireland
+  - answers:
+    - Oslo
+    question: Norway
+  - answers:
+    - Warszawa
+    question: Poland
+  - answers:
+    - Lisboa
+    question: Portugal
+  - answers:
+    - Bucuresti
+    question: Romania
+  - answers:
+    - Moscow
+    question: Russian Federation
+  - answers:
+    - San Marino
+    question: San Marino
+  - answers:
+    - Edinburgh
+    question: Scotland
+  - answers:
+    - Belgrade
+    question: Serbia
+  - answers:
+    - Bratislava
+    question: Slovakia
+  - answers:
+    - Ljubljana
+    question: Slovenia
+  - answers:
+    - Madrid
+    question: Spain
+  - answers:
+    - Longyearbyen
+    question: Svalbard and Jan Mayen
+  - answers:
+    - Stockholm
+    question: Sweden
+  - answers:
+    - Bern
+    question: Switzerland
+  - answers:
+    - Kyiv
+    question: Ukraine
+  - answers:
+    - London
+    question: United Kingdom
+  - answers:
+    - Vatican City
+    question: Vatican City
+  - answers:
+    - Cardiff
+    question: Wales
+  question_prefix: 'What is the capital of '
+name: capitals
+type_: default

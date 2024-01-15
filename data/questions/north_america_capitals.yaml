@@ -1,0 +1,116 @@
+data:
+  items:
+  - answers:
+    - The Valley
+    question: Anguilla
+  - answers:
+    - Saint John's
+    question: Antigua and Barbuda
+  - answers:
+    - Oranjestad
+    question: Aruba
+  - answers:
+    - Nassau
+    question: Bahamas
+  - answers:
+    - Bridgetown
+    question: Barbados
+  - answers:
+    - Belmopan
+    question: Belize
+  - answers:
+    - Hamilton
+    question: Bermuda
+  - answers:
+    - Ottawa
+    question: Canada
+  - answers:
+    - George Town
+    question: Cayman Islands
+  - answers:
+    - San Jos
+    question: Costa Rica
+  - answers:
+    - Havana
+    question: Cuba
+  - answers:
+    - Roseau
+    question: Dominica
+  - answers:
+    - Santo Domingo
+    question: Dominican Republic
+  - answers:
+    - San Salvador
+    question: El Salvador
+  - answers:
+    - Nuuk
+    question: Greenland
+  - answers:
+    - Saint George's
+    question: Grenada
+  - answers:
+    - Basse-Terre
+    question: Guadeloupe
+  - answers:
+    - Guatemala City
+    question: Guatemala
+  - answers:
+    - Port-au-Prince
+    question: Haiti
+  - answers:
+    - Tegucigalpa
+    question: Honduras
+  - answers:
+    - Kingston
+    question: Jamaica
+  - answers:
+    - Fort-de-France
+    question: Martinique
+  - answers:
+    - Mexico City
+    question: Mexico
+  - answers:
+    - Plymouth
+    question: Montserrat
+  - answers:
+    - Willemstad
+    question: Netherlands Antilles
+  - answers:
+    - Managua
+    question: Nicaragua
+  - answers:
+    - Panama City
+    question: Panama
+  - answers:
+    - San Juan
+    question: Puerto Rico
+  - answers:
+    - Basseterre
+    question: Saint Kitts and Nevis
+  - answers:
+    - Castries
+    question: Saint Lucia
+  - answers:
+    - Saint-Pierre
+    question: Saint Pierre and Miquelon
+  - answers:
+    - Kingstown
+    question: Saint Vincent and the Grenadines
+  - answers:
+    - Port-of-Spain
+    question: Trinidad and Tobago
+  - answers:
+    - Cockburn Town
+    question: Turks and Caicos Islands
+  - answers:
+    - Washington
+    question: United States
+  - answers:
+    - Road Town
+    question: Virgin Islands, British
+  - answers:
+    - Charlotte Amalie
+    question: Virgin Islands, U.S.
+  question_prefix: 'What is the capital of '
+name: capitals
+type_: default

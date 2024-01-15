@@ -1,0 +1,179 @@
+data:
+  items:
+  - answers:
+    - Alger
+    question: Algeria
+  - answers:
+    - Luanda
+    question: Angola
+  - answers:
+    - Porto-Novo
+    question: Benin
+  - answers:
+    - Gaborone
+    question: Botswana
+  - answers:
+    - Ouagadougou
+    question: Burkina Faso
+  - answers:
+    - Bujumbura
+    question: Burundi
+  - answers:
+    - Yaounde
+    question: Cameroon
+  - answers:
+    - Praia
+    question: Cape Verde
+  - answers:
+    - Bangui
+    question: Central African Republic
+  - answers:
+    - N'Djamena
+    question: Chad
+  - answers:
+    - Moroni
+    question: Comoros
+  - answers:
+    - Brazzaville
+    question: Congo
+  - answers:
+    - Djibouti
+    question: Djibouti
+  - answers:
+    - Cairo
+    question: Egypt
+  - answers:
+    - Malabo
+    question: Equatorial Guinea
+  - answers:
+    - Asmara
+    question: Eritrea
+  - answers:
+    - Addis Abeba
+    question: Ethiopia
+  - answers:
+    - Libreville
+    question: Gabon
+  - answers:
+    - Banjul
+    question: Gambia
+  - answers:
+    - Accra
+    question: Ghana
+  - answers:
+    - Conakry
+    question: Guinea
+  - answers:
+    - Bissau
+    question: Guinea-Bissau
+  - answers:
+    - Yamoussoukro
+    question: Ivory Coast
+  - answers:
+    - Nairobi
+    question: Kenya
+  - answers:
+    - Maseru
+    question: Lesotho
+  - answers:
+    - Monrovia
+    question: Liberia
+  - answers:
+    - Tripoli
+    question: Libyan Arab Jamahiriya
+  - answers:
+    - Antananarivo
+    question: Madagascar
+  - answers:
+    - Lilongwe
+    question: Malawi
+  - answers:
+    - Bamako
+    question: Mali
+  - answers:
+    - Nouakchott
+    question: Mauritania
+  - answers:
+    - Port-Louis
+    question: Mauritius
+  - answers:
+    - Mamoutzou
+    question: Mayotte
+  - answers:
+    - Rabat
+    question: Morocco
+  - answers:
+    - Maputo
+    question: Mozambique
+  - answers:
+    - Windhoek
+    question: Namibia
+  - answers:
+    - Niamey
+    question: Niger
+  - answers:
+    - Abuja
+    question: Nigeria
+  - answers:
+    - Saint-Denis
+    question: Reunion
+  - answers:
+    - Kigali
+    question: Rwanda
+  - answers:
+    - Jamestown
+    question: Saint Helena
+  - answers:
+    - So Tom
+    question: Sao Tome and Principe
+  - answers:
+    - Dakar
+    question: Senegal
+  - answers:
+    - Victoria
+    question: Seychelles
+  - answers:
+    - Freetown
+    question: Sierra Leone
+  - answers:
+    - Mogadishu
+    question: Somalia
+  - answers:
+    - Pretoria
+    question: South Africa
+  - answers:
+    - Juba
+    question: South Sudan
+  - answers:
+    - Khartum
+    question: Sudan
+  - answers:
+    - Mbabane
+    question: Swaziland
+  - answers:
+    - Dodoma
+    question: Tanzania
+  - answers:
+    - Kinshasa
+    question: The Democratic Republic of Congo
+  - answers:
+    - Lome
+    question: Togo
+  - answers:
+    - Tunis
+    question: Tunisia
+  - answers:
+    - Kampala
+    question: Uganda
+  - answers:
+    - Laayoune
+    question: Western Sahara
+  - answers:
+    - Lusaka
+    question: Zambia
+  - answers:
+    - Harare
+    question: Zimbabwe
+  question_prefix: 'What is the capital of '
+name: capitals
+type_: default

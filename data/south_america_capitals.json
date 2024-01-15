@@ -1,0 +1,58 @@
+[
+  {
+    "country": "Argentina",
+    "city": "Buenos Aires"
+  },
+  {
+    "country": "Bolivia",
+    "city": "La Paz"
+  },
+  {
+    "country": "Brazil",
+    "city": "Braslia"
+  },
+  {
+    "country": "Chile",
+    "city": "Santiago"
+  },
+  {
+    "country": "Colombia",
+    "city": "Bogota"
+  },
+  {
+    "country": "Ecuador",
+    "city": "Quito"
+  },
+  {
+    "country": "Falkland Islands",
+    "city": "Stanley"
+  },
+  {
+    "country": "French Guiana",
+    "city": "Cayenne"
+  },
+  {
+    "country": "Guyana",
+    "city": "Georgetown"
+  },
+  {
+    "country": "Paraguay",
+    "city": "Asuncin"
+  },
+  {
+    "country": "Peru",
+    "city": "Lima"
+  },
+  {
+    "country": "Suriname",
+    "city": "Paramaribo"
+  },
+  {
+    "country": "Uruguay",
+    "city": "Montevideo"
+  },
+  {
+    "country": "Venezuela",
+    "city": "Caracas"
+  }
+]

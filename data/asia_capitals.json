@@ -1,0 +1,202 @@
+[
+  {
+    "country": "Afghanistan",
+    "city": "Kabul"
+  },
+  {
+    "country": "Armenia",
+    "city": "Yerevan"
+  },
+  {
+    "country": "Azerbaijan",
+    "city": "Baku"
+  },
+  {
+    "country": "Bahrain",
+    "city": "al-Manama"
+  },
+  {
+    "country": "Bangladesh",
+    "city": "Dhaka"
+  },
+  {
+    "country": "Bhutan",
+    "city": "Thimphu"
+  },
+  {
+    "country": "Brunei",
+    "city": "Bandar Seri Begawan"
+  },
+  {
+    "country": "Cambodia",
+    "city": "Phnom Penh"
+  },
+  {
+    "country": "China",
+    "city": "Peking"
+  },
+  {
+    "country": "Cyprus",
+    "city": "Nicosia"
+  },
+  {
+    "country": "East Timor",
+    "city": "Dili"
+  },
+  {
+    "country": "Georgia",
+    "city": "Tbilisi"
+  },
+  {
+    "country": "Hong Kong",
+    "city": "Victoria"
+  },
+  {
+    "country": "India",
+    "city": "New Delhi"
+  },
+  {
+    "country": "Indonesia",
+    "city": "Jakarta"
+  },
+  {
+    "country": "Iran",
+    "city": "Tehran"
+  },
+  {
+    "country": "Iraq",
+    "city": "Baghdad"
+  },
+  {
+    "country": "Israel",
+    "city": "Jerusalem"
+  },
+  {
+    "country": "Japan",
+    "city": "Tokyo"
+  },
+  {
+    "country": "Jordan",
+    "city": "Amman"
+  },
+  {
+    "country": "Kazakhstan",
+    "city": "Astana"
+  },
+  {
+    "country": "Kuwait",
+    "city": "Kuwait"
+  },
+  {
+    "country": "Kyrgyzstan",
+    "city": "Bishkek"
+  },
+  {
+    "country": "Laos",
+    "city": "Vientiane"
+  },
+  {
+    "country": "Lebanon",
+    "city": "Beirut"
+  },
+  {
+    "country": "Macao",
+    "city": "Macao"
+  },
+  {
+    "country": "Malaysia",
+    "city": "Kuala Lumpur"
+  },
+  {
+    "country": "Maldives",
+    "city": "Male"
+  },
+  {
+    "country": "Mongolia",
+    "city": "Ulan Bator"
+  },
+  {
+    "country": "Myanmar",
+    "city": "Naypyidaw"
+  },
+  {
+    "country": "Nepal",
+    "city": "Kathmandu"
+  },
+  {
+    "country": "North Korea",
+    "city": "Pyongyang"
+  },
+  {
+    "country": "Oman",
+    "city": "Masqat"
+  },
+  {
+    "country": "Pakistan",
+    "city": "Islamabad"
+  },
+  {
+    "country": "Palestine",
+    "city": "Ramallah"
+  },
+  {
+    "country": "Philippines",
+    "city": "Manila"
+  },
+  {
+    "country": "Qatar",
+    "city": "Doha"
+  },
+  {
+    "country": "Saudi Arabia",
+    "city": "Riyadh"
+  },
+  {
+    "country": "Singapore",
+    "city": "Singapore"
+  },
+  {
+    "country": "South Korea",
+    "city": "Seoul"
+  },
+  {
+    "country": "Sri Lanka",
+    "city": "Colombo"
+  },
+  {
+    "country": "Syria",
+    "city": "Damascus"
+  },
+  {
+    "country": "Tajikistan",
+    "city": "Dushanbe"
+  },
+  {
+    "country": "Thailand",
+    "city": "Bangkok"
+  },
+  {
+    "country": "Turkey",
+    "city": "Ankara"
+  },
+  {
+    "country": "Turkmenistan",
+    "city": "Ashgabat"
+  },
+  {
+    "country": "United Arab Emirates",
+    "city": "Abu Dhabi"
+  },
+  {
+    "country": "Uzbekistan",
+    "city": "Toskent"
+  },
+  {
+    "country": "Vietnam",
+    "city": "Hanoi"
+  },
+  {
+    "country": "Yemen",
+    "city": "Sanaa"
+  }
+]
