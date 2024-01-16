@@ -8,7 +8,9 @@ edition = "2021"
 [dependencies]
 anyhow = "1.0.79"
 clap = { version = "4.4.16", features = ["derive"] }
+clearscreen = "2.0.1"
 inquire = "0.6.2"
+num-format = "0.4.4"
 rand = "0.8.5"
 serde = { version = "1.0.195", features = ["derive"] }
 serde_yaml = "0.9.30"
