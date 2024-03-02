@@ -155,7 +155,7 @@ data:
     question: Tanzania
   - answers:
     - Kinshasa
-    question: The Democratic Republic of Congo
+    question: The Democratic Repuplic of Congo
   - answers:
     - Lome
     question: Togo
@@ -175,5 +175,5 @@ data:
     - Harare
     question: Zimbabwe
   question_prefix: 'What is the capital of '
-name: capitals
+name: africa_capitals
 type_: default

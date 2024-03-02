@@ -1,0 +1,98 @@
+data:
+  items:
+  - answer: 652090
+    question: Afghanistan
+  - answer: 29800
+    question: Armenia
+  - answer: 86600
+    question: Azerbaijan
+  - answer: 143998
+    question: Bangladesh
+  - answer: 47000
+    question: Bhutan
+  - answer: 5765
+    question: Brunei
+  - answer: 181035
+    question: Cambodia
+  - answer: 9572900
+    question: China
+  - answer: 9251
+    question: Cyprus
+  - answer: 14874
+    question: East Timor
+  - answer: 69700
+    question: Georgia
+  - answer: 1075
+    question: Hong Kong
+  - answer: 3287263
+    question: India
+  - answer: 1904569
+    question: Indonesia
+  - answer: 1648195
+    question: Iran
+  - answer: 438317
+    question: Iraq
+  - answer: 21056
+    question: Israel
+  - answer: 377829
+    question: Japan
+  - answer: 88946
+    question: Jordan
+  - answer: 2724900
+    question: Kazakhstan
+  - answer: 17818
+    question: Kuwait
+  - answer: 199900
+    question: Kyrgyzstan
+  - answer: 236800
+    question: Laos
+  - answer: 10400
+    question: Lebanon
+  - answer: 329758
+    question: Malaysia
+  - answer: 1566500
+    question: Mongolia
+  - answer: 676578
+    question: Myanmar
+  - answer: 147181
+    question: Nepal
+  - answer: 120538
+    question: North Korea
+  - answer: 309500
+    question: Oman
+  - answer: 796095
+    question: Pakistan
+  - answer: 6257
+    question: Palestine
+  - answer: 300000
+    question: Philippines
+  - answer: 11000
+    question: Qatar
+  - answer: 2149690
+    question: Saudi Arabia
+  - answer: 99434
+    question: South Korea
+  - answer: 65610
+    question: Sri Lanka
+  - answer: 185180
+    question: Syria
+  - answer: 143100
+    question: Tajikistan
+  - answer: 513115
+    question: Thailand
+  - answer: 774815
+    question: Turkey
+  - answer: 488100
+    question: Turkmenistan
+  - answer: 83600
+    question: United Arab Emirates
+  - answer: 447400
+    question: Uzbekistan
+  - answer: 331689
+    question: Vietnam
+  - answer: 527968
+    question: Yemen
+  question_prefix: 'What is the area (km^2) of '
+  range: 0.025
+name: asia_areas
+type_: numeric_range

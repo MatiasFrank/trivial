@@ -43,5 +43,5 @@ data:
     - Caracas
     question: Venezuela
   question_prefix: 'What is the capital of '
-name: capitals
+name: south_america_capitals
 type_: default

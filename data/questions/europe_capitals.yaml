@@ -7,7 +7,7 @@ data:
     - Andorra la Vella
     question: Andorra
   - answers:
-    - Wien
+    - Vienna
     question: Austria
   - answers:
     - Minsk
@@ -25,7 +25,7 @@ data:
     - Zagreb
     question: Croatia
   - answers:
-    - Praha
+    - Prague
     question: Czech Republic
   - answers:
     - Copenhagen
@@ -37,7 +37,7 @@ data:
     - Tallinn
     question: Estonia
   - answers:
-    - Trshavn
+    - Torshavn
     question: Faroe Islands
   - answers:
     - Helsinki
@@ -52,7 +52,7 @@ data:
     - Gibraltar
     question: Gibraltar
   - answers:
-    - Athenai
+    - Athens
     question: Greece
   - answers:
     - Budapest
@@ -64,7 +64,7 @@ data:
     - Dublin
     question: Ireland
   - answers:
-    - Roma
+    - Rome
     question: Italy
   - answers:
     - Riga
@@ -85,7 +85,7 @@ data:
     - Chisinau
     question: Moldova
   - answers:
-    - Monaco-Ville
+    - Monaco
     question: Monaco
   - answers:
     - Podgorica
@@ -103,13 +103,13 @@ data:
     - Oslo
     question: Norway
   - answers:
-    - Warszawa
+    - Warsaw
     question: Poland
   - answers:
-    - Lisboa
+    - Lisbon
     question: Portugal
   - answers:
-    - Bucuresti
+    - Bucharest
     question: Romania
   - answers:
     - Moscow
@@ -154,5 +154,5 @@ data:
     - Cardiff
     question: Wales
   question_prefix: 'What is the capital of '
-name: capitals
+name: europe_capitals
 type_: default

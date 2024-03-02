@@ -1,0 +1,106 @@
+data:
+  items:
+  - answer: 41129000
+    question: Afghanistan
+  - answer: 2780000
+    question: Armenia
+  - answer: 10142000
+    question: Azerbaijan
+  - answer: 1472000
+    question: Bahrain
+  - answer: 171186000
+    question: Bangladesh
+  - answer: 782000
+    question: Bhutan
+  - answer: 449000
+    question: Brunei
+  - answer: 16768000
+    question: Cambodia
+  - answer: 1412175000
+    question: China
+  - answer: 1251000
+    question: Cyprus
+  - answer: 1341000
+    question: East Timor
+  - answer: 3713000
+    question: Georgia
+  - answer: 7346000
+    question: Hong Kong
+  - answer: 1417173000
+    question: India
+  - answer: 275501000
+    question: Indonesia
+  - answer: 88551000
+    question: Iran
+  - answer: 44496000
+    question: Iraq
+  - answer: 9558000
+    question: Israel
+  - answer: 125125000
+    question: Japan
+  - answer: 11286000
+    question: Jordan
+  - answer: 19622000
+    question: Kazakhstan
+  - answer: 4269000
+    question: Kuwait
+  - answer: 6975000
+    question: Kyrgyzstan
+  - answer: 7529000
+    question: Laos
+  - answer: 5490000
+    question: Lebanon
+  - answer: 695000
+    question: Macao
+  - answer: 33938000
+    question: Malaysia
+  - answer: 524000
+    question: Maldives
+  - answer: 3398000
+    question: Mongolia
+  - answer: 54179000
+    question: Myanmar
+  - answer: 30548000
+    question: Nepal
+  - answer: 26069000
+    question: North Korea
+  - answer: 4576000
+    question: Oman
+  - answer: 235825000
+    question: Pakistan
+  - answer: 5044000
+    question: Palestine
+  - answer: 115559000
+    question: Philippines
+  - answer: 2695000
+    question: Qatar
+  - answer: 36409000
+    question: Saudi Arabia
+  - answer: 5637000
+    question: Singapore
+  - answer: 51628000
+    question: South Korea
+  - answer: 22181000
+    question: Sri Lanka
+  - answer: 22125000
+    question: Syria
+  - answer: 9953000
+    question: Tajikistan
+  - answer: 71697000
+    question: Thailand
+  - answer: 84980000
+    question: Turkey
+  - answer: 6431000
+    question: Turkmenistan
+  - answer: 9441000
+    question: United Arab Emirates
+  - answer: 35648000
+    question: Uzbekistan
+  - answer: 98187000
+    question: Vietnam
+  - answer: 33697000
+    question: Yemen
+  question_prefix: 'What is the population of '
+  range: 0.025
+name: asia_populations
+type_: numeric_range

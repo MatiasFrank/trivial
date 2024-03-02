@@ -1,0 +1,30 @@
+data:
+  items:
+  - answer: 46235000
+    question: Argentina
+  - answer: 12224000
+    question: Bolivia
+  - answer: 215313000
+    question: Brazil
+  - answer: 19604000
+    question: Chile
+  - answer: 51874000
+    question: Colombia
+  - answer: 18001000
+    question: Ecuador
+  - answer: 809000
+    question: Guyana
+  - answer: 6781000
+    question: Paraguay
+  - answer: 34050000
+    question: Peru
+  - answer: 618000
+    question: Suriname
+  - answer: 3423000
+    question: Uruguay
+  - answer: 28302000
+    question: Venezuela
+  question_prefix: 'What is the population of '
+  range: 0.025
+name: south_america_populations
+type_: numeric_range

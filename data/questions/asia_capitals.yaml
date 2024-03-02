@@ -10,7 +10,7 @@ data:
     - Baku
     question: Azerbaijan
   - answers:
-    - al-Manama
+    - Manama
     question: Bahrain
   - answers:
     - Dhaka
@@ -25,7 +25,7 @@ data:
     - Phnom Penh
     question: Cambodia
   - answers:
-    - Peking
+    - Beijing
     question: China
   - answers:
     - Nicosia
@@ -85,7 +85,7 @@ data:
     - Male
     question: Maldives
   - answers:
-    - Ulan Bator
+    - Ulaanbaatar
     question: Mongolia
   - answers:
     - Naypyidaw
@@ -97,7 +97,7 @@ data:
     - Pyongyang
     question: North Korea
   - answers:
-    - Masqat
+    - Muscat
     question: Oman
   - answers:
     - Islamabad
@@ -142,7 +142,7 @@ data:
     - Abu Dhabi
     question: United Arab Emirates
   - answers:
-    - Toskent
+    - Tashkent
     question: Uzbekistan
   - answers:
     - Hanoi
@@ -151,5 +151,5 @@ data:
     - Sanaa
     question: Yemen
   question_prefix: 'What is the capital of '
-name: capitals
+name: asia_capitals
 type_: default

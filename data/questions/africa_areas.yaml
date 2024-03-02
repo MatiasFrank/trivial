@@ -1,0 +1,114 @@
+data:
+  items:
+  - answer: 2381741
+    question: Algeria
+  - answer: 1246700
+    question: Angola
+  - answer: 112622
+    question: Benin
+  - answer: 581730
+    question: Botswana
+  - answer: 274000
+    question: Burkina Faso
+  - answer: 27834
+    question: Burundi
+  - answer: 475442
+    question: Cameroon
+  - answer: 4033
+    question: Cape Verde
+  - answer: 622984
+    question: Central African Republic
+  - answer: 1284000
+    question: Chad
+  - answer: 1862
+    question: Comoros
+  - answer: 342000
+    question: Congo
+  - answer: 23200
+    question: Djibouti
+  - answer: 1001449
+    question: Egypt
+  - answer: 28051
+    question: Equatorial Guinea
+  - answer: 117600
+    question: Eritrea
+  - answer: 1104300
+    question: Ethiopia
+  - answer: 267668
+    question: Gabon
+  - answer: 11295
+    question: Gambia
+  - answer: 238533
+    question: Ghana
+  - answer: 245857
+    question: Guinea
+  - answer: 36125
+    question: Guinea-Bissau
+  - answer: 322463
+    question: Ivory Coast
+  - answer: 580367
+    question: Kenya
+  - answer: 30355
+    question: Lesotho
+  - answer: 111369
+    question: Liberia
+  - answer: 1759540
+    question: Libyan Arab Jamahiriya
+  - answer: 587041
+    question: Madagascar
+  - answer: 118484
+    question: Malawi
+  - answer: 1240192
+    question: Mali
+  - answer: 1025520
+    question: Mauritania
+  - answer: 2040
+    question: Mauritius
+  - answer: 446550
+    question: Morocco
+  - answer: 801590
+    question: Mozambique
+  - answer: 824292
+    question: Namibia
+  - answer: 1267000
+    question: Niger
+  - answer: 923768
+    question: Nigeria
+  - answer: 2510
+    question: Reunion
+  - answer: 26338
+    question: Rwanda
+  - answer: 196722
+    question: Senegal
+  - answer: 71740
+    question: Sierra Leone
+  - answer: 637657
+    question: Somalia
+  - answer: 1221037
+    question: South Africa
+  - answer: 619745
+    question: South Sudan
+  - answer: 1886068
+    question: Sudan
+  - answer: 17364
+    question: Swaziland
+  - answer: 883749
+    question: Tanzania
+  - answer: 2344858
+    question: The Democratic Repuplic of Congo
+  - answer: 56785
+    question: Togo
+  - answer: 163610
+    question: Tunisia
+  - answer: 241038
+    question: Uganda
+  - answer: 266000
+    question: Western Sahara
+  - answer: 752618
+    question: Zambia
+  - answer: 390757
+    question: Zimbabwe
+  question_prefix: 'What is the area (km^2) of '
+  range: 0.025
+name: africa_areas
+type_: numeric_range

@@ -1,0 +1,96 @@
+data:
+  items:
+  - answer: 2778000
+    question: Albania
+  - answer: 80000
+    question: Andorra
+  - answer: 9042000
+    question: Austria
+  - answer: 9228000
+    question: Belarus
+  - answer: 11686000
+    question: Belgium
+  - answer: 3234000
+    question: Bosnia and Herzegovina
+  - answer: 6465000
+    question: Bulgaria
+  - answer: 3856000
+    question: Croatia
+  - answer: 10672000
+    question: Czech Republic
+  - answer: 5903000
+    question: Denmark
+  - answer: 1349000
+    question: Estonia
+  - answer: 53000
+    question: Faroe Islands
+  - answer: 5556000
+    question: Finland
+  - answer: 67971000
+    question: France
+  - answer: 83798000
+    question: Germany
+  - answer: 33000
+    question: Gibraltar
+  - answer: 10427000
+    question: Greece
+  - answer: 9643000
+    question: Hungary
+  - answer: 382000
+    question: Iceland
+  - answer: 5127000
+    question: Ireland
+  - answer: 58940000
+    question: Italy
+  - answer: 1879000
+    question: Latvia
+  - answer: 39000
+    question: Liechtenstein
+  - answer: 2832000
+    question: Lithuania
+  - answer: 653000
+    question: Luxembourg
+  - answer: 531000
+    question: Malta
+  - answer: 2539000
+    question: Moldova
+  - answer: 36000
+    question: Monaco
+  - answer: 617000
+    question: Montenegro
+  - answer: 17701000
+    question: Netherlands
+  - answer: 2058000
+    question: North Macedonia
+  - answer: 5457000
+    question: Norway
+  - answer: 36822000
+    question: Poland
+  - answer: 10410000
+    question: Portugal
+  - answer: 19047000
+    question: Romania
+  - answer: 144237000
+    question: Russian Federation
+  - answer: 34000
+    question: San Marino
+  - answer: 6664000
+    question: Serbia
+  - answer: 5432000
+    question: Slovakia
+  - answer: 2112000
+    question: Slovenia
+  - answer: 47778000
+    question: Spain
+  - answer: 10487000
+    question: Sweden
+  - answer: 8776000
+    question: Switzerland
+  - answer: 38000000
+    question: Ukraine
+  - answer: 66971000
+    question: United Kingdom
+  question_prefix: 'What is the population of '
+  range: 0.025
+name: europe_populations
+type_: numeric_range

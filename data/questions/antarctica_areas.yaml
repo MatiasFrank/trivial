@@ -1,0 +1,12 @@
+data:
+  items:
+  - answer: 13120000
+    question: Antarctica
+  - answer: 7780
+    question: French Southern territories
+  - answer: 3903
+    question: South Georgia and the South Sandwich Islands
+  question_prefix: 'What is the area (km^2) of '
+  range: 0.025
+name: antarctica_areas
+type_: numeric_range

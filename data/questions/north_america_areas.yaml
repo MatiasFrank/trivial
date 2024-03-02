@@ -1,0 +1,46 @@
+data:
+  items:
+  - answer: 13878
+    question: Bahamas
+  - answer: 22696
+    question: Belize
+  - answer: 9970610
+    question: Canada
+  - answer: 51100
+    question: Costa Rica
+  - answer: 110861
+    question: Cuba
+  - answer: 48511
+    question: Dominican Republic
+  - answer: 21041
+    question: El Salvador
+  - answer: 2166090
+    question: Greenland
+  - answer: 1705
+    question: Guadeloupe
+  - answer: 108889
+    question: Guatemala
+  - answer: 27750
+    question: Haiti
+  - answer: 112088
+    question: Honduras
+  - answer: 10990
+    question: Jamaica
+  - answer: 1102
+    question: Martinique
+  - answer: 1958201
+    question: Mexico
+  - answer: 130000
+    question: Nicaragua
+  - answer: 75517
+    question: Panama
+  - answer: 8875
+    question: Puerto Rico
+  - answer: 5130
+    question: Trinidad and Tobago
+  - answer: 9363520
+    question: United States
+  question_prefix: 'What is the area (km^2) of '
+  range: 0.025
+name: north_america_areas
+type_: numeric_range

@@ -1,0 +1,114 @@
+data:
+  items:
+  - answer: 44903000
+    question: Algeria
+  - answer: 35589000
+    question: Angola
+  - answer: 13353000
+    question: Benin
+  - answer: 2630000
+    question: Botswana
+  - answer: 22674000
+    question: Burkina Faso
+  - answer: 12890000
+    question: Burundi
+  - answer: 27915000
+    question: Cameroon
+  - answer: 593000
+    question: Cape Verde
+  - answer: 5579000
+    question: Central African Republic
+  - answer: 17723000
+    question: Chad
+  - answer: 837000
+    question: Comoros
+  - answer: 5970000
+    question: Congo
+  - answer: 1121000
+    question: Djibouti
+  - answer: 110990000
+    question: Egypt
+  - answer: 1675000
+    question: Equatorial Guinea
+  - answer: 3684000
+    question: Eritrea
+  - answer: 123380000
+    question: Ethiopia
+  - answer: 2389000
+    question: Gabon
+  - answer: 2706000
+    question: Gambia
+  - answer: 33476000
+    question: Ghana
+  - answer: 13859000
+    question: Guinea
+  - answer: 2106000
+    question: Guinea-Bissau
+  - answer: 28161000
+    question: Ivory Coast
+  - answer: 54027000
+    question: Kenya
+  - answer: 2306000
+    question: Lesotho
+  - answer: 5303000
+    question: Liberia
+  - answer: 6812000
+    question: Libyan Arab Jamahiriya
+  - answer: 29612000
+    question: Madagascar
+  - answer: 20405000
+    question: Malawi
+  - answer: 22594000
+    question: Mali
+  - answer: 4736000
+    question: Mauritania
+  - answer: 1263000
+    question: Mauritius
+  - answer: 37458000
+    question: Morocco
+  - answer: 32970000
+    question: Mozambique
+  - answer: 2567000
+    question: Namibia
+  - answer: 26208000
+    question: Niger
+  - answer: 218541000
+    question: Nigeria
+  - answer: 13777000
+    question: Rwanda
+  - answer: 227000
+    question: Sao Tome and Principe
+  - answer: 17316000
+    question: Senegal
+  - answer: 120000
+    question: Seychelles
+  - answer: 8606000
+    question: Sierra Leone
+  - answer: 17598000
+    question: Somalia
+  - answer: 59894000
+    question: South Africa
+  - answer: 10913000
+    question: South Sudan
+  - answer: 46874000
+    question: Sudan
+  - answer: 1202000
+    question: Swaziland
+  - answer: 65498000
+    question: Tanzania
+  - answer: 99010000
+    question: The Democratic Repuplic of Congo
+  - answer: 8849000
+    question: Togo
+  - answer: 12356000
+    question: Tunisia
+  - answer: 47250000
+    question: Uganda
+  - answer: 20018000
+    question: Zambia
+  - answer: 16321000
+    question: Zimbabwe
+  question_prefix: 'What is the population of '
+  range: 0.025
+name: africa_populations
+type_: numeric_range

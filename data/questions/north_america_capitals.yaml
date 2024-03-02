@@ -112,5 +112,5 @@ data:
     - Charlotte Amalie
     question: Virgin Islands, U.S.
   question_prefix: 'What is the capital of '
-name: capitals
+name: north_america_capitals
 type_: default

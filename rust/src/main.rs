@@ -1,7 +1,8 @@
 use anyhow::{bail, Error, Result};
 use clap::Parser;
+use colored::Colorize;
 use inquire::validator::{ErrorMessage, Validation};
-use inquire::Text;
+use inquire::{Confirm, Text};
 use num_format::{Locale, ToFormattedString};
 use rand::{seq::SliceRandom, thread_rng};
 use serde::{Deserialize, Serialize};
@@ -195,6 +196,63 @@ impl QuestionFactory for UnionDataFactory {
     }
 }
 
+#[derive(Deserialize, Serialize, Debug)]
+struct VocabData {
+    words: Vec<Word>,
+}
+
+#[derive(Deserialize, Serialize, Debug, Clone)]
+struct Word {
+    word: String,
+    definition: String,
+    example: String,
+    translations: Vec<String>,
+}
+
+struct VocabDataFactory {
+    data: VocabData,
+}
+
+impl Question for Word {
+    fn run(&self) -> Result<bool> {
+        let answer = Text::new(&format!("Translation of '{}': ", self.word.bold())).prompt()?;
+        let mut correct = true;
+        if self.translations.contains(&answer) {
+            println!("Valid translation");
+        } else {
+            correct = false;
+            println!("Invalid translation. The accepted ones are:");
+            for s in &self.translations {
+                println!("\t{}", s);
+            }
+        }
+
+        pause_with_message("Press any key to see an english definition and example.")?;
+        print!("{}", "Definition: ".bold());
+        println!("{}", &self.definition);
+        print!("{}", "Example: ".bold());
+        println!("{}", &self.example);
+
+        let ans = Confirm::new("Did you know the definition?").prompt()?;
+        Ok(correct && ans)
+    }
+}
+
+impl QuestionFactory for VocabDataFactory {
+    fn build(
+        &self,
+        _: &HashMap<String, Box<dyn QuestionFactory>>,
+    ) -> Result<Vec<Box<dyn Question>>> {
+        let mut res = Vec::new();
+
+        for word in &self.data.words {
+            res.push(Box::new(word.clone()) as Box<dyn Question>);
+        }
+
+        Ok(res)
+    }
+}
+
 trait Question {
     fn run(&self) -> Result<bool>;
 }
@@ -206,12 +264,16 @@ trait QuestionFactory {
     ) -> Result<Vec<Box<dyn Question>>>;
 }
 
-fn pause() -> Result<()> {
+fn pause_with_message(msg: &str) -> Result<()> {
     let mut stdout = stdout();
-    stdout.write(b"Press any key to continue...")?;
+    stdout.write(msg.as_bytes())?;
     stdout.flush().unwrap();
     stdin().read(&mut [0])?;
     Ok(())
+}
+
+fn pause() -> Result<()> {
+    pause_with_message("Press any key to continue...")
 }
 
 fn main() -> Result<(), Error> {
@@ -236,6 +298,13 @@ fn main() -> Result<(), Error> {
                 let set = serde_yaml::from_str::<QuestionSet<UnionData>>(&contents)?;
                 (
                     Box::new(UnionDataFactory { data: set.data }) as Box<dyn QuestionFactory>,
+                    set.name,
+                )
+            }
+            "vocab" => {
+                let set = serde_yaml::from_str::<QuestionSet<VocabData>>(&contents)?;
+                (
+                    Box::new(VocabDataFactory { data: set.data }) as Box<dyn QuestionFactory>,
                     set.name,
                 )
             }
@@ -274,11 +343,12 @@ fn main() -> Result<(), Error> {
         let mut wrong = Vec::new();
         loop {
             for (i, &q) in question_slice.iter().enumerate() {
-                print!("{}/{}: ", i + 1, question_slice.len());
+                println!("---------- {}/{} ----------: ", i + 1, question_slice.len());
                 let correct = q.run()?;
                 if !correct {
                     wrong.push(q);
                 }
+                println!("");
             }
 
             if wrong.is_empty() {

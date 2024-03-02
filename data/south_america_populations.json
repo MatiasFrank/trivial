@@ -1,0 +1,50 @@
+[
+  {
+    "country": "Brazil",
+    "population": 215313000
+  },
+  {
+    "country": "Colombia",
+    "population": 51874000
+  },
+  {
+    "country": "Argentina",
+    "population": 46235000
+  },
+  {
+    "country": "Peru",
+    "population": 34050000
+  },
+  {
+    "country": "Chile",
+    "population": 19604000
+  },
+  {
+    "country": "Ecuador",
+    "population": 18001000
+  },
+  {
+    "country": "Bolivia",
+    "population": 12224000
+  },
+  {
+    "country": "Paraguay",
+    "population": 6781000
+  },
+  {
+    "country": "Uruguay",
+    "population": 3423000
+  },
+  {
+    "country": "Guyana",
+    "population": 809000
+  },
+  {
+    "country": "Suriname",
+    "population": 618000
+  },
+  {
+    "country": "Venezuela",
+    "population": 28302000
+  }
+]

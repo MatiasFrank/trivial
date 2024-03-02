@@ -1,0 +1,44 @@
+data:
+  items:
+  - answer: 44000
+    question: American Samoa
+  - answer: 26006000
+    question: Australia
+  - answer: 930000
+    question: Fiji Islands
+  - answer: 306000
+    question: French Polynesia
+  - answer: 172000
+    question: Guam
+  - answer: 131000
+    question: Kiribati
+  - answer: 42000
+    question: Marshall Islands
+  - answer: 114000
+    question: Micronesia, Federated States of
+  - answer: 13000
+    question: Nauru
+  - answer: 269000
+    question: New Caledonia
+  - answer: 5124000
+    question: New Zealand
+  - answer: 50000
+    question: Northern Mariana Islands
+  - answer: 18000
+    question: Palau
+  - answer: 10143000
+    question: Papua New Guinea
+  - answer: 222000
+    question: Samoa
+  - answer: 724000
+    question: Solomon Islands
+  - answer: 107000
+    question: Tonga
+  - answer: 11000
+    question: Tuvalu
+  - answer: 327000
+    question: Vanuatu
+  question_prefix: 'What is the population of '
+  range: 0.025
+name: oceania_populations
+type_: numeric_range

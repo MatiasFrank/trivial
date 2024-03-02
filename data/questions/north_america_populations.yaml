@@ -1,0 +1,70 @@
+data:
+  items:
+  - answer: 94000
+    question: Antigua and Barbuda
+  - answer: 106000
+    question: Aruba
+  - answer: 410000
+    question: Bahamas
+  - answer: 282000
+    question: Barbados
+  - answer: 405000
+    question: Belize
+  - answer: 64000
+    question: Bermuda
+  - answer: 38930000
+    question: Canada
+  - answer: 69000
+    question: Cayman Islands
+  - answer: 5181000
+    question: Costa Rica
+  - answer: 11212000
+    question: Cuba
+  - answer: 73000
+    question: Dominica
+  - answer: 11229000
+    question: Dominican Republic
+  - answer: 6336000
+    question: El Salvador
+  - answer: 57000
+    question: Greenland
+  - answer: 125000
+    question: Grenada
+  - answer: 17358000
+    question: Guatemala
+  - answer: 11585000
+    question: Haiti
+  - answer: 10433000
+    question: Honduras
+  - answer: 2827000
+    question: Jamaica
+  - answer: 127504000
+    question: Mexico
+  - answer: 150000
+    question: Netherlands Antilles
+  - answer: 6948000
+    question: Nicaragua
+  - answer: 4409000
+    question: Panama
+  - answer: 3222000
+    question: Puerto Rico
+  - answer: 48000
+    question: Saint Kitts and Nevis
+  - answer: 180000
+    question: Saint Lucia
+  - answer: 104000
+    question: Saint Vincent and the Grenadines
+  - answer: 1531000
+    question: Trinidad and Tobago
+  - answer: 46000
+    question: Turks and Caicos Islands
+  - answer: 333288000
+    question: United States
+  - answer: 31000
+    question: Virgin Islands, British
+  - answer: 105000
+    question: Virgin Islands, U.S.
+  question_prefix: 'What is the population of '
+  range: 0.025
+name: north_america_populations
+type_: numeric_range

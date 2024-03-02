@@ -1,0 +1,84 @@
+data:
+  items:
+  - answer: 28748
+    question: Albania
+  - answer: 83859
+    question: Austria
+  - answer: 207600
+    question: Belarus
+  - answer: 30518
+    question: Belgium
+  - answer: 51197
+    question: Bosnia and Herzegovina
+  - answer: 110994
+    question: Bulgaria
+  - answer: 56538
+    question: Croatia
+  - answer: 78866
+    question: Czech Republic
+  - answer: 43094
+    question: Denmark
+  - answer: 45227
+    question: Estonia
+  - answer: 1399
+    question: Faroe Islands
+  - answer: 338145
+    question: Finland
+  - answer: 551500
+    question: France
+  - answer: 357022
+    question: Germany
+  - answer: 131626
+    question: Greece
+  - answer: 93030
+    question: Hungary
+  - answer: 103000
+    question: Iceland
+  - answer: 70273
+    question: Ireland
+  - answer: 301316
+    question: Italy
+  - answer: 64589
+    question: Latvia
+  - answer: 65301
+    question: Lithuania
+  - answer: 2586
+    question: Luxembourg
+  - answer: 33851
+    question: Moldova
+  - answer: 41526
+    question: Netherlands
+  - answer: 25713
+    question: North Macedonia
+  - answer: 323877
+    question: Norway
+  - answer: 323250
+    question: Poland
+  - answer: 91982
+    question: Portugal
+  - answer: 238391
+    question: Romania
+  - answer: 17075400
+    question: Russian Federation
+  - answer: 88361
+    question: Serbia
+  - answer: 49012
+    question: Slovakia
+  - answer: 20256
+    question: Slovenia
+  - answer: 505992
+    question: Spain
+  - answer: 62422
+    question: Svalbard and Jan Mayen
+  - answer: 449964
+    question: Sweden
+  - answer: 41284
+    question: Switzerland
+  - answer: 603700
+    question: Ukraine
+  - answer: 242900
+    question: United Kingdom
+  question_prefix: 'What is the area (km^2) of '
+  range: 0.025
+name: europe_areas
+type_: numeric_range

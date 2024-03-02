@@ -1,0 +1,10 @@
+name: world_capitals
+type_: union
+data:
+  sets:
+    - europe_capitals
+    - asia_capitals
+    - africa_capitals
+    - oceania_capitals
+    - north_america_capitals
+    - south_america_capitals

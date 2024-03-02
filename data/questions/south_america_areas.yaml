@@ -1,0 +1,34 @@
+data:
+  items:
+  - answer: 2780400
+    question: Argentina
+  - answer: 1098581
+    question: Bolivia
+  - answer: 8547403
+    question: Brazil
+  - answer: 756626
+    question: Chile
+  - answer: 1138914
+    question: Colombia
+  - answer: 283561
+    question: Ecuador
+  - answer: 12173
+    question: Falkland Islands
+  - answer: 90000
+    question: French Guiana
+  - answer: 214969
+    question: Guyana
+  - answer: 406752
+    question: Paraguay
+  - answer: 1285216
+    question: Peru
+  - answer: 163265
+    question: Suriname
+  - answer: 175016
+    question: Uruguay
+  - answer: 912050
+    question: Venezuela
+  question_prefix: 'What is the area (km^2) of '
+  range: 0.025
+name: south_america_areas
+type_: numeric_range

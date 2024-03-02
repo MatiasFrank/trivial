@@ -1,0 +1,202 @@
+[
+  {
+    "country": "India",
+    "population": 1417173000
+  },
+  {
+    "country": "China",
+    "population": 1412175000
+  },
+  {
+    "country": "Indonesia",
+    "population": 275501000
+  },
+  {
+    "country": "Pakistan",
+    "population": 235825000
+  },
+  {
+    "country": "Bangladesh",
+    "population": 171186000
+  },
+  {
+    "country": "Japan",
+    "population": 125125000
+  },
+  {
+    "country": "Philippines",
+    "population": 115559000
+  },
+  {
+    "country": "Thailand",
+    "population": 71697000
+  },
+  {
+    "country": "Myanmar",
+    "population": 54179000
+  },
+  {
+    "country": "Iraq",
+    "population": 44496000
+  },
+  {
+    "country": "Afghanistan",
+    "population": 41129000
+  },
+  {
+    "country": "Saudi Arabia",
+    "population": 36409000
+  },
+  {
+    "country": "Uzbekistan",
+    "population": 35648000
+  },
+  {
+    "country": "Malaysia",
+    "population": 33938000
+  },
+  {
+    "country": "Nepal",
+    "population": 30548000
+  },
+  {
+    "country": "Sri Lanka",
+    "population": 22181000
+  },
+  {
+    "country": "Kazakhstan",
+    "population": 19622000
+  },
+  {
+    "country": "Cambodia",
+    "population": 16768000
+  },
+  {
+    "country": "Jordan",
+    "population": 11286000
+  },
+  {
+    "country": "Azerbaijan",
+    "population": 10142000
+  },
+  {
+    "country": "Tajikistan",
+    "population": 9953000
+  },
+  {
+    "country": "Israel",
+    "population": 9558000
+  },
+  {
+    "country": "United Arab Emirates",
+    "population": 9441000
+  },
+  {
+    "country": "Turkmenistan",
+    "population": 6431000
+  },
+  {
+    "country": "Singapore",
+    "population": 5637000
+  },
+  {
+    "country": "Lebanon",
+    "population": 5490000
+  },
+  {
+    "country": "Oman",
+    "population": 4576000
+  },
+  {
+    "country": "Kuwait",
+    "population": 4269000
+  },
+  {
+    "country": "Georgia",
+    "population": 3713000
+  },
+  {
+    "country": "Mongolia",
+    "population": 3398000
+  },
+  {
+    "country": "Armenia",
+    "population": 2780000
+  },
+  {
+    "country": "Qatar",
+    "population": 2695000
+  },
+  {
+    "country": "Bahrain",
+    "population": 1472000
+  },
+  {
+    "country": "Cyprus",
+    "population": 1251000
+  },
+  {
+    "country": "Bhutan",
+    "population": 782000
+  },
+  {
+    "country": "Maldives",
+    "population": 524000
+  },
+  {
+    "country": "Vietnam",
+    "population": 98187000
+  },
+  {
+    "country": "Iran",
+    "population": 88551000
+  },
+  {
+    "country": "Turkey",
+    "population": 84980000
+  },
+  {
+    "country": "South Korea",
+    "population": 51628000
+  },
+  {
+    "country": "Yemen",
+    "population": 33697000
+  },
+  {
+    "country": "North Korea",
+    "population": 26069000
+  },
+  {
+    "country": "Syria",
+    "population": 22125000
+  },
+  {
+    "country": "Laos",
+    "population": 7529000
+  },
+  {
+    "country": "Hong Kong",
+    "population": 7346000
+  },
+  {
+    "country": "Kyrgyzstan",
+    "population": 6975000
+  },
+  {
+    "country": "Palestine",
+    "population": 5044000
+  },
+  {
+    "country": "East Timor",
+    "population": 1341000
+  },
+  {
+    "country": "Macao",
+    "population": 695000
+  },
+  {
+    "country": "Brunei",
+    "population": 449000
+  }
+]

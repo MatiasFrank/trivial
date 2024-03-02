@@ -82,5 +82,5 @@ data:
     - Mata-Utu
     question: Wallis and Futuna
   question_prefix: 'What is the capital of '
-name: capitals
+name: oceania_capitals
 type_: default

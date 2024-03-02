@@ -1,0 +1,11 @@
+name: world_areas
+type_: union
+data:
+  sets:
+    - europe_areas
+    - asia_areas
+    - africa_areas
+    - oceania_areas
+    - north_america_areas
+    - south_america_areas
+

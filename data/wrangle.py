@@ -3,6 +3,8 @@ from collections import defaultdict
 import string
 import os
 from yaml import load, dump
+import csv
+from difflib import SequenceMatcher
 
 try:
     from yaml import CLoader as Loader, CDumper as Dumper
@@ -19,7 +21,7 @@ def split_by_continent():
     for v in res.values():
         v.sort()
     with open("continent_to_country.json", "w") as f:
-        json.dump(res, f)
+        json.dump(res, f, indent=2)
 
 
 def continent_fixup():
@@ -184,5 +186,113 @@ def gen_area_questions():
     continent_area_questions()
 
 
+def population_json():
+    populations = {}
+    with open("world_population.csv") as f:
+        reader = csv.reader(f)
+        for line in reader:
+            country, pop = line[3], line[4]
+            population = int(pop.replace(",", "")) * 1000
+            populations[country.strip()] = population
+
+    renames = [
+        ("Egypt, Arab Rep.", "Egypt"),
+        ("Congo, Dem. Rep.", "The Democratic Repuplic of Congo"),
+        ("Viet Nam", "Vietnam"),
+        ("Iran, Islamic Rep.", "Iran"),
+        ("Türkiye", "Turkey"),
+        ("Korea, Rep.", "South Korea"),
+        ("Yemen, Rep.", "Yemen"),
+        ("Venezuela, RB", "Venezuela"),
+        ("Côte d'Ivoire", "Ivory Coast"),
+        ("Korea, Dem. People's Rep.", "North Korea"),
+        ("Syrian Arab Republic", "Syria"),
+        ("Lao PDR", "Laos"),
+        ("Hong Kong SAR, China", "Hong Kong"),
+        ("Kyrgyz Republic", "Kyrgyzstan"),
+        ("Libya", "Libyan Arab Jamahiriya"),
+        ("Congo, Rep.", "Congo"),
+        ("Slovak Republic", "Slovakia"),
+        ("West Bank and Gaza", "Palestine"),
+        ("Gambia, The", "Gambia"),
+        ("Timor-Leste", "East Timor"),
+        ("Eswatini", "Swaziland"),
+        ("Fiji", "Fiji Islands"),
+        ("Macao SAR, China", "Macao"),
+        ("Cabo Verde", "Cape Verde"),
+        ("Brunei Darussalam", "Brunei"),
+        ("Bahamas, The", "Bahamas"),
+        ("São Tomé and Principe", "Sao Tome and Principe"),
+        ("St. Lucia", "Saint Lucia"),
+        ("Curaçao", "Netherlands Antilles"),
+        ("Micronesia, Fed. Sts.", "Micronesia, Federated States of"),
+        ("Virgin Islands (U.S.)", "Virgin Islands, U.S."),
+        ("St. Vincent and the Grenadines", "Saint Vincent and the Grenadines"),
+        ("St. Kitts and Nevis", "Saint Kitts and Nevis"),
+        ("British Virgin Islands", "Virgin Islands, British"),
+    ]
+    for a, b in renames:
+        rename(populations, a, b)
+    populations = [{"country": k, "population": v} for k, v in populations.items()]
+    with open("country_population.json", "w") as f:
+        json.dump(populations, f, indent=2)
+
+
+def rename(d: dict, key1: str, key2: str):
+    obj = d[key1]
+    del d[key1]
+    d[key2] = obj
+
+
+def continent_to_population():
+    with open("continent_to_country.json") as f:
+        continents = json.load(f)
+    with open("country_population.json") as f:
+        populations = json.load(f)
+
+    for continent, countries in continents.items():
+        continent = continent.replace(" ", "_").lower()
+        continent_pops = [c for c in populations if c["country"] in countries]
+        with open(f"{continent}_populations.json", "w") as f:
+            json.dump(continent_pops, f, indent=2)
+
+
+def continent_population_questions():
+    for p in os.listdir("."):
+        if not p.endswith("_populations.json"):
+            continue
+        with open(p) as f:
+            data = json.load(f)
+        continent = p.removesuffix("_populations.json")
+        items = [
+            {
+                "question": d["country"],
+                "answer": int(d["population"]),
+            }
+            for d in data
+        ]
+        items.sort(key=lambda x: x["question"])
+        questions = {
+            "name": continent + "_populations",
+            "type_": "numeric_range",
+            "data": {
+                "question_prefix": "What is the population of ",
+                "items": items,
+                "range": 0.025,
+            },
+        }
+        with open(f"questions/{continent}_populations.yaml", "w") as f:
+            dump(questions, f, Dumper=Dumper)
+
+
+def gen_population_questions():
+    continent_fixup()
+    split_by_continent()
+    population_json()
+    continent_to_population()
+    continent_population_questions()
+
+
 gen_capital_questions()
 gen_area_questions()
+gen_population_questions()

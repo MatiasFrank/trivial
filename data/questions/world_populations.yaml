@@ -1,0 +1,11 @@
+name: world_populations
+type_: union
+data:
+  sets:
+    - europe_populations
+    - asia_populations
+    - africa_populations
+    - oceania_populations
+    - north_america_populations
+    - south_america_populations
+

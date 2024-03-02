@@ -1,0 +1,24 @@
+data:
+  items:
+  - answer: 7741220
+    question: Australia
+  - answer: 18274
+    question: Fiji Islands
+  - answer: 4000
+    question: French Polynesia
+  - answer: 18575
+    question: New Caledonia
+  - answer: 270534
+    question: New Zealand
+  - answer: 462840
+    question: Papua New Guinea
+  - answer: 2831
+    question: Samoa
+  - answer: 28896
+    question: Solomon Islands
+  - answer: 12189
+    question: Vanuatu
+  question_prefix: 'What is the area (km^2) of '
+  range: 0.025
+name: oceania_areas
+type_: numeric_range

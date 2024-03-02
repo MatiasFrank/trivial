@@ -1,0 +1,115 @@
+data:
+  words:
+  - word: inure
+    definition: accustom (someone) to something, especially something unpleasant.
+    example: these children have been inured to violence
+    translations:
+      - vænne
+  - word: persnickety
+    definition: placing too much emphasis on trivial or minor details; fussy.
+    example: she's very persnickety about her food
+    translations:
+      - pertentlig
+  - word: ineffable
+    definition: unspeakable, incapable of being expressed through words.
+    example: the ineffable mysteries of the soul
+    translations:
+      - usigelig
+      - ubeskrivelig
+  - word: flibbertigibbet
+    definition: a frivolous, flighty, or excessively talkative person. (achaic) gossip
+    example: Her reputation as a flibbertigibbet made her an ureliable friend.
+    translations:
+      - forfløjent pigebarn (gammeldags)
+      - sladretaske (gammeldags)
+  - word: mendacious
+    definition: dishonest and untruthful in speech or conduct
+    example: The mendacious politician made impossible promises.
+    translations:
+      - løgnagtig
+  - word: pernicious
+    definition: extremely destructive or harmful
+    example: Not being able to communicate can be pernicious to any relationship
+    translations:
+      - skadelig
+      - fordærvelig
+      - ondartet
+  - word: pugnacious
+    definition: quarrelsome, combative
+    example: his public statements became increasingly pugnacious
+    translations:
+      - stridbar
+      - kamplysten
+  - word: trepidation
+    definition: a feeling of fear or anxiety about something that may happen
+    example: the men set off in fear and trepidation
+    translations:
+      - ængstelse
+      - (om bevægelse) bæven
+  - word: resplendent
+    definition: brilliant, shining
+    example: she was resplendent in a sea-green dress
+    translations:
+      - strålende
+      - pragtfuld
+  - word: puerile
+    definition: childish, immature or silly not appropiate for an adult
+    example: a puerile argument
+    translations:
+      - barnagtig
+  - word: loquacious
+    definition: talkative or chatty
+    example: never loquacious, Sarah was now totally lost for words
+    translations:
+      - snakkesalig
+  - word: zephyr
+    definition: a gentle breeze
+    example: In European tradition, a zephyr is a light wind or a west wind, named after Zephyrus, the Greek god or personification of the west wind.
+    translations:
+      - zefyr
+      - mild vind
+  - word: beguile
+    definition: charm or enchant (someone), often in a deceptive way
+    example: he beguiled the voters with his good looks
+    translations:
+      - charmere
+      - fortrylle
+      - fængsle
+  - word: disconsolate
+    definition: deeply unhappy and without hope
+    example: she left Fritz looking disconsolate
+    translations:
+      - utrøstelig
+      - fortivlet
+  - word: opprobrium
+    definition: shameful act; public disgrace. Also harsh criticism or censure
+    example: the opprobrium of being closely associated with gangsters
+    translations:
+      - vanære
+      - forsmædelse
+  - word: acquiesce
+    definition: to agree without protesting
+    example: Sara acquiesced in his decision
+    translations:
+      - samtykke
+      - gå med til
+  - word: somnolent
+    definition: sleepy, drowsy
+    example: The gray rainy day made everyone somnolent.
+    translations:
+      - døsig
+      - søvnig
+  - word: equanimity
+    definition: composure, steadiness of mind under stress
+    example: she accepted both the good and the bad with equanimity
+    translations:
+      - sindsro
+      - sindsligevægtig
+  - word: nadir 
+    definition: the worst moment; the lowest point of something
+    example: asking that word was the nadir of my career
+    translations:
+      - lavpunkt
+    
+name: vocabulary
+type_: vocab
