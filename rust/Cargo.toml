@@ -15,3 +15,14 @@ num-format = "0.4.4"
 rand = "0.8.5"
 serde = { version = "1.0.195", features = ["derive"] }
 serde_yaml = "0.9.30"
+tokio = { version = "1", features = ["full"] }
+sqlx = { version = "0.7.1", features = [ "runtime-tokio", "sqlite","chrono", "macros" ] }
+chrono = "0.4.38"
+
+[[bin]]
+name = "trivial"
+path = "src/bin/main.rs"
+
+[[bin]]
+name = "sqlx_test"
+path = "src/bin/sqlx_test.rs"

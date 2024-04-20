@@ -5,12 +5,13 @@ use inquire::validator::{ErrorMessage, Validation};
 use inquire::{Confirm, Text};
 use num_format::{Locale, ToFormattedString};
 use rand::{seq::SliceRandom, thread_rng};
+use rust::db;
 use serde::{Deserialize, Serialize};
 use std::fmt::Debug;
 use std::io::{stdin, stdout, Read, Write};
+use std::path::PathBuf;
 use std::{collections::HashMap, fs};
 
-/// Simple program to greet a person
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
 struct Args {
@@ -83,6 +84,7 @@ fn si_parse(s: &str) -> Result<i64> {
 
 #[derive(Deserialize, Serialize, Debug, Clone)]
 struct NumericRangeQuestion {
+    id: String,
     question: String,
     answer: i64,
     #[serde(default = "default_range")]
@@ -121,6 +123,10 @@ impl Question for NumericRangeQuestion {
         println!("");
         Ok(correct)
     }
+
+    fn id(&self) -> String {
+        self.id.clone()
+    }
 }
 
 #[derive(Deserialize, Serialize, Debug)]
@@ -146,6 +152,7 @@ impl QuestionFactory for DefaultData {
 
 #[derive(Deserialize, Serialize, Debug, Clone)]
 struct DefaultQuestion {
+    id: String,
     question: String,
     answers: Vec<String>,
 }
@@ -164,6 +171,10 @@ impl Question for DefaultQuestion {
         }
         println!("");
         Ok(correct)
+    }
+
+    fn id(&self) -> String {
+        return self.id.clone();
     }
 }
 
@@ -203,6 +214,7 @@ struct VocabData {
 
 #[derive(Deserialize, Serialize, Debug, Clone)]
 struct Word {
+    id: String,
     word: String,
     definition: String,
     example: String,
@@ -236,6 +248,10 @@ impl Question for Word {
         let ans = Confirm::new("Did you know the definition?").prompt()?;
         Ok(correct && ans)
     }
+
+    fn id(&self) -> String {
+        self.id.clone()
+    }
 }
 
 impl QuestionFactory for VocabDataFactory {
@@ -255,6 +271,7 @@ impl QuestionFactory for VocabDataFactory {
 
 trait Question {
     fn run(&self) -> Result<bool>;
+    fn id(&self) -> String;
 }
 
 trait QuestionFactory {
@@ -276,14 +293,10 @@ fn pause() -> Result<()> {
     pause_with_message("Press any key to continue...")
 }
 
-fn main() -> Result<(), Error> {
-    let args = Args::parse();
-
+fn load_factories(paths: &[PathBuf]) -> Result<HashMap<String, Box<dyn QuestionFactory>>> {
     let mut factories = HashMap::new();
-    let paths = fs::read_dir(args.path)?;
     for path in paths {
-        let p = path?.path();
-        let contents = fs::read_to_string(p)?;
+        let contents = fs::read_to_string(path)?;
         let base: BaseQuestionSet = serde_yaml::from_str(&contents)?;
         let (factory, name) = match base.type_.as_str() {
             "default" => {
@@ -315,6 +328,10 @@ fn main() -> Result<(), Error> {
         factories.insert(name, factory);
     }
 
+    Ok(factories)
+}
+
+fn quiz_loop(factories: &HashMap<String, Box<dyn QuestionFactory>>) -> Result<()> {
     loop {
         let mut options: Vec<String> = factories.keys().map(|s| s.clone()).collect();
         options.sort();
@@ -322,7 +339,7 @@ fn main() -> Result<(), Error> {
         let select = inquire::Select::new("Pick a question set", options);
         let choice = select.prompt()?;
         if choice == "Exit" {
-            break;
+            return Ok(());
         }
         let factory = factories.get(&choice).unwrap();
         let questions = factory.build(&factories)?;
@@ -374,6 +391,14 @@ fn main() -> Result<(), Error> {
         pause()?;
         clearscreen::clear()?;
     }
+}
 
-    Ok(())
+fn main() -> Result<(), Error> {
+    let args = Args::parse();
+    let mut paths = Vec::new();
+    for path in fs::read_dir(args.path)? {
+        paths.push(path?.path());
+    }
+    let factories = load_factories(&paths)?;
+    quiz_loop(&factories)
 }
