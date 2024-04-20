@@ -2,45 +2,59 @@ data:
   items:
   - answers:
     - Buenos Aires
+    id: argentina
     question: Argentina
   - answers:
     - La Paz
+    id: bolivia
     question: Bolivia
   - answers:
     - Braslia
+    id: brazil
     question: Brazil
   - answers:
     - Santiago
+    id: chile
     question: Chile
   - answers:
     - Bogota
+    id: colombia
     question: Colombia
   - answers:
     - Quito
+    id: ecuador
     question: Ecuador
   - answers:
     - Stanley
+    id: falkland_islands
     question: Falkland Islands
   - answers:
     - Cayenne
+    id: french_guiana
     question: French Guiana
   - answers:
     - Georgetown
+    id: guyana
     question: Guyana
   - answers:
     - Asuncin
+    id: paraguay
     question: Paraguay
   - answers:
     - Lima
+    id: peru
     question: Peru
   - answers:
     - Paramaribo
+    id: suriname
     question: Suriname
   - answers:
     - Montevideo
+    id: uruguay
     question: Uruguay
   - answers:
     - Caracas
+    id: venezuela
     question: Venezuela
   question_prefix: 'What is the capital of '
 name: south_america_capitals

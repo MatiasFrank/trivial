@@ -2,177 +2,235 @@ data:
   items:
   - answers:
     - Alger
+    id: algeria
     question: Algeria
   - answers:
     - Luanda
+    id: angola
     question: Angola
   - answers:
     - Porto-Novo
+    id: benin
     question: Benin
   - answers:
     - Gaborone
+    id: botswana
     question: Botswana
   - answers:
     - Ouagadougou
+    id: burkina_faso
     question: Burkina Faso
   - answers:
     - Bujumbura
+    id: burundi
     question: Burundi
   - answers:
     - Yaounde
+    id: cameroon
     question: Cameroon
   - answers:
     - Praia
+    id: cape_verde
     question: Cape Verde
   - answers:
     - Bangui
+    id: central_african_republic
     question: Central African Republic
   - answers:
     - N'Djamena
+    id: chad
     question: Chad
   - answers:
     - Moroni
+    id: comoros
     question: Comoros
   - answers:
     - Brazzaville
+    id: congo
     question: Congo
   - answers:
     - Djibouti
+    id: djibouti
     question: Djibouti
   - answers:
     - Cairo
+    id: egypt
     question: Egypt
   - answers:
     - Malabo
+    id: equatorial_guinea
     question: Equatorial Guinea
   - answers:
     - Asmara
+    id: eritrea
     question: Eritrea
   - answers:
     - Addis Abeba
+    id: ethiopia
     question: Ethiopia
   - answers:
     - Libreville
+    id: gabon
     question: Gabon
   - answers:
     - Banjul
+    id: gambia
     question: Gambia
   - answers:
     - Accra
+    id: ghana
     question: Ghana
   - answers:
     - Conakry
+    id: guinea
     question: Guinea
   - answers:
     - Bissau
+    id: guinea-bissau
     question: Guinea-Bissau
   - answers:
     - Yamoussoukro
+    id: ivory_coast
     question: Ivory Coast
   - answers:
     - Nairobi
+    id: kenya
     question: Kenya
   - answers:
     - Maseru
+    id: lesotho
     question: Lesotho
   - answers:
     - Monrovia
+    id: liberia
     question: Liberia
   - answers:
     - Tripoli
+    id: libyan_arab_jamahiriya
     question: Libyan Arab Jamahiriya
   - answers:
     - Antananarivo
+    id: madagascar
     question: Madagascar
   - answers:
     - Lilongwe
+    id: malawi
     question: Malawi
   - answers:
     - Bamako
+    id: mali
     question: Mali
   - answers:
     - Nouakchott
+    id: mauritania
     question: Mauritania
   - answers:
     - Port-Louis
+    id: mauritius
     question: Mauritius
   - answers:
     - Mamoutzou
+    id: mayotte
     question: Mayotte
   - answers:
     - Rabat
+    id: morocco
     question: Morocco
   - answers:
     - Maputo
+    id: mozambique
     question: Mozambique
   - answers:
     - Windhoek
+    id: namibia
     question: Namibia
   - answers:
     - Niamey
+    id: niger
     question: Niger
   - answers:
     - Abuja
+    id: nigeria
     question: Nigeria
   - answers:
     - Saint-Denis
+    id: reunion
     question: Reunion
   - answers:
     - Kigali
+    id: rwanda
     question: Rwanda
   - answers:
     - Jamestown
+    id: saint_helena
     question: Saint Helena
   - answers:
     - So Tom
+    id: sao_tome_and_principe
     question: Sao Tome and Principe
   - answers:
     - Dakar
+    id: senegal
     question: Senegal
   - answers:
     - Victoria
+    id: seychelles
     question: Seychelles
   - answers:
     - Freetown
+    id: sierra_leone
     question: Sierra Leone
   - answers:
     - Mogadishu
+    id: somalia
     question: Somalia
   - answers:
     - Pretoria
+    id: south_africa
     question: South Africa
   - answers:
     - Juba
+    id: south_sudan
     question: South Sudan
   - answers:
     - Khartum
+    id: sudan
     question: Sudan
   - answers:
     - Mbabane
+    id: swaziland
     question: Swaziland
   - answers:
     - Dodoma
+    id: tanzania
     question: Tanzania
   - answers:
     - Kinshasa
+    id: the_democratic_repuplic_of_congo
     question: The Democratic Repuplic of Congo
   - answers:
     - Lome
+    id: togo
     question: Togo
   - answers:
     - Tunis
+    id: tunisia
     question: Tunisia
   - answers:
     - Kampala
+    id: uganda
     question: Uganda
   - answers:
     - Laayoune
+    id: western_sahara
     question: Western Sahara
   - answers:
     - Lusaka
+    id: zambia
     question: Zambia
   - answers:
     - Harare
+    id: zimbabwe
     question: Zimbabwe
   question_prefix: 'What is the capital of '
 name: africa_capitals

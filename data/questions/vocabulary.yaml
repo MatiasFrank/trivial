@@ -110,6 +110,112 @@ data:
     example: asking that word was the nadir of my career
     translations:
       - lavpunkt
-    
+  - word: accede
+    definition: agree to a demand, request, or treaty.
+    example: the authorities did not accede to the strikers' demands
+    translations:
+      - acceptere
+  - word: occipital
+    definition: relating to or situated in the back of the head.
+    example: the occipital bone
+    translations:
+      - nakke-
+  - word: expunge
+    definition: to obliterate, eradicate
+    example: the kind of man that could expunge an unsatisfactory incident from his memory
+    translations:
+      - slette
+      - stryge
+      - udslette
+  - word: raucous
+    definition: loud, boisterous
+    example: raucous youths
+    translations:
+      - støjende
+      - larmende
+  - word: engender
+    definition: cause or give rise to (a feeling, situation, or condition)
+    example: the issue engendered continuing controversy
+    translations:
+      - skabe
+      - frembringe
+      - afføde
+  - word: euphonious
+    definition: pleasant-souding, melodious
+    example: a stream of fine, euphonious phrases
+    translations:
+      - vellydende
+  - word: deft
+    definition: skillful, capable
+    example: a deft piece of footwork
+    translations:
+      - fingernem
+      - ferm
+  - word: craven
+    definition: lacking the least bit of courage. Contemptibly fainthearted.
+    example: a craven abdication of his moral duty
+    translations:
+      - fej
+  - word: incisive
+    definition: clear, sharp, direct
+    example: she was an incisive critic
+    translations:
+      - skarp
+  - word: larceny
+    definition: Obtaining another's property by theft or trickery
+    example: The young man engaged in larceny to gain her purse
+    translations:
+      - tyveri
+      - rapseri
+  - word: languid
+    definition: sluggish from fatigue or weakness
+    example: his languid demeanour irritated her
+    translations:
+      - sløv
+      - træg
+      - doven
+      - dvask
+      - apatisk
+  - word: bonhomie 
+    definition: good-natured easy friendliness
+    example: he exuded good humour and bonhomie
+    translations:
+      - gemytlighed
+  - word: fetter
+    definition: to chain, restrain
+    example: The dog was fettered to the parking meter
+    translations:
+      - lænke
+      - binde
+  - word: sinuous
+    definition: lithe, serpentine
+    example: the river follows a sinuous trail through the dale
+    translations:
+      - bugtet
+      - snoet
+      - snoet
+  - word: equivocal
+    definition: (adj.) ambiguousm, uncertain, undecided
+    example: the results of the investigation were equivocal
+    translations:
+      - tvetydig
+      - flertydig
+  - word: promulgate
+    definition: to proclaim, make known
+    example: these objectives have to be promulgated within the organization
+    translations:
+      - offentliggøre
+      - kundgøre
+  - word: burnish
+    definition: to polish, shine
+    example: to burnish copper, I would probably use a drill with a pad attached to the end
+    translations:
+      - polere
+      - pudse
+  # - word: 
+  #   definition:
+  #   example:
+  #   translations:
+  #     - 
 name: vocabulary
 type_: vocab

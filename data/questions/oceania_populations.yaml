@@ -1,42 +1,61 @@
 data:
   items:
   - answer: 44000
+    id: american_samoa
     question: American Samoa
   - answer: 26006000
+    id: australia
     question: Australia
   - answer: 930000
+    id: fiji_islands
     question: Fiji Islands
   - answer: 306000
+    id: french_polynesia
     question: French Polynesia
   - answer: 172000
+    id: guam
     question: Guam
   - answer: 131000
+    id: kiribati
     question: Kiribati
   - answer: 42000
+    id: marshall_islands
     question: Marshall Islands
   - answer: 114000
+    id: micronesia_federated_states_of
     question: Micronesia, Federated States of
   - answer: 13000
+    id: nauru
     question: Nauru
   - answer: 269000
+    id: new_caledonia
     question: New Caledonia
   - answer: 5124000
+    id: new_zealand
     question: New Zealand
   - answer: 50000
+    id: northern_mariana_islands
     question: Northern Mariana Islands
   - answer: 18000
+    id: palau
     question: Palau
   - answer: 10143000
+    id: papua_new_guinea
     question: Papua New Guinea
   - answer: 222000
+    id: samoa
     question: Samoa
   - answer: 724000
+    id: solomon_islands
     question: Solomon Islands
   - answer: 107000
+    id: tonga
     question: Tonga
   - answer: 11000
+    id: tuvalu
     question: Tuvalu
   - answer: 327000
+    id: vanuatu
     question: Vanuatu
   question_prefix: 'What is the population of '
   range: 0.025

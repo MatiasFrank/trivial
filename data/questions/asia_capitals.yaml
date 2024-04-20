@@ -2,153 +2,203 @@ data:
   items:
   - answers:
     - Kabul
+    id: afghanistan
     question: Afghanistan
   - answers:
     - Yerevan
+    id: armenia
     question: Armenia
   - answers:
     - Baku
+    id: azerbaijan
     question: Azerbaijan
   - answers:
     - Manama
+    id: bahrain
     question: Bahrain
   - answers:
     - Dhaka
+    id: bangladesh
     question: Bangladesh
   - answers:
     - Thimphu
+    id: bhutan
     question: Bhutan
   - answers:
     - Bandar Seri Begawan
+    id: brunei
     question: Brunei
   - answers:
     - Phnom Penh
+    id: cambodia
     question: Cambodia
   - answers:
     - Beijing
+    id: china
     question: China
   - answers:
     - Nicosia
+    id: cyprus
     question: Cyprus
   - answers:
     - Dili
+    id: east_timor
     question: East Timor
   - answers:
     - Tbilisi
+    id: georgia
     question: Georgia
   - answers:
     - Victoria
+    id: hong_kong
     question: Hong Kong
   - answers:
     - New Delhi
+    id: india
     question: India
   - answers:
     - Jakarta
+    id: indonesia
     question: Indonesia
   - answers:
     - Tehran
+    id: iran
     question: Iran
   - answers:
     - Baghdad
+    id: iraq
     question: Iraq
   - answers:
     - Jerusalem
+    id: israel
     question: Israel
   - answers:
     - Tokyo
+    id: japan
     question: Japan
   - answers:
     - Amman
+    id: jordan
     question: Jordan
   - answers:
     - Astana
+    id: kazakhstan
     question: Kazakhstan
   - answers:
     - Kuwait
+    id: kuwait
     question: Kuwait
   - answers:
     - Bishkek
+    id: kyrgyzstan
     question: Kyrgyzstan
   - answers:
     - Vientiane
+    id: laos
     question: Laos
   - answers:
     - Beirut
+    id: lebanon
     question: Lebanon
   - answers:
     - Macao
+    id: macao
     question: Macao
   - answers:
     - Kuala Lumpur
+    id: malaysia
     question: Malaysia
   - answers:
     - Male
+    id: maldives
     question: Maldives
   - answers:
     - Ulaanbaatar
+    id: mongolia
     question: Mongolia
   - answers:
     - Naypyidaw
+    id: myanmar
     question: Myanmar
   - answers:
     - Kathmandu
+    id: nepal
     question: Nepal
   - answers:
     - Pyongyang
+    id: north_korea
     question: North Korea
   - answers:
     - Muscat
+    id: oman
     question: Oman
   - answers:
     - Islamabad
+    id: pakistan
     question: Pakistan
   - answers:
     - Ramallah
+    id: palestine
     question: Palestine
   - answers:
     - Manila
+    id: philippines
     question: Philippines
   - answers:
     - Doha
+    id: qatar
     question: Qatar
   - answers:
     - Riyadh
+    id: saudi_arabia
     question: Saudi Arabia
   - answers:
     - Singapore
+    id: singapore
     question: Singapore
   - answers:
     - Seoul
+    id: south_korea
     question: South Korea
   - answers:
     - Colombo
+    id: sri_lanka
     question: Sri Lanka
   - answers:
     - Damascus
+    id: syria
     question: Syria
   - answers:
     - Dushanbe
+    id: tajikistan
     question: Tajikistan
   - answers:
     - Bangkok
+    id: thailand
     question: Thailand
   - answers:
     - Ankara
+    id: turkey
     question: Turkey
   - answers:
     - Ashgabat
+    id: turkmenistan
     question: Turkmenistan
   - answers:
     - Abu Dhabi
+    id: united_arab_emirates
     question: United Arab Emirates
   - answers:
     - Tashkent
+    id: uzbekistan
     question: Uzbekistan
   - answers:
     - Hanoi
+    id: vietnam
     question: Vietnam
   - answers:
     - Sanaa
+    id: yemen
     question: Yemen
   question_prefix: 'What is the capital of '
 name: asia_capitals

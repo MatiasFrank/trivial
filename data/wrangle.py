@@ -5,6 +5,7 @@ import os
 from yaml import load, dump
 import csv
 from difflib import SequenceMatcher
+import re
 
 try:
     from yaml import CLoader as Loader, CDumper as Dumper
@@ -107,6 +108,7 @@ def continent_capitals_questions():
         continent = p.removesuffix("_capitals.json")
         items = [
             {
+                "id": to_id(d["country"]),
                 "question": d["country"],
                 "answers": [d["city"]],
             }
@@ -123,6 +125,13 @@ def continent_capitals_questions():
         }
         with open(f"questions/{continent}_capitals.yaml", "w") as f:
             dump(questions, f, Dumper=Dumper)
+
+allowed_chars = "abcdefghijklmnopqrstuvwxyz0123456789-_."
+def to_id(s: str) -> str:
+    s = s.lower()
+    s = re.sub(r'\s+', r'_', s)
+    s = "".join(c for c in s if c in allowed_chars)
+    return s
 
 
 def continent_to_areas():
@@ -152,6 +161,7 @@ def continent_area_questions():
         continent = p.removesuffix("_areas.json")
         items = [
             {
+                "id": to_id(d["country"]),
                 "question": d["country"],
                 "answer": int(d["area"]),
             }
@@ -266,6 +276,7 @@ def continent_population_questions():
         continent = p.removesuffix("_populations.json")
         items = [
             {
+                "id": to_id(d["country"]),
                 "question": d["country"],
                 "answer": int(d["population"]),
             }

@@ -1,28 +1,40 @@
 data:
   items:
   - answer: 46235000
+    id: argentina
     question: Argentina
   - answer: 12224000
+    id: bolivia
     question: Bolivia
   - answer: 215313000
+    id: brazil
     question: Brazil
   - answer: 19604000
+    id: chile
     question: Chile
   - answer: 51874000
+    id: colombia
     question: Colombia
   - answer: 18001000
+    id: ecuador
     question: Ecuador
   - answer: 809000
+    id: guyana
     question: Guyana
   - answer: 6781000
+    id: paraguay
     question: Paraguay
   - answer: 34050000
+    id: peru
     question: Peru
   - answer: 618000
+    id: suriname
     question: Suriname
   - answer: 3423000
+    id: uruguay
     question: Uruguay
   - answer: 28302000
+    id: venezuela
     question: Venezuela
   question_prefix: 'What is the population of '
   range: 0.025
