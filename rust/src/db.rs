@@ -5,8 +5,6 @@ use sqlx::{
     Pool, Sqlite, SqlitePool,
 };
 
-// const DB_URL: &str = "sqlite://../sql/data.db";
-
 #[derive(Clone, FromRow, Debug, Default)]
 pub struct Question {
     pub id: i64,
@@ -96,20 +94,45 @@ impl Repository {
 
     pub async fn insert_question(&self, factory: &str, name: &str, data: &Vec<u8>) -> Result<()> {
         let created_at = chrono::offset::Utc::now();
-        let q = sqlx::query("INSERT INTO questions(factory, name, created_at, probability, num_correct, num_incorrect, data) VALUES($1, $2, $3, $4, $5, $6, $7);")
+        sqlx::query("INSERT INTO questions(factory, name, created_at, probability, num_correct, num_incorrect, data) VALUES($1, $2, $3, $4, $5, $6, $7);")
             .bind(factory)
             .bind(name)
             .bind(created_at)
             .bind(0.5)
             .bind(1)
             .bind(1)
-            .bind(data);
-        q.execute(&self.db).await?;
+            .bind(data)
+            .execute(&self.db).await?;
         Ok(())
     }
 
-    pub async fn add_answer(&self, answer: Answer, new_prob: f64) -> Result<()> {
-        let (cor, inc) = if answer.correct { (1, 0) } else { (0, 1) };
+    pub async fn set_probability(&self, factory: &str, name: &str, probability: f64) -> Result<()> {
+        sqlx::query(
+            "
+        UPDATE 
+            questions
+        SET
+            probability = $1
+        WHERE
+            factory = $2 AND name = $3
+        ",
+        )
+        .bind(probability)
+        .bind(factory)
+        .bind(name)
+        .execute(&self.db)
+        .await?;
+        Ok(())
+    }
+
+    pub async fn add_answer(
+        &self,
+        question_id: i64,
+        time: DateTime<Utc>,
+        correct: bool,
+        new_prob: f64,
+    ) -> Result<()> {
+        let (cor, inc) = if correct { (1, 0) } else { (0, 1) };
         sqlx::query(
             "
         UPDATE 
@@ -124,10 +147,10 @@ impl Repository {
         ;",
         )
         .bind(new_prob)
-        .bind(answer.time)
+        .bind(time)
         .bind(cor)
         .bind(inc)
-        .bind(answer.question_id)
+        .bind(question_id)
         .execute(&self.db)
         .await?;
 
@@ -137,9 +160,9 @@ impl Repository {
             answers(question_id, time, correct)
             VALUES($1, $2, $3);",
         )
-        .bind(answer.question_id)
-        .bind(answer.time)
-        .bind(answer.correct)
+        .bind(question_id)
+        .bind(time)
+        .bind(correct)
         .execute(&self.db)
         .await?;
 
