@@ -1,168 +1,168 @@
-data:
-  items:
-  - answer: 2381741
-    id: algeria
-    question: Algeria
-  - answer: 1246700
-    id: angola
-    question: Angola
-  - answer: 112622
-    id: benin
-    question: Benin
-  - answer: 581730
-    id: botswana
-    question: Botswana
-  - answer: 274000
-    id: burkina_faso
-    question: Burkina Faso
-  - answer: 27834
-    id: burundi
-    question: Burundi
-  - answer: 475442
-    id: cameroon
-    question: Cameroon
-  - answer: 4033
-    id: cape_verde
-    question: Cape Verde
-  - answer: 622984
-    id: central_african_republic
-    question: Central African Republic
-  - answer: 1284000
-    id: chad
-    question: Chad
-  - answer: 1862
-    id: comoros
-    question: Comoros
-  - answer: 342000
-    id: congo
-    question: Congo
-  - answer: 23200
-    id: djibouti
-    question: Djibouti
-  - answer: 1001449
-    id: egypt
-    question: Egypt
-  - answer: 28051
-    id: equatorial_guinea
-    question: Equatorial Guinea
-  - answer: 117600
-    id: eritrea
-    question: Eritrea
-  - answer: 1104300
-    id: ethiopia
-    question: Ethiopia
-  - answer: 267668
-    id: gabon
-    question: Gabon
-  - answer: 11295
-    id: gambia
-    question: Gambia
-  - answer: 238533
-    id: ghana
-    question: Ghana
-  - answer: 245857
-    id: guinea
-    question: Guinea
-  - answer: 36125
-    id: guinea-bissau
-    question: Guinea-Bissau
-  - answer: 322463
-    id: ivory_coast
-    question: Ivory Coast
-  - answer: 580367
-    id: kenya
-    question: Kenya
-  - answer: 30355
-    id: lesotho
-    question: Lesotho
-  - answer: 111369
-    id: liberia
-    question: Liberia
-  - answer: 1759540
-    id: libyan_arab_jamahiriya
-    question: Libyan Arab Jamahiriya
-  - answer: 587041
-    id: madagascar
-    question: Madagascar
-  - answer: 118484
-    id: malawi
-    question: Malawi
-  - answer: 1240192
-    id: mali
-    question: Mali
-  - answer: 1025520
-    id: mauritania
-    question: Mauritania
-  - answer: 2040
-    id: mauritius
-    question: Mauritius
-  - answer: 446550
-    id: morocco
-    question: Morocco
-  - answer: 801590
-    id: mozambique
-    question: Mozambique
-  - answer: 824292
-    id: namibia
-    question: Namibia
-  - answer: 1267000
-    id: niger
-    question: Niger
-  - answer: 923768
-    id: nigeria
-    question: Nigeria
-  - answer: 2510
-    id: reunion
-    question: Reunion
-  - answer: 26338
-    id: rwanda
-    question: Rwanda
-  - answer: 196722
-    id: senegal
-    question: Senegal
-  - answer: 71740
-    id: sierra_leone
-    question: Sierra Leone
-  - answer: 637657
-    id: somalia
-    question: Somalia
-  - answer: 1221037
-    id: south_africa
-    question: South Africa
-  - answer: 619745
-    id: south_sudan
-    question: South Sudan
-  - answer: 1886068
-    id: sudan
-    question: Sudan
-  - answer: 17364
-    id: swaziland
-    question: Swaziland
-  - answer: 883749
-    id: tanzania
-    question: Tanzania
-  - answer: 2344858
-    id: the_democratic_repuplic_of_congo
-    question: The Democratic Repuplic of Congo
-  - answer: 56785
-    id: togo
-    question: Togo
-  - answer: 163610
-    id: tunisia
-    question: Tunisia
-  - answer: 241038
-    id: uganda
-    question: Uganda
-  - answer: 266000
-    id: western_sahara
-    question: Western Sahara
-  - answer: 752618
-    id: zambia
-    question: Zambia
-  - answer: 390757
-    id: zimbabwe
-    question: Zimbabwe
-  question_prefix: 'What is the area (km^2) of '
-  range: 0.025
 name: africa_areas
 type_: numeric_range
+items:
+- id: algeria
+  question: Algeria
+  answer: 2381741
+- id: angola
+  question: Angola
+  answer: 1246700
+- id: benin
+  question: Benin
+  answer: 112622
+- id: botswana
+  question: Botswana
+  answer: 581730
+- id: burkina_faso
+  question: Burkina Faso
+  answer: 274000
+- id: burundi
+  question: Burundi
+  answer: 27834
+- id: cameroon
+  question: Cameroon
+  answer: 475442
+- id: cape_verde
+  question: Cape Verde
+  answer: 4033
+- id: central_african_republic
+  question: Central African Republic
+  answer: 622984
+- id: chad
+  question: Chad
+  answer: 1284000
+- id: comoros
+  question: Comoros
+  answer: 1862
+- id: congo
+  question: Congo
+  answer: 342000
+- id: djibouti
+  question: Djibouti
+  answer: 23200
+- id: egypt
+  question: Egypt
+  answer: 1001449
+- id: equatorial_guinea
+  question: Equatorial Guinea
+  answer: 28051
+- id: eritrea
+  question: Eritrea
+  answer: 117600
+- id: ethiopia
+  question: Ethiopia
+  answer: 1104300
+- id: gabon
+  question: Gabon
+  answer: 267668
+- id: gambia
+  question: Gambia
+  answer: 11295
+- id: ghana
+  question: Ghana
+  answer: 238533
+- id: guinea
+  question: Guinea
+  answer: 245857
+- id: guinea-bissau
+  question: Guinea-Bissau
+  answer: 36125
+- id: ivory_coast
+  question: Ivory Coast
+  answer: 322463
+- id: kenya
+  question: Kenya
+  answer: 580367
+- id: lesotho
+  question: Lesotho
+  answer: 30355
+- id: liberia
+  question: Liberia
+  answer: 111369
+- id: libyan_arab_jamahiriya
+  question: Libyan Arab Jamahiriya
+  answer: 1759540
+- id: madagascar
+  question: Madagascar
+  answer: 587041
+- id: malawi
+  question: Malawi
+  answer: 118484
+- id: mali
+  question: Mali
+  answer: 1240192
+- id: mauritania
+  question: Mauritania
+  answer: 1025520
+- id: mauritius
+  question: Mauritius
+  answer: 2040
+- id: morocco
+  question: Morocco
+  answer: 446550
+- id: mozambique
+  question: Mozambique
+  answer: 801590
+- id: namibia
+  question: Namibia
+  answer: 824292
+- id: niger
+  question: Niger
+  answer: 1267000
+- id: nigeria
+  question: Nigeria
+  answer: 923768
+- id: reunion
+  question: Reunion
+  answer: 2510
+- id: rwanda
+  question: Rwanda
+  answer: 26338
+- id: senegal
+  question: Senegal
+  answer: 196722
+- id: sierra_leone
+  question: Sierra Leone
+  answer: 71740
+- id: somalia
+  question: Somalia
+  answer: 637657
+- id: south_africa
+  question: South Africa
+  answer: 1221037
+- id: south_sudan
+  question: South Sudan
+  answer: 619745
+- id: sudan
+  question: Sudan
+  answer: 1886068
+- id: swaziland
+  question: Swaziland
+  answer: 17364
+- id: tanzania
+  question: Tanzania
+  answer: 883749
+- id: the_democratic_repuplic_of_congo
+  question: The Democratic Repuplic of Congo
+  answer: 2344858
+- id: togo
+  question: Togo
+  answer: 56785
+- id: tunisia
+  question: Tunisia
+  answer: 163610
+- id: uganda
+  question: Uganda
+  answer: 241038
+- id: western_sahara
+  question: Western Sahara
+  answer: 266000
+- id: zambia
+  question: Zambia
+  answer: 752618
+- id: zimbabwe
+  question: Zimbabwe
+  answer: 390757
+data:
+  question_prefix: 'What is the area (km^2) of '
+  range: 0.025

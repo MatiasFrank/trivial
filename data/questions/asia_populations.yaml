@@ -1,156 +1,156 @@
-data:
-  items:
-  - answer: 41129000
-    id: afghanistan
-    question: Afghanistan
-  - answer: 2780000
-    id: armenia
-    question: Armenia
-  - answer: 10142000
-    id: azerbaijan
-    question: Azerbaijan
-  - answer: 1472000
-    id: bahrain
-    question: Bahrain
-  - answer: 171186000
-    id: bangladesh
-    question: Bangladesh
-  - answer: 782000
-    id: bhutan
-    question: Bhutan
-  - answer: 449000
-    id: brunei
-    question: Brunei
-  - answer: 16768000
-    id: cambodia
-    question: Cambodia
-  - answer: 1412175000
-    id: china
-    question: China
-  - answer: 1251000
-    id: cyprus
-    question: Cyprus
-  - answer: 1341000
-    id: east_timor
-    question: East Timor
-  - answer: 3713000
-    id: georgia
-    question: Georgia
-  - answer: 7346000
-    id: hong_kong
-    question: Hong Kong
-  - answer: 1417173000
-    id: india
-    question: India
-  - answer: 275501000
-    id: indonesia
-    question: Indonesia
-  - answer: 88551000
-    id: iran
-    question: Iran
-  - answer: 44496000
-    id: iraq
-    question: Iraq
-  - answer: 9558000
-    id: israel
-    question: Israel
-  - answer: 125125000
-    id: japan
-    question: Japan
-  - answer: 11286000
-    id: jordan
-    question: Jordan
-  - answer: 19622000
-    id: kazakhstan
-    question: Kazakhstan
-  - answer: 4269000
-    id: kuwait
-    question: Kuwait
-  - answer: 6975000
-    id: kyrgyzstan
-    question: Kyrgyzstan
-  - answer: 7529000
-    id: laos
-    question: Laos
-  - answer: 5490000
-    id: lebanon
-    question: Lebanon
-  - answer: 695000
-    id: macao
-    question: Macao
-  - answer: 33938000
-    id: malaysia
-    question: Malaysia
-  - answer: 524000
-    id: maldives
-    question: Maldives
-  - answer: 3398000
-    id: mongolia
-    question: Mongolia
-  - answer: 54179000
-    id: myanmar
-    question: Myanmar
-  - answer: 30548000
-    id: nepal
-    question: Nepal
-  - answer: 26069000
-    id: north_korea
-    question: North Korea
-  - answer: 4576000
-    id: oman
-    question: Oman
-  - answer: 235825000
-    id: pakistan
-    question: Pakistan
-  - answer: 5044000
-    id: palestine
-    question: Palestine
-  - answer: 115559000
-    id: philippines
-    question: Philippines
-  - answer: 2695000
-    id: qatar
-    question: Qatar
-  - answer: 36409000
-    id: saudi_arabia
-    question: Saudi Arabia
-  - answer: 5637000
-    id: singapore
-    question: Singapore
-  - answer: 51628000
-    id: south_korea
-    question: South Korea
-  - answer: 22181000
-    id: sri_lanka
-    question: Sri Lanka
-  - answer: 22125000
-    id: syria
-    question: Syria
-  - answer: 9953000
-    id: tajikistan
-    question: Tajikistan
-  - answer: 71697000
-    id: thailand
-    question: Thailand
-  - answer: 84980000
-    id: turkey
-    question: Turkey
-  - answer: 6431000
-    id: turkmenistan
-    question: Turkmenistan
-  - answer: 9441000
-    id: united_arab_emirates
-    question: United Arab Emirates
-  - answer: 35648000
-    id: uzbekistan
-    question: Uzbekistan
-  - answer: 98187000
-    id: vietnam
-    question: Vietnam
-  - answer: 33697000
-    id: yemen
-    question: Yemen
-  question_prefix: 'What is the population of '
-  range: 0.025
 name: asia_populations
 type_: numeric_range
+items:
+- id: afghanistan
+  question: Afghanistan
+  answer: 41129000
+- id: armenia
+  question: Armenia
+  answer: 2780000
+- id: azerbaijan
+  question: Azerbaijan
+  answer: 10142000
+- id: bahrain
+  question: Bahrain
+  answer: 1472000
+- id: bangladesh
+  question: Bangladesh
+  answer: 171186000
+- id: bhutan
+  question: Bhutan
+  answer: 782000
+- id: brunei
+  question: Brunei
+  answer: 449000
+- id: cambodia
+  question: Cambodia
+  answer: 16768000
+- id: china
+  question: China
+  answer: 1412175000
+- id: cyprus
+  question: Cyprus
+  answer: 1251000
+- id: east_timor
+  question: East Timor
+  answer: 1341000
+- id: georgia
+  question: Georgia
+  answer: 3713000
+- id: hong_kong
+  question: Hong Kong
+  answer: 7346000
+- id: india
+  question: India
+  answer: 1417173000
+- id: indonesia
+  question: Indonesia
+  answer: 275501000
+- id: iran
+  question: Iran
+  answer: 88551000
+- id: iraq
+  question: Iraq
+  answer: 44496000
+- id: israel
+  question: Israel
+  answer: 9558000
+- id: japan
+  question: Japan
+  answer: 125125000
+- id: jordan
+  question: Jordan
+  answer: 11286000
+- id: kazakhstan
+  question: Kazakhstan
+  answer: 19622000
+- id: kuwait
+  question: Kuwait
+  answer: 4269000
+- id: kyrgyzstan
+  question: Kyrgyzstan
+  answer: 6975000
+- id: laos
+  question: Laos
+  answer: 7529000
+- id: lebanon
+  question: Lebanon
+  answer: 5490000
+- id: macao
+  question: Macao
+  answer: 695000
+- id: malaysia
+  question: Malaysia
+  answer: 33938000
+- id: maldives
+  question: Maldives
+  answer: 524000
+- id: mongolia
+  question: Mongolia
+  answer: 3398000
+- id: myanmar
+  question: Myanmar
+  answer: 54179000
+- id: nepal
+  question: Nepal
+  answer: 30548000
+- id: north_korea
+  question: North Korea
+  answer: 26069000
+- id: oman
+  question: Oman
+  answer: 4576000
+- id: pakistan
+  question: Pakistan
+  answer: 235825000
+- id: palestine
+  question: Palestine
+  answer: 5044000
+- id: philippines
+  question: Philippines
+  answer: 115559000
+- id: qatar
+  question: Qatar
+  answer: 2695000
+- id: saudi_arabia
+  question: Saudi Arabia
+  answer: 36409000
+- id: singapore
+  question: Singapore
+  answer: 5637000
+- id: south_korea
+  question: South Korea
+  answer: 51628000
+- id: sri_lanka
+  question: Sri Lanka
+  answer: 22181000
+- id: syria
+  question: Syria
+  answer: 22125000
+- id: tajikistan
+  question: Tajikistan
+  answer: 9953000
+- id: thailand
+  question: Thailand
+  answer: 71697000
+- id: turkey
+  question: Turkey
+  answer: 84980000
+- id: turkmenistan
+  question: Turkmenistan
+  answer: 6431000
+- id: united_arab_emirates
+  question: United Arab Emirates
+  answer: 9441000
+- id: uzbekistan
+  question: Uzbekistan
+  answer: 35648000
+- id: vietnam
+  question: Vietnam
+  answer: 98187000
+- id: yemen
+  question: Yemen
+  answer: 33697000
+data:
+  question_prefix: 'What is the population of '
+  range: 0.025

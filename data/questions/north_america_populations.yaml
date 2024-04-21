@@ -1,102 +1,102 @@
-data:
-  items:
-  - answer: 94000
-    id: antigua_and_barbuda
-    question: Antigua and Barbuda
-  - answer: 106000
-    id: aruba
-    question: Aruba
-  - answer: 410000
-    id: bahamas
-    question: Bahamas
-  - answer: 282000
-    id: barbados
-    question: Barbados
-  - answer: 405000
-    id: belize
-    question: Belize
-  - answer: 64000
-    id: bermuda
-    question: Bermuda
-  - answer: 38930000
-    id: canada
-    question: Canada
-  - answer: 69000
-    id: cayman_islands
-    question: Cayman Islands
-  - answer: 5181000
-    id: costa_rica
-    question: Costa Rica
-  - answer: 11212000
-    id: cuba
-    question: Cuba
-  - answer: 73000
-    id: dominica
-    question: Dominica
-  - answer: 11229000
-    id: dominican_republic
-    question: Dominican Republic
-  - answer: 6336000
-    id: el_salvador
-    question: El Salvador
-  - answer: 57000
-    id: greenland
-    question: Greenland
-  - answer: 125000
-    id: grenada
-    question: Grenada
-  - answer: 17358000
-    id: guatemala
-    question: Guatemala
-  - answer: 11585000
-    id: haiti
-    question: Haiti
-  - answer: 10433000
-    id: honduras
-    question: Honduras
-  - answer: 2827000
-    id: jamaica
-    question: Jamaica
-  - answer: 127504000
-    id: mexico
-    question: Mexico
-  - answer: 150000
-    id: netherlands_antilles
-    question: Netherlands Antilles
-  - answer: 6948000
-    id: nicaragua
-    question: Nicaragua
-  - answer: 4409000
-    id: panama
-    question: Panama
-  - answer: 3222000
-    id: puerto_rico
-    question: Puerto Rico
-  - answer: 48000
-    id: saint_kitts_and_nevis
-    question: Saint Kitts and Nevis
-  - answer: 180000
-    id: saint_lucia
-    question: Saint Lucia
-  - answer: 104000
-    id: saint_vincent_and_the_grenadines
-    question: Saint Vincent and the Grenadines
-  - answer: 1531000
-    id: trinidad_and_tobago
-    question: Trinidad and Tobago
-  - answer: 46000
-    id: turks_and_caicos_islands
-    question: Turks and Caicos Islands
-  - answer: 333288000
-    id: united_states
-    question: United States
-  - answer: 31000
-    id: virgin_islands_british
-    question: Virgin Islands, British
-  - answer: 105000
-    id: virgin_islands_u.s.
-    question: Virgin Islands, U.S.
-  question_prefix: 'What is the population of '
-  range: 0.025
 name: north_america_populations
 type_: numeric_range
+items:
+- id: antigua_and_barbuda
+  question: Antigua and Barbuda
+  answer: 94000
+- id: aruba
+  question: Aruba
+  answer: 106000
+- id: bahamas
+  question: Bahamas
+  answer: 410000
+- id: barbados
+  question: Barbados
+  answer: 282000
+- id: belize
+  question: Belize
+  answer: 405000
+- id: bermuda
+  question: Bermuda
+  answer: 64000
+- id: canada
+  question: Canada
+  answer: 38930000
+- id: cayman_islands
+  question: Cayman Islands
+  answer: 69000
+- id: costa_rica
+  question: Costa Rica
+  answer: 5181000
+- id: cuba
+  question: Cuba
+  answer: 11212000
+- id: dominica
+  question: Dominica
+  answer: 73000
+- id: dominican_republic
+  question: Dominican Republic
+  answer: 11229000
+- id: el_salvador
+  question: El Salvador
+  answer: 6336000
+- id: greenland
+  question: Greenland
+  answer: 57000
+- id: grenada
+  question: Grenada
+  answer: 125000
+- id: guatemala
+  question: Guatemala
+  answer: 17358000
+- id: haiti
+  question: Haiti
+  answer: 11585000
+- id: honduras
+  question: Honduras
+  answer: 10433000
+- id: jamaica
+  question: Jamaica
+  answer: 2827000
+- id: mexico
+  question: Mexico
+  answer: 127504000
+- id: netherlands_antilles
+  question: Netherlands Antilles
+  answer: 150000
+- id: nicaragua
+  question: Nicaragua
+  answer: 6948000
+- id: panama
+  question: Panama
+  answer: 4409000
+- id: puerto_rico
+  question: Puerto Rico
+  answer: 3222000
+- id: saint_kitts_and_nevis
+  question: Saint Kitts and Nevis
+  answer: 48000
+- id: saint_lucia
+  question: Saint Lucia
+  answer: 180000
+- id: saint_vincent_and_the_grenadines
+  question: Saint Vincent and the Grenadines
+  answer: 104000
+- id: trinidad_and_tobago
+  question: Trinidad and Tobago
+  answer: 1531000
+- id: turks_and_caicos_islands
+  question: Turks and Caicos Islands
+  answer: 46000
+- id: united_states
+  question: United States
+  answer: 333288000
+- id: virgin_islands_british
+  question: Virgin Islands, British
+  answer: 31000
+- id: virgin_islands_u.s.
+  question: Virgin Islands, U.S.
+  answer: 105000
+data:
+  question_prefix: 'What is the population of '
+  range: 0.025

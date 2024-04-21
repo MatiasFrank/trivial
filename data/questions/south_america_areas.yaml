@@ -1,48 +1,48 @@
-data:
-  items:
-  - answer: 2780400
-    id: argentina
-    question: Argentina
-  - answer: 1098581
-    id: bolivia
-    question: Bolivia
-  - answer: 8547403
-    id: brazil
-    question: Brazil
-  - answer: 756626
-    id: chile
-    question: Chile
-  - answer: 1138914
-    id: colombia
-    question: Colombia
-  - answer: 283561
-    id: ecuador
-    question: Ecuador
-  - answer: 12173
-    id: falkland_islands
-    question: Falkland Islands
-  - answer: 90000
-    id: french_guiana
-    question: French Guiana
-  - answer: 214969
-    id: guyana
-    question: Guyana
-  - answer: 406752
-    id: paraguay
-    question: Paraguay
-  - answer: 1285216
-    id: peru
-    question: Peru
-  - answer: 163265
-    id: suriname
-    question: Suriname
-  - answer: 175016
-    id: uruguay
-    question: Uruguay
-  - answer: 912050
-    id: venezuela
-    question: Venezuela
-  question_prefix: 'What is the area (km^2) of '
-  range: 0.025
 name: south_america_areas
 type_: numeric_range
+items:
+- id: argentina
+  question: Argentina
+  answer: 2780400
+- id: bolivia
+  question: Bolivia
+  answer: 1098581
+- id: brazil
+  question: Brazil
+  answer: 8547403
+- id: chile
+  question: Chile
+  answer: 756626
+- id: colombia
+  question: Colombia
+  answer: 1138914
+- id: ecuador
+  question: Ecuador
+  answer: 283561
+- id: falkland_islands
+  question: Falkland Islands
+  answer: 12173
+- id: french_guiana
+  question: French Guiana
+  answer: 90000
+- id: guyana
+  question: Guyana
+  answer: 214969
+- id: paraguay
+  question: Paraguay
+  answer: 406752
+- id: peru
+  question: Peru
+  answer: 1285216
+- id: suriname
+  question: Suriname
+  answer: 163265
+- id: uruguay
+  question: Uruguay
+  answer: 175016
+- id: venezuela
+  question: Venezuela
+  answer: 912050
+data:
+  question_prefix: 'What is the area (km^2) of '
+  range: 0.025

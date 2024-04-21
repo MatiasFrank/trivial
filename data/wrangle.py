@@ -6,7 +6,6 @@ from yaml import load, dump
 import csv
 from difflib import SequenceMatcher
 import re
-
 try:
     from yaml import CLoader as Loader, CDumper as Dumper
 except ImportError:
@@ -118,18 +117,21 @@ def continent_capitals_questions():
         questions = {
             "name": continent + "_capitals",
             "type_": "default",
+            "items": items,
             "data": {
                 "question_prefix": "What is the capital of ",
-                "items": items,
             },
         }
         with open(f"questions/{continent}_capitals.yaml", "w") as f:
-            dump(questions, f, Dumper=Dumper)
+            dump(questions, f, Dumper=Dumper, sort_keys=False)
+
 
 allowed_chars = "abcdefghijklmnopqrstuvwxyz0123456789-_."
+
+
 def to_id(s: str) -> str:
     s = s.lower()
-    s = re.sub(r'\s+', r'_', s)
+    s = re.sub(r"\s+", r"_", s)
     s = "".join(c for c in s if c in allowed_chars)
     return s
 
@@ -171,14 +173,14 @@ def continent_area_questions():
         questions = {
             "name": continent + "_areas",
             "type_": "numeric_range",
+            "items": items,
             "data": {
                 "question_prefix": "What is the area (km^2) of ",
-                "items": items,
                 "range": 0.025,
             },
         }
         with open(f"questions/{continent}_areas.yaml", "w") as f:
-            dump(questions, f, Dumper=Dumper)
+            dump(questions, f, Dumper=Dumper, sort_keys=False)
 
 
 def gen_capital_questions():
@@ -286,14 +288,14 @@ def continent_population_questions():
         questions = {
             "name": continent + "_populations",
             "type_": "numeric_range",
+            "items": items,
             "data": {
                 "question_prefix": "What is the population of ",
-                "items": items,
                 "range": 0.025,
             },
         }
         with open(f"questions/{continent}_populations.yaml", "w") as f:
-            dump(questions, f, Dumper=Dumper)
+            dump(questions, f, Dumper=Dumper, sort_keys=False)
 
 
 def gen_population_questions():

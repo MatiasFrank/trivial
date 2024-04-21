@@ -1,141 +1,141 @@
-data:
-  items:
-  - answer: 2778000
-    id: albania
-    question: Albania
-  - answer: 80000
-    id: andorra
-    question: Andorra
-  - answer: 9042000
-    id: austria
-    question: Austria
-  - answer: 9228000
-    id: belarus
-    question: Belarus
-  - answer: 11686000
-    id: belgium
-    question: Belgium
-  - answer: 3234000
-    id: bosnia_and_herzegovina
-    question: Bosnia and Herzegovina
-  - answer: 6465000
-    id: bulgaria
-    question: Bulgaria
-  - answer: 3856000
-    id: croatia
-    question: Croatia
-  - answer: 10672000
-    id: czech_republic
-    question: Czech Republic
-  - answer: 5903000
-    id: denmark
-    question: Denmark
-  - answer: 1349000
-    id: estonia
-    question: Estonia
-  - answer: 53000
-    id: faroe_islands
-    question: Faroe Islands
-  - answer: 5556000
-    id: finland
-    question: Finland
-  - answer: 67971000
-    id: france
-    question: France
-  - answer: 83798000
-    id: germany
-    question: Germany
-  - answer: 33000
-    id: gibraltar
-    question: Gibraltar
-  - answer: 10427000
-    id: greece
-    question: Greece
-  - answer: 9643000
-    id: hungary
-    question: Hungary
-  - answer: 382000
-    id: iceland
-    question: Iceland
-  - answer: 5127000
-    id: ireland
-    question: Ireland
-  - answer: 58940000
-    id: italy
-    question: Italy
-  - answer: 1879000
-    id: latvia
-    question: Latvia
-  - answer: 39000
-    id: liechtenstein
-    question: Liechtenstein
-  - answer: 2832000
-    id: lithuania
-    question: Lithuania
-  - answer: 653000
-    id: luxembourg
-    question: Luxembourg
-  - answer: 531000
-    id: malta
-    question: Malta
-  - answer: 2539000
-    id: moldova
-    question: Moldova
-  - answer: 36000
-    id: monaco
-    question: Monaco
-  - answer: 617000
-    id: montenegro
-    question: Montenegro
-  - answer: 17701000
-    id: netherlands
-    question: Netherlands
-  - answer: 2058000
-    id: north_macedonia
-    question: North Macedonia
-  - answer: 5457000
-    id: norway
-    question: Norway
-  - answer: 36822000
-    id: poland
-    question: Poland
-  - answer: 10410000
-    id: portugal
-    question: Portugal
-  - answer: 19047000
-    id: romania
-    question: Romania
-  - answer: 144237000
-    id: russian_federation
-    question: Russian Federation
-  - answer: 34000
-    id: san_marino
-    question: San Marino
-  - answer: 6664000
-    id: serbia
-    question: Serbia
-  - answer: 5432000
-    id: slovakia
-    question: Slovakia
-  - answer: 2112000
-    id: slovenia
-    question: Slovenia
-  - answer: 47778000
-    id: spain
-    question: Spain
-  - answer: 10487000
-    id: sweden
-    question: Sweden
-  - answer: 8776000
-    id: switzerland
-    question: Switzerland
-  - answer: 38000000
-    id: ukraine
-    question: Ukraine
-  - answer: 66971000
-    id: united_kingdom
-    question: United Kingdom
-  question_prefix: 'What is the population of '
-  range: 0.025
 name: europe_populations
 type_: numeric_range
+items:
+- id: albania
+  question: Albania
+  answer: 2778000
+- id: andorra
+  question: Andorra
+  answer: 80000
+- id: austria
+  question: Austria
+  answer: 9042000
+- id: belarus
+  question: Belarus
+  answer: 9228000
+- id: belgium
+  question: Belgium
+  answer: 11686000
+- id: bosnia_and_herzegovina
+  question: Bosnia and Herzegovina
+  answer: 3234000
+- id: bulgaria
+  question: Bulgaria
+  answer: 6465000
+- id: croatia
+  question: Croatia
+  answer: 3856000
+- id: czech_republic
+  question: Czech Republic
+  answer: 10672000
+- id: denmark
+  question: Denmark
+  answer: 5903000
+- id: estonia
+  question: Estonia
+  answer: 1349000
+- id: faroe_islands
+  question: Faroe Islands
+  answer: 53000
+- id: finland
+  question: Finland
+  answer: 5556000
+- id: france
+  question: France
+  answer: 67971000
+- id: germany
+  question: Germany
+  answer: 83798000
+- id: gibraltar
+  question: Gibraltar
+  answer: 33000
+- id: greece
+  question: Greece
+  answer: 10427000
+- id: hungary
+  question: Hungary
+  answer: 9643000
+- id: iceland
+  question: Iceland
+  answer: 382000
+- id: ireland
+  question: Ireland
+  answer: 5127000
+- id: italy
+  question: Italy
+  answer: 58940000
+- id: latvia
+  question: Latvia
+  answer: 1879000
+- id: liechtenstein
+  question: Liechtenstein
+  answer: 39000
+- id: lithuania
+  question: Lithuania
+  answer: 2832000
+- id: luxembourg
+  question: Luxembourg
+  answer: 653000
+- id: malta
+  question: Malta
+  answer: 531000
+- id: moldova
+  question: Moldova
+  answer: 2539000
+- id: monaco
+  question: Monaco
+  answer: 36000
+- id: montenegro
+  question: Montenegro
+  answer: 617000
+- id: netherlands
+  question: Netherlands
+  answer: 17701000
+- id: north_macedonia
+  question: North Macedonia
+  answer: 2058000
+- id: norway
+  question: Norway
+  answer: 5457000
+- id: poland
+  question: Poland
+  answer: 36822000
+- id: portugal
+  question: Portugal
+  answer: 10410000
+- id: romania
+  question: Romania
+  answer: 19047000
+- id: russian_federation
+  question: Russian Federation
+  answer: 144237000
+- id: san_marino
+  question: San Marino
+  answer: 34000
+- id: serbia
+  question: Serbia
+  answer: 6664000
+- id: slovakia
+  question: Slovakia
+  answer: 5432000
+- id: slovenia
+  question: Slovenia
+  answer: 2112000
+- id: spain
+  question: Spain
+  answer: 47778000
+- id: sweden
+  question: Sweden
+  answer: 10487000
+- id: switzerland
+  question: Switzerland
+  answer: 8776000
+- id: ukraine
+  question: Ukraine
+  answer: 38000000
+- id: united_kingdom
+  question: United Kingdom
+  answer: 66971000
+data:
+  question_prefix: 'What is the population of '
+  range: 0.025

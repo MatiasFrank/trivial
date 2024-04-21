@@ -1,123 +1,123 @@
-data:
-  items:
-  - answer: 28748
-    id: albania
-    question: Albania
-  - answer: 83859
-    id: austria
-    question: Austria
-  - answer: 207600
-    id: belarus
-    question: Belarus
-  - answer: 30518
-    id: belgium
-    question: Belgium
-  - answer: 51197
-    id: bosnia_and_herzegovina
-    question: Bosnia and Herzegovina
-  - answer: 110994
-    id: bulgaria
-    question: Bulgaria
-  - answer: 56538
-    id: croatia
-    question: Croatia
-  - answer: 78866
-    id: czech_republic
-    question: Czech Republic
-  - answer: 43094
-    id: denmark
-    question: Denmark
-  - answer: 45227
-    id: estonia
-    question: Estonia
-  - answer: 1399
-    id: faroe_islands
-    question: Faroe Islands
-  - answer: 338145
-    id: finland
-    question: Finland
-  - answer: 551500
-    id: france
-    question: France
-  - answer: 357022
-    id: germany
-    question: Germany
-  - answer: 131626
-    id: greece
-    question: Greece
-  - answer: 93030
-    id: hungary
-    question: Hungary
-  - answer: 103000
-    id: iceland
-    question: Iceland
-  - answer: 70273
-    id: ireland
-    question: Ireland
-  - answer: 301316
-    id: italy
-    question: Italy
-  - answer: 64589
-    id: latvia
-    question: Latvia
-  - answer: 65301
-    id: lithuania
-    question: Lithuania
-  - answer: 2586
-    id: luxembourg
-    question: Luxembourg
-  - answer: 33851
-    id: moldova
-    question: Moldova
-  - answer: 41526
-    id: netherlands
-    question: Netherlands
-  - answer: 25713
-    id: north_macedonia
-    question: North Macedonia
-  - answer: 323877
-    id: norway
-    question: Norway
-  - answer: 323250
-    id: poland
-    question: Poland
-  - answer: 91982
-    id: portugal
-    question: Portugal
-  - answer: 238391
-    id: romania
-    question: Romania
-  - answer: 17075400
-    id: russian_federation
-    question: Russian Federation
-  - answer: 88361
-    id: serbia
-    question: Serbia
-  - answer: 49012
-    id: slovakia
-    question: Slovakia
-  - answer: 20256
-    id: slovenia
-    question: Slovenia
-  - answer: 505992
-    id: spain
-    question: Spain
-  - answer: 62422
-    id: svalbard_and_jan_mayen
-    question: Svalbard and Jan Mayen
-  - answer: 449964
-    id: sweden
-    question: Sweden
-  - answer: 41284
-    id: switzerland
-    question: Switzerland
-  - answer: 603700
-    id: ukraine
-    question: Ukraine
-  - answer: 242900
-    id: united_kingdom
-    question: United Kingdom
-  question_prefix: 'What is the area (km^2) of '
-  range: 0.025
 name: europe_areas
 type_: numeric_range
+items:
+- id: albania
+  question: Albania
+  answer: 28748
+- id: austria
+  question: Austria
+  answer: 83859
+- id: belarus
+  question: Belarus
+  answer: 207600
+- id: belgium
+  question: Belgium
+  answer: 30518
+- id: bosnia_and_herzegovina
+  question: Bosnia and Herzegovina
+  answer: 51197
+- id: bulgaria
+  question: Bulgaria
+  answer: 110994
+- id: croatia
+  question: Croatia
+  answer: 56538
+- id: czech_republic
+  question: Czech Republic
+  answer: 78866
+- id: denmark
+  question: Denmark
+  answer: 43094
+- id: estonia
+  question: Estonia
+  answer: 45227
+- id: faroe_islands
+  question: Faroe Islands
+  answer: 1399
+- id: finland
+  question: Finland
+  answer: 338145
+- id: france
+  question: France
+  answer: 551500
+- id: germany
+  question: Germany
+  answer: 357022
+- id: greece
+  question: Greece
+  answer: 131626
+- id: hungary
+  question: Hungary
+  answer: 93030
+- id: iceland
+  question: Iceland
+  answer: 103000
+- id: ireland
+  question: Ireland
+  answer: 70273
+- id: italy
+  question: Italy
+  answer: 301316
+- id: latvia
+  question: Latvia
+  answer: 64589
+- id: lithuania
+  question: Lithuania
+  answer: 65301
+- id: luxembourg
+  question: Luxembourg
+  answer: 2586
+- id: moldova
+  question: Moldova
+  answer: 33851
+- id: netherlands
+  question: Netherlands
+  answer: 41526
+- id: north_macedonia
+  question: North Macedonia
+  answer: 25713
+- id: norway
+  question: Norway
+  answer: 323877
+- id: poland
+  question: Poland
+  answer: 323250
+- id: portugal
+  question: Portugal
+  answer: 91982
+- id: romania
+  question: Romania
+  answer: 238391
+- id: russian_federation
+  question: Russian Federation
+  answer: 17075400
+- id: serbia
+  question: Serbia
+  answer: 88361
+- id: slovakia
+  question: Slovakia
+  answer: 49012
+- id: slovenia
+  question: Slovenia
+  answer: 20256
+- id: spain
+  question: Spain
+  answer: 505992
+- id: svalbard_and_jan_mayen
+  question: Svalbard and Jan Mayen
+  answer: 62422
+- id: sweden
+  question: Sweden
+  answer: 449964
+- id: switzerland
+  question: Switzerland
+  answer: 41284
+- id: ukraine
+  question: Ukraine
+  answer: 603700
+- id: united_kingdom
+  question: United Kingdom
+  answer: 242900
+data:
+  question_prefix: 'What is the area (km^2) of '
+  range: 0.025

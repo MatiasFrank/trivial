@@ -1,209 +1,209 @@
-data:
-  items:
-  - answers:
-    - Tirana
-    id: albania
-    question: Albania
-  - answers:
-    - Andorra la Vella
-    id: andorra
-    question: Andorra
-  - answers:
-    - Vienna
-    id: austria
-    question: Austria
-  - answers:
-    - Minsk
-    id: belarus
-    question: Belarus
-  - answers:
-    - Brussels
-    id: belgium
-    question: Belgium
-  - answers:
-    - Sarajevo
-    id: bosnia_and_herzegovina
-    question: Bosnia and Herzegovina
-  - answers:
-    - Sofia
-    id: bulgaria
-    question: Bulgaria
-  - answers:
-    - Zagreb
-    id: croatia
-    question: Croatia
-  - answers:
-    - Prague
-    id: czech_republic
-    question: Czech Republic
-  - answers:
-    - Copenhagen
-    id: denmark
-    question: Denmark
-  - answers:
-    - London
-    id: england
-    question: England
-  - answers:
-    - Tallinn
-    id: estonia
-    question: Estonia
-  - answers:
-    - Torshavn
-    id: faroe_islands
-    question: Faroe Islands
-  - answers:
-    - Helsinki
-    id: finland
-    question: Finland
-  - answers:
-    - Paris
-    id: france
-    question: France
-  - answers:
-    - Berlin
-    id: germany
-    question: Germany
-  - answers:
-    - Gibraltar
-    id: gibraltar
-    question: Gibraltar
-  - answers:
-    - Athens
-    id: greece
-    question: Greece
-  - answers:
-    - Budapest
-    id: hungary
-    question: Hungary
-  - answers:
-    - Reykjavk
-    id: iceland
-    question: Iceland
-  - answers:
-    - Dublin
-    id: ireland
-    question: Ireland
-  - answers:
-    - Rome
-    id: italy
-    question: Italy
-  - answers:
-    - Riga
-    id: latvia
-    question: Latvia
-  - answers:
-    - Vaduz
-    id: liechtenstein
-    question: Liechtenstein
-  - answers:
-    - Vilnius
-    id: lithuania
-    question: Lithuania
-  - answers:
-    - Luxembourg
-    id: luxembourg
-    question: Luxembourg
-  - answers:
-    - Valletta
-    id: malta
-    question: Malta
-  - answers:
-    - Chisinau
-    id: moldova
-    question: Moldova
-  - answers:
-    - Monaco
-    id: monaco
-    question: Monaco
-  - answers:
-    - Podgorica
-    id: montenegro
-    question: Montenegro
-  - answers:
-    - Amsterdam
-    id: netherlands
-    question: Netherlands
-  - answers:
-    - Skopje
-    id: north_macedonia
-    question: North Macedonia
-  - answers:
-    - Belfast
-    id: northern_ireland
-    question: Northern Ireland
-  - answers:
-    - Oslo
-    id: norway
-    question: Norway
-  - answers:
-    - Warsaw
-    id: poland
-    question: Poland
-  - answers:
-    - Lisbon
-    id: portugal
-    question: Portugal
-  - answers:
-    - Bucharest
-    id: romania
-    question: Romania
-  - answers:
-    - Moscow
-    id: russian_federation
-    question: Russian Federation
-  - answers:
-    - San Marino
-    id: san_marino
-    question: San Marino
-  - answers:
-    - Edinburgh
-    id: scotland
-    question: Scotland
-  - answers:
-    - Belgrade
-    id: serbia
-    question: Serbia
-  - answers:
-    - Bratislava
-    id: slovakia
-    question: Slovakia
-  - answers:
-    - Ljubljana
-    id: slovenia
-    question: Slovenia
-  - answers:
-    - Madrid
-    id: spain
-    question: Spain
-  - answers:
-    - Longyearbyen
-    id: svalbard_and_jan_mayen
-    question: Svalbard and Jan Mayen
-  - answers:
-    - Stockholm
-    id: sweden
-    question: Sweden
-  - answers:
-    - Bern
-    id: switzerland
-    question: Switzerland
-  - answers:
-    - Kyiv
-    id: ukraine
-    question: Ukraine
-  - answers:
-    - London
-    id: united_kingdom
-    question: United Kingdom
-  - answers:
-    - Vatican City
-    id: vatican_city
-    question: Vatican City
-  - answers:
-    - Cardiff
-    id: wales
-    question: Wales
-  question_prefix: 'What is the capital of '
 name: europe_capitals
 type_: default
+items:
+- id: albania
+  question: Albania
+  answers:
+  - Tirana
+- id: andorra
+  question: Andorra
+  answers:
+  - Andorra la Vella
+- id: austria
+  question: Austria
+  answers:
+  - Vienna
+- id: belarus
+  question: Belarus
+  answers:
+  - Minsk
+- id: belgium
+  question: Belgium
+  answers:
+  - Brussels
+- id: bosnia_and_herzegovina
+  question: Bosnia and Herzegovina
+  answers:
+  - Sarajevo
+- id: bulgaria
+  question: Bulgaria
+  answers:
+  - Sofia
+- id: croatia
+  question: Croatia
+  answers:
+  - Zagreb
+- id: czech_republic
+  question: Czech Republic
+  answers:
+  - Prague
+- id: denmark
+  question: Denmark
+  answers:
+  - Copenhagen
+- id: england
+  question: England
+  answers:
+  - London
+- id: estonia
+  question: Estonia
+  answers:
+  - Tallinn
+- id: faroe_islands
+  question: Faroe Islands
+  answers:
+  - Torshavn
+- id: finland
+  question: Finland
+  answers:
+  - Helsinki
+- id: france
+  question: France
+  answers:
+  - Paris
+- id: germany
+  question: Germany
+  answers:
+  - Berlin
+- id: gibraltar
+  question: Gibraltar
+  answers:
+  - Gibraltar
+- id: greece
+  question: Greece
+  answers:
+  - Athens
+- id: hungary
+  question: Hungary
+  answers:
+  - Budapest
+- id: iceland
+  question: Iceland
+  answers:
+  - Reykjavk
+- id: ireland
+  question: Ireland
+  answers:
+  - Dublin
+- id: italy
+  question: Italy
+  answers:
+  - Rome
+- id: latvia
+  question: Latvia
+  answers:
+  - Riga
+- id: liechtenstein
+  question: Liechtenstein
+  answers:
+  - Vaduz
+- id: lithuania
+  question: Lithuania
+  answers:
+  - Vilnius
+- id: luxembourg
+  question: Luxembourg
+  answers:
+  - Luxembourg
+- id: malta
+  question: Malta
+  answers:
+  - Valletta
+- id: moldova
+  question: Moldova
+  answers:
+  - Chisinau
+- id: monaco
+  question: Monaco
+  answers:
+  - Monaco
+- id: montenegro
+  question: Montenegro
+  answers:
+  - Podgorica
+- id: netherlands
+  question: Netherlands
+  answers:
+  - Amsterdam
+- id: north_macedonia
+  question: North Macedonia
+  answers:
+  - Skopje
+- id: northern_ireland
+  question: Northern Ireland
+  answers:
+  - Belfast
+- id: norway
+  question: Norway
+  answers:
+  - Oslo
+- id: poland
+  question: Poland
+  answers:
+  - Warsaw
+- id: portugal
+  question: Portugal
+  answers:
+  - Lisbon
+- id: romania
+  question: Romania
+  answers:
+  - Bucharest
+- id: russian_federation
+  question: Russian Federation
+  answers:
+  - Moscow
+- id: san_marino
+  question: San Marino
+  answers:
+  - San Marino
+- id: scotland
+  question: Scotland
+  answers:
+  - Edinburgh
+- id: serbia
+  question: Serbia
+  answers:
+  - Belgrade
+- id: slovakia
+  question: Slovakia
+  answers:
+  - Bratislava
+- id: slovenia
+  question: Slovenia
+  answers:
+  - Ljubljana
+- id: spain
+  question: Spain
+  answers:
+  - Madrid
+- id: svalbard_and_jan_mayen
+  question: Svalbard and Jan Mayen
+  answers:
+  - Longyearbyen
+- id: sweden
+  question: Sweden
+  answers:
+  - Stockholm
+- id: switzerland
+  question: Switzerland
+  answers:
+  - Bern
+- id: ukraine
+  question: Ukraine
+  answers:
+  - Kyiv
+- id: united_kingdom
+  question: United Kingdom
+  answers:
+  - London
+- id: vatican_city
+  question: Vatican City
+  answers:
+  - Vatican City
+- id: wales
+  question: Wales
+  answers:
+  - Cardiff
+data:
+  question_prefix: 'What is the capital of '

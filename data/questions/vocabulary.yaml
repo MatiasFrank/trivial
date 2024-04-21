@@ -1,33 +1,39 @@
-data:
-  words:
+data: {}
+items:
   - word: inure
+    id: inure
     definition: accustom (someone) to something, especially something unpleasant.
     example: these children have been inured to violence
     translations:
       - vænne
   - word: persnickety
+    id: persnickety
     definition: placing too much emphasis on trivial or minor details; fussy.
     example: she's very persnickety about her food
     translations:
       - pertentlig
   - word: ineffable
+    id: ineffable
     definition: unspeakable, incapable of being expressed through words.
     example: the ineffable mysteries of the soul
     translations:
       - usigelig
       - ubeskrivelig
   - word: flibbertigibbet
+    id: flibbertigibbet
     definition: a frivolous, flighty, or excessively talkative person. (achaic) gossip
     example: Her reputation as a flibbertigibbet made her an ureliable friend.
     translations:
       - forfløjent pigebarn (gammeldags)
       - sladretaske (gammeldags)
   - word: mendacious
+    id: mendacious
     definition: dishonest and untruthful in speech or conduct
     example: The mendacious politician made impossible promises.
     translations:
       - løgnagtig
   - word: pernicious
+    id: pernicious
     definition: extremely destructive or harmful
     example: Not being able to communicate can be pernicious to any relationship
     translations:
@@ -35,40 +41,47 @@ data:
       - fordærvelig
       - ondartet
   - word: pugnacious
+    id: pugnacious
     definition: quarrelsome, combative
     example: his public statements became increasingly pugnacious
     translations:
       - stridbar
       - kamplysten
   - word: trepidation
+    id: trepidation
     definition: a feeling of fear or anxiety about something that may happen
     example: the men set off in fear and trepidation
     translations:
       - ængstelse
       - (om bevægelse) bæven
   - word: resplendent
+    id: resplendent
     definition: brilliant, shining
     example: she was resplendent in a sea-green dress
     translations:
       - strålende
       - pragtfuld
   - word: puerile
+    id: puerile
     definition: childish, immature or silly not appropiate for an adult
     example: a puerile argument
     translations:
       - barnagtig
   - word: loquacious
+    id: loquacious
     definition: talkative or chatty
     example: never loquacious, Sarah was now totally lost for words
     translations:
       - snakkesalig
   - word: zephyr
+    id: zephyr
     definition: a gentle breeze
     example: In European tradition, a zephyr is a light wind or a west wind, named after Zephyrus, the Greek god or personification of the west wind.
     translations:
       - zefyr
       - mild vind
   - word: beguile
+    id: beguile
     definition: charm or enchant (someone), often in a deceptive way
     example: he beguiled the voters with his good looks
     translations:
@@ -76,51 +89,60 @@ data:
       - fortrylle
       - fængsle
   - word: disconsolate
+    id: disconsolate
     definition: deeply unhappy and without hope
     example: she left Fritz looking disconsolate
     translations:
       - utrøstelig
       - fortivlet
   - word: opprobrium
+    id: opprobrium
     definition: shameful act; public disgrace. Also harsh criticism or censure
     example: the opprobrium of being closely associated with gangsters
     translations:
       - vanære
       - forsmædelse
   - word: acquiesce
+    id: acquiesce
     definition: to agree without protesting
     example: Sara acquiesced in his decision
     translations:
       - samtykke
       - gå med til
   - word: somnolent
+    id: somnolent
     definition: sleepy, drowsy
     example: The gray rainy day made everyone somnolent.
     translations:
       - døsig
       - søvnig
   - word: equanimity
+    id: equanimity
     definition: composure, steadiness of mind under stress
     example: she accepted both the good and the bad with equanimity
     translations:
       - sindsro
       - sindsligevægtig
   - word: nadir 
+    id: nadir 
     definition: the worst moment; the lowest point of something
     example: asking that word was the nadir of my career
     translations:
       - lavpunkt
   - word: accede
+    id: accede
     definition: agree to a demand, request, or treaty.
     example: the authorities did not accede to the strikers' demands
     translations:
       - acceptere
   - word: occipital
+    id: occipital
     definition: relating to or situated in the back of the head.
     example: the occipital bone
     translations:
       - nakke-
   - word: expunge
+    id: expunge
     definition: to obliterate, eradicate
     example: the kind of man that could expunge an unsatisfactory incident from his memory
     translations:
@@ -128,12 +150,14 @@ data:
       - stryge
       - udslette
   - word: raucous
+    id: raucous
     definition: loud, boisterous
     example: raucous youths
     translations:
       - støjende
       - larmende
   - word: engender
+    id: engender
     definition: cause or give rise to (a feeling, situation, or condition)
     example: the issue engendered continuing controversy
     translations:
@@ -141,33 +165,39 @@ data:
       - frembringe
       - afføde
   - word: euphonious
+    id: euphonious
     definition: pleasant-souding, melodious
     example: a stream of fine, euphonious phrases
     translations:
       - vellydende
   - word: deft
+    id: deft
     definition: skillful, capable
     example: a deft piece of footwork
     translations:
       - fingernem
       - ferm
   - word: craven
+    id: craven
     definition: lacking the least bit of courage. Contemptibly fainthearted.
     example: a craven abdication of his moral duty
     translations:
       - fej
   - word: incisive
+    id: incisive
     definition: clear, sharp, direct
     example: she was an incisive critic
     translations:
       - skarp
   - word: larceny
+    id: larceny
     definition: Obtaining another's property by theft or trickery
     example: The young man engaged in larceny to gain her purse
     translations:
       - tyveri
       - rapseri
   - word: languid
+    id: languid
     definition: sluggish from fatigue or weakness
     example: his languid demeanour irritated her
     translations:
@@ -177,17 +207,20 @@ data:
       - dvask
       - apatisk
   - word: bonhomie 
+    id: bonhomie 
     definition: good-natured easy friendliness
     example: he exuded good humour and bonhomie
     translations:
       - gemytlighed
   - word: fetter
+    id: fetter
     definition: to chain, restrain
     example: The dog was fettered to the parking meter
     translations:
       - lænke
       - binde
   - word: sinuous
+    id: sinuous
     definition: lithe, serpentine
     example: the river follows a sinuous trail through the dale
     translations:
@@ -195,27 +228,25 @@ data:
       - snoet
       - snoet
   - word: equivocal
+    id: equivocal
     definition: (adj.) ambiguousm, uncertain, undecided
     example: the results of the investigation were equivocal
     translations:
       - tvetydig
       - flertydig
   - word: promulgate
+    id: promulgate
     definition: to proclaim, make known
     example: these objectives have to be promulgated within the organization
     translations:
       - offentliggøre
       - kundgøre
   - word: burnish
+    id: burnish
     definition: to polish, shine
     example: to burnish copper, I would probably use a drill with a pad attached to the end
     translations:
       - polere
       - pudse
-  # - word: 
-  #   definition:
-  #   example:
-  #   translations:
-  #     - 
 name: vocabulary
 type_: vocab

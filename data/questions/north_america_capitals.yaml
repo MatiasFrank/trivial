@@ -1,153 +1,153 @@
-data:
-  items:
-  - answers:
-    - The Valley
-    id: anguilla
-    question: Anguilla
-  - answers:
-    - Saint John's
-    id: antigua_and_barbuda
-    question: Antigua and Barbuda
-  - answers:
-    - Oranjestad
-    id: aruba
-    question: Aruba
-  - answers:
-    - Nassau
-    id: bahamas
-    question: Bahamas
-  - answers:
-    - Bridgetown
-    id: barbados
-    question: Barbados
-  - answers:
-    - Belmopan
-    id: belize
-    question: Belize
-  - answers:
-    - Hamilton
-    id: bermuda
-    question: Bermuda
-  - answers:
-    - Ottawa
-    id: canada
-    question: Canada
-  - answers:
-    - George Town
-    id: cayman_islands
-    question: Cayman Islands
-  - answers:
-    - San Jos
-    id: costa_rica
-    question: Costa Rica
-  - answers:
-    - Havana
-    id: cuba
-    question: Cuba
-  - answers:
-    - Roseau
-    id: dominica
-    question: Dominica
-  - answers:
-    - Santo Domingo
-    id: dominican_republic
-    question: Dominican Republic
-  - answers:
-    - San Salvador
-    id: el_salvador
-    question: El Salvador
-  - answers:
-    - Nuuk
-    id: greenland
-    question: Greenland
-  - answers:
-    - Saint George's
-    id: grenada
-    question: Grenada
-  - answers:
-    - Basse-Terre
-    id: guadeloupe
-    question: Guadeloupe
-  - answers:
-    - Guatemala City
-    id: guatemala
-    question: Guatemala
-  - answers:
-    - Port-au-Prince
-    id: haiti
-    question: Haiti
-  - answers:
-    - Tegucigalpa
-    id: honduras
-    question: Honduras
-  - answers:
-    - Kingston
-    id: jamaica
-    question: Jamaica
-  - answers:
-    - Fort-de-France
-    id: martinique
-    question: Martinique
-  - answers:
-    - Mexico City
-    id: mexico
-    question: Mexico
-  - answers:
-    - Plymouth
-    id: montserrat
-    question: Montserrat
-  - answers:
-    - Willemstad
-    id: netherlands_antilles
-    question: Netherlands Antilles
-  - answers:
-    - Managua
-    id: nicaragua
-    question: Nicaragua
-  - answers:
-    - Panama City
-    id: panama
-    question: Panama
-  - answers:
-    - San Juan
-    id: puerto_rico
-    question: Puerto Rico
-  - answers:
-    - Basseterre
-    id: saint_kitts_and_nevis
-    question: Saint Kitts and Nevis
-  - answers:
-    - Castries
-    id: saint_lucia
-    question: Saint Lucia
-  - answers:
-    - Saint-Pierre
-    id: saint_pierre_and_miquelon
-    question: Saint Pierre and Miquelon
-  - answers:
-    - Kingstown
-    id: saint_vincent_and_the_grenadines
-    question: Saint Vincent and the Grenadines
-  - answers:
-    - Port-of-Spain
-    id: trinidad_and_tobago
-    question: Trinidad and Tobago
-  - answers:
-    - Cockburn Town
-    id: turks_and_caicos_islands
-    question: Turks and Caicos Islands
-  - answers:
-    - Washington
-    id: united_states
-    question: United States
-  - answers:
-    - Road Town
-    id: virgin_islands_british
-    question: Virgin Islands, British
-  - answers:
-    - Charlotte Amalie
-    id: virgin_islands_u.s.
-    question: Virgin Islands, U.S.
-  question_prefix: 'What is the capital of '
 name: north_america_capitals
 type_: default
+items:
+- id: anguilla
+  question: Anguilla
+  answers:
+  - The Valley
+- id: antigua_and_barbuda
+  question: Antigua and Barbuda
+  answers:
+  - Saint John's
+- id: aruba
+  question: Aruba
+  answers:
+  - Oranjestad
+- id: bahamas
+  question: Bahamas
+  answers:
+  - Nassau
+- id: barbados
+  question: Barbados
+  answers:
+  - Bridgetown
+- id: belize
+  question: Belize
+  answers:
+  - Belmopan
+- id: bermuda
+  question: Bermuda
+  answers:
+  - Hamilton
+- id: canada
+  question: Canada
+  answers:
+  - Ottawa
+- id: cayman_islands
+  question: Cayman Islands
+  answers:
+  - George Town
+- id: costa_rica
+  question: Costa Rica
+  answers:
+  - San Jos
+- id: cuba
+  question: Cuba
+  answers:
+  - Havana
+- id: dominica
+  question: Dominica
+  answers:
+  - Roseau
+- id: dominican_republic
+  question: Dominican Republic
+  answers:
+  - Santo Domingo
+- id: el_salvador
+  question: El Salvador
+  answers:
+  - San Salvador
+- id: greenland
+  question: Greenland
+  answers:
+  - Nuuk
+- id: grenada
+  question: Grenada
+  answers:
+  - Saint George's
+- id: guadeloupe
+  question: Guadeloupe
+  answers:
+  - Basse-Terre
+- id: guatemala
+  question: Guatemala
+  answers:
+  - Guatemala City
+- id: haiti
+  question: Haiti
+  answers:
+  - Port-au-Prince
+- id: honduras
+  question: Honduras
+  answers:
+  - Tegucigalpa
+- id: jamaica
+  question: Jamaica
+  answers:
+  - Kingston
+- id: martinique
+  question: Martinique
+  answers:
+  - Fort-de-France
+- id: mexico
+  question: Mexico
+  answers:
+  - Mexico City
+- id: montserrat
+  question: Montserrat
+  answers:
+  - Plymouth
+- id: netherlands_antilles
+  question: Netherlands Antilles
+  answers:
+  - Willemstad
+- id: nicaragua
+  question: Nicaragua
+  answers:
+  - Managua
+- id: panama
+  question: Panama
+  answers:
+  - Panama City
+- id: puerto_rico
+  question: Puerto Rico
+  answers:
+  - San Juan
+- id: saint_kitts_and_nevis
+  question: Saint Kitts and Nevis
+  answers:
+  - Basseterre
+- id: saint_lucia
+  question: Saint Lucia
+  answers:
+  - Castries
+- id: saint_pierre_and_miquelon
+  question: Saint Pierre and Miquelon
+  answers:
+  - Saint-Pierre
+- id: saint_vincent_and_the_grenadines
+  question: Saint Vincent and the Grenadines
+  answers:
+  - Kingstown
+- id: trinidad_and_tobago
+  question: Trinidad and Tobago
+  answers:
+  - Port-of-Spain
+- id: turks_and_caicos_islands
+  question: Turks and Caicos Islands
+  answers:
+  - Cockburn Town
+- id: united_states
+  question: United States
+  answers:
+  - Washington
+- id: virgin_islands_british
+  question: Virgin Islands, British
+  answers:
+  - Road Town
+- id: virgin_islands_u.s.
+  question: Virgin Islands, U.S.
+  answers:
+  - Charlotte Amalie
+data:
+  question_prefix: 'What is the capital of '

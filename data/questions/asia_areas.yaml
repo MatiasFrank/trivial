@@ -1,144 +1,144 @@
-data:
-  items:
-  - answer: 652090
-    id: afghanistan
-    question: Afghanistan
-  - answer: 29800
-    id: armenia
-    question: Armenia
-  - answer: 86600
-    id: azerbaijan
-    question: Azerbaijan
-  - answer: 143998
-    id: bangladesh
-    question: Bangladesh
-  - answer: 47000
-    id: bhutan
-    question: Bhutan
-  - answer: 5765
-    id: brunei
-    question: Brunei
-  - answer: 181035
-    id: cambodia
-    question: Cambodia
-  - answer: 9572900
-    id: china
-    question: China
-  - answer: 9251
-    id: cyprus
-    question: Cyprus
-  - answer: 14874
-    id: east_timor
-    question: East Timor
-  - answer: 69700
-    id: georgia
-    question: Georgia
-  - answer: 1075
-    id: hong_kong
-    question: Hong Kong
-  - answer: 3287263
-    id: india
-    question: India
-  - answer: 1904569
-    id: indonesia
-    question: Indonesia
-  - answer: 1648195
-    id: iran
-    question: Iran
-  - answer: 438317
-    id: iraq
-    question: Iraq
-  - answer: 21056
-    id: israel
-    question: Israel
-  - answer: 377829
-    id: japan
-    question: Japan
-  - answer: 88946
-    id: jordan
-    question: Jordan
-  - answer: 2724900
-    id: kazakhstan
-    question: Kazakhstan
-  - answer: 17818
-    id: kuwait
-    question: Kuwait
-  - answer: 199900
-    id: kyrgyzstan
-    question: Kyrgyzstan
-  - answer: 236800
-    id: laos
-    question: Laos
-  - answer: 10400
-    id: lebanon
-    question: Lebanon
-  - answer: 329758
-    id: malaysia
-    question: Malaysia
-  - answer: 1566500
-    id: mongolia
-    question: Mongolia
-  - answer: 676578
-    id: myanmar
-    question: Myanmar
-  - answer: 147181
-    id: nepal
-    question: Nepal
-  - answer: 120538
-    id: north_korea
-    question: North Korea
-  - answer: 309500
-    id: oman
-    question: Oman
-  - answer: 796095
-    id: pakistan
-    question: Pakistan
-  - answer: 6257
-    id: palestine
-    question: Palestine
-  - answer: 300000
-    id: philippines
-    question: Philippines
-  - answer: 11000
-    id: qatar
-    question: Qatar
-  - answer: 2149690
-    id: saudi_arabia
-    question: Saudi Arabia
-  - answer: 99434
-    id: south_korea
-    question: South Korea
-  - answer: 65610
-    id: sri_lanka
-    question: Sri Lanka
-  - answer: 185180
-    id: syria
-    question: Syria
-  - answer: 143100
-    id: tajikistan
-    question: Tajikistan
-  - answer: 513115
-    id: thailand
-    question: Thailand
-  - answer: 774815
-    id: turkey
-    question: Turkey
-  - answer: 488100
-    id: turkmenistan
-    question: Turkmenistan
-  - answer: 83600
-    id: united_arab_emirates
-    question: United Arab Emirates
-  - answer: 447400
-    id: uzbekistan
-    question: Uzbekistan
-  - answer: 331689
-    id: vietnam
-    question: Vietnam
-  - answer: 527968
-    id: yemen
-    question: Yemen
-  question_prefix: 'What is the area (km^2) of '
-  range: 0.025
 name: asia_areas
 type_: numeric_range
+items:
+- id: afghanistan
+  question: Afghanistan
+  answer: 652090
+- id: armenia
+  question: Armenia
+  answer: 29800
+- id: azerbaijan
+  question: Azerbaijan
+  answer: 86600
+- id: bangladesh
+  question: Bangladesh
+  answer: 143998
+- id: bhutan
+  question: Bhutan
+  answer: 47000
+- id: brunei
+  question: Brunei
+  answer: 5765
+- id: cambodia
+  question: Cambodia
+  answer: 181035
+- id: china
+  question: China
+  answer: 9572900
+- id: cyprus
+  question: Cyprus
+  answer: 9251
+- id: east_timor
+  question: East Timor
+  answer: 14874
+- id: georgia
+  question: Georgia
+  answer: 69700
+- id: hong_kong
+  question: Hong Kong
+  answer: 1075
+- id: india
+  question: India
+  answer: 3287263
+- id: indonesia
+  question: Indonesia
+  answer: 1904569
+- id: iran
+  question: Iran
+  answer: 1648195
+- id: iraq
+  question: Iraq
+  answer: 438317
+- id: israel
+  question: Israel
+  answer: 21056
+- id: japan
+  question: Japan
+  answer: 377829
+- id: jordan
+  question: Jordan
+  answer: 88946
+- id: kazakhstan
+  question: Kazakhstan
+  answer: 2724900
+- id: kuwait
+  question: Kuwait
+  answer: 17818
+- id: kyrgyzstan
+  question: Kyrgyzstan
+  answer: 199900
+- id: laos
+  question: Laos
+  answer: 236800
+- id: lebanon
+  question: Lebanon
+  answer: 10400
+- id: malaysia
+  question: Malaysia
+  answer: 329758
+- id: mongolia
+  question: Mongolia
+  answer: 1566500
+- id: myanmar
+  question: Myanmar
+  answer: 676578
+- id: nepal
+  question: Nepal
+  answer: 147181
+- id: north_korea
+  question: North Korea
+  answer: 120538
+- id: oman
+  question: Oman
+  answer: 309500
+- id: pakistan
+  question: Pakistan
+  answer: 796095
+- id: palestine
+  question: Palestine
+  answer: 6257
+- id: philippines
+  question: Philippines
+  answer: 300000
+- id: qatar
+  question: Qatar
+  answer: 11000
+- id: saudi_arabia
+  question: Saudi Arabia
+  answer: 2149690
+- id: south_korea
+  question: South Korea
+  answer: 99434
+- id: sri_lanka
+  question: Sri Lanka
+  answer: 65610
+- id: syria
+  question: Syria
+  answer: 185180
+- id: tajikistan
+  question: Tajikistan
+  answer: 143100
+- id: thailand
+  question: Thailand
+  answer: 513115
+- id: turkey
+  question: Turkey
+  answer: 774815
+- id: turkmenistan
+  question: Turkmenistan
+  answer: 488100
+- id: united_arab_emirates
+  question: United Arab Emirates
+  answer: 83600
+- id: uzbekistan
+  question: Uzbekistan
+  answer: 447400
+- id: vietnam
+  question: Vietnam
+  answer: 331689
+- id: yemen
+  question: Yemen
+  answer: 527968
+data:
+  question_prefix: 'What is the area (km^2) of '
+  range: 0.025

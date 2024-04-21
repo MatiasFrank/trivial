@@ -1,66 +1,66 @@
-data:
-  items:
-  - answer: 13878
-    id: bahamas
-    question: Bahamas
-  - answer: 22696
-    id: belize
-    question: Belize
-  - answer: 9970610
-    id: canada
-    question: Canada
-  - answer: 51100
-    id: costa_rica
-    question: Costa Rica
-  - answer: 110861
-    id: cuba
-    question: Cuba
-  - answer: 48511
-    id: dominican_republic
-    question: Dominican Republic
-  - answer: 21041
-    id: el_salvador
-    question: El Salvador
-  - answer: 2166090
-    id: greenland
-    question: Greenland
-  - answer: 1705
-    id: guadeloupe
-    question: Guadeloupe
-  - answer: 108889
-    id: guatemala
-    question: Guatemala
-  - answer: 27750
-    id: haiti
-    question: Haiti
-  - answer: 112088
-    id: honduras
-    question: Honduras
-  - answer: 10990
-    id: jamaica
-    question: Jamaica
-  - answer: 1102
-    id: martinique
-    question: Martinique
-  - answer: 1958201
-    id: mexico
-    question: Mexico
-  - answer: 130000
-    id: nicaragua
-    question: Nicaragua
-  - answer: 75517
-    id: panama
-    question: Panama
-  - answer: 8875
-    id: puerto_rico
-    question: Puerto Rico
-  - answer: 5130
-    id: trinidad_and_tobago
-    question: Trinidad and Tobago
-  - answer: 9363520
-    id: united_states
-    question: United States
-  question_prefix: 'What is the area (km^2) of '
-  range: 0.025
 name: north_america_areas
 type_: numeric_range
+items:
+- id: bahamas
+  question: Bahamas
+  answer: 13878
+- id: belize
+  question: Belize
+  answer: 22696
+- id: canada
+  question: Canada
+  answer: 9970610
+- id: costa_rica
+  question: Costa Rica
+  answer: 51100
+- id: cuba
+  question: Cuba
+  answer: 110861
+- id: dominican_republic
+  question: Dominican Republic
+  answer: 48511
+- id: el_salvador
+  question: El Salvador
+  answer: 21041
+- id: greenland
+  question: Greenland
+  answer: 2166090
+- id: guadeloupe
+  question: Guadeloupe
+  answer: 1705
+- id: guatemala
+  question: Guatemala
+  answer: 108889
+- id: haiti
+  question: Haiti
+  answer: 27750
+- id: honduras
+  question: Honduras
+  answer: 112088
+- id: jamaica
+  question: Jamaica
+  answer: 10990
+- id: martinique
+  question: Martinique
+  answer: 1102
+- id: mexico
+  question: Mexico
+  answer: 1958201
+- id: nicaragua
+  question: Nicaragua
+  answer: 130000
+- id: panama
+  question: Panama
+  answer: 75517
+- id: puerto_rico
+  question: Puerto Rico
+  answer: 8875
+- id: trinidad_and_tobago
+  question: Trinidad and Tobago
+  answer: 5130
+- id: united_states
+  question: United States
+  answer: 9363520
+data:
+  question_prefix: 'What is the area (km^2) of '
+  range: 0.025

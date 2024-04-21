@@ -1,168 +1,168 @@
-data:
-  items:
-  - answer: 44903000
-    id: algeria
-    question: Algeria
-  - answer: 35589000
-    id: angola
-    question: Angola
-  - answer: 13353000
-    id: benin
-    question: Benin
-  - answer: 2630000
-    id: botswana
-    question: Botswana
-  - answer: 22674000
-    id: burkina_faso
-    question: Burkina Faso
-  - answer: 12890000
-    id: burundi
-    question: Burundi
-  - answer: 27915000
-    id: cameroon
-    question: Cameroon
-  - answer: 593000
-    id: cape_verde
-    question: Cape Verde
-  - answer: 5579000
-    id: central_african_republic
-    question: Central African Republic
-  - answer: 17723000
-    id: chad
-    question: Chad
-  - answer: 837000
-    id: comoros
-    question: Comoros
-  - answer: 5970000
-    id: congo
-    question: Congo
-  - answer: 1121000
-    id: djibouti
-    question: Djibouti
-  - answer: 110990000
-    id: egypt
-    question: Egypt
-  - answer: 1675000
-    id: equatorial_guinea
-    question: Equatorial Guinea
-  - answer: 3684000
-    id: eritrea
-    question: Eritrea
-  - answer: 123380000
-    id: ethiopia
-    question: Ethiopia
-  - answer: 2389000
-    id: gabon
-    question: Gabon
-  - answer: 2706000
-    id: gambia
-    question: Gambia
-  - answer: 33476000
-    id: ghana
-    question: Ghana
-  - answer: 13859000
-    id: guinea
-    question: Guinea
-  - answer: 2106000
-    id: guinea-bissau
-    question: Guinea-Bissau
-  - answer: 28161000
-    id: ivory_coast
-    question: Ivory Coast
-  - answer: 54027000
-    id: kenya
-    question: Kenya
-  - answer: 2306000
-    id: lesotho
-    question: Lesotho
-  - answer: 5303000
-    id: liberia
-    question: Liberia
-  - answer: 6812000
-    id: libyan_arab_jamahiriya
-    question: Libyan Arab Jamahiriya
-  - answer: 29612000
-    id: madagascar
-    question: Madagascar
-  - answer: 20405000
-    id: malawi
-    question: Malawi
-  - answer: 22594000
-    id: mali
-    question: Mali
-  - answer: 4736000
-    id: mauritania
-    question: Mauritania
-  - answer: 1263000
-    id: mauritius
-    question: Mauritius
-  - answer: 37458000
-    id: morocco
-    question: Morocco
-  - answer: 32970000
-    id: mozambique
-    question: Mozambique
-  - answer: 2567000
-    id: namibia
-    question: Namibia
-  - answer: 26208000
-    id: niger
-    question: Niger
-  - answer: 218541000
-    id: nigeria
-    question: Nigeria
-  - answer: 13777000
-    id: rwanda
-    question: Rwanda
-  - answer: 227000
-    id: sao_tome_and_principe
-    question: Sao Tome and Principe
-  - answer: 17316000
-    id: senegal
-    question: Senegal
-  - answer: 120000
-    id: seychelles
-    question: Seychelles
-  - answer: 8606000
-    id: sierra_leone
-    question: Sierra Leone
-  - answer: 17598000
-    id: somalia
-    question: Somalia
-  - answer: 59894000
-    id: south_africa
-    question: South Africa
-  - answer: 10913000
-    id: south_sudan
-    question: South Sudan
-  - answer: 46874000
-    id: sudan
-    question: Sudan
-  - answer: 1202000
-    id: swaziland
-    question: Swaziland
-  - answer: 65498000
-    id: tanzania
-    question: Tanzania
-  - answer: 99010000
-    id: the_democratic_repuplic_of_congo
-    question: The Democratic Repuplic of Congo
-  - answer: 8849000
-    id: togo
-    question: Togo
-  - answer: 12356000
-    id: tunisia
-    question: Tunisia
-  - answer: 47250000
-    id: uganda
-    question: Uganda
-  - answer: 20018000
-    id: zambia
-    question: Zambia
-  - answer: 16321000
-    id: zimbabwe
-    question: Zimbabwe
-  question_prefix: 'What is the population of '
-  range: 0.025
 name: africa_populations
 type_: numeric_range
+items:
+- id: algeria
+  question: Algeria
+  answer: 44903000
+- id: angola
+  question: Angola
+  answer: 35589000
+- id: benin
+  question: Benin
+  answer: 13353000
+- id: botswana
+  question: Botswana
+  answer: 2630000
+- id: burkina_faso
+  question: Burkina Faso
+  answer: 22674000
+- id: burundi
+  question: Burundi
+  answer: 12890000
+- id: cameroon
+  question: Cameroon
+  answer: 27915000
+- id: cape_verde
+  question: Cape Verde
+  answer: 593000
+- id: central_african_republic
+  question: Central African Republic
+  answer: 5579000
+- id: chad
+  question: Chad
+  answer: 17723000
+- id: comoros
+  question: Comoros
+  answer: 837000
+- id: congo
+  question: Congo
+  answer: 5970000
+- id: djibouti
+  question: Djibouti
+  answer: 1121000
+- id: egypt
+  question: Egypt
+  answer: 110990000
+- id: equatorial_guinea
+  question: Equatorial Guinea
+  answer: 1675000
+- id: eritrea
+  question: Eritrea
+  answer: 3684000
+- id: ethiopia
+  question: Ethiopia
+  answer: 123380000
+- id: gabon
+  question: Gabon
+  answer: 2389000
+- id: gambia
+  question: Gambia
+  answer: 2706000
+- id: ghana
+  question: Ghana
+  answer: 33476000
+- id: guinea
+  question: Guinea
+  answer: 13859000
+- id: guinea-bissau
+  question: Guinea-Bissau
+  answer: 2106000
+- id: ivory_coast
+  question: Ivory Coast
+  answer: 28161000
+- id: kenya
+  question: Kenya
+  answer: 54027000
+- id: lesotho
+  question: Lesotho
+  answer: 2306000
+- id: liberia
+  question: Liberia
+  answer: 5303000
+- id: libyan_arab_jamahiriya
+  question: Libyan Arab Jamahiriya
+  answer: 6812000
+- id: madagascar
+  question: Madagascar
+  answer: 29612000
+- id: malawi
+  question: Malawi
+  answer: 20405000
+- id: mali
+  question: Mali
+  answer: 22594000
+- id: mauritania
+  question: Mauritania
+  answer: 4736000
+- id: mauritius
+  question: Mauritius
+  answer: 1263000
+- id: morocco
+  question: Morocco
+  answer: 37458000
+- id: mozambique
+  question: Mozambique
+  answer: 32970000
+- id: namibia
+  question: Namibia
+  answer: 2567000
+- id: niger
+  question: Niger
+  answer: 26208000
+- id: nigeria
+  question: Nigeria
+  answer: 218541000
+- id: rwanda
+  question: Rwanda
+  answer: 13777000
+- id: sao_tome_and_principe
+  question: Sao Tome and Principe
+  answer: 227000
+- id: senegal
+  question: Senegal
+  answer: 17316000
+- id: seychelles
+  question: Seychelles
+  answer: 120000
+- id: sierra_leone
+  question: Sierra Leone
+  answer: 8606000
+- id: somalia
+  question: Somalia
+  answer: 17598000
+- id: south_africa
+  question: South Africa
+  answer: 59894000
+- id: south_sudan
+  question: South Sudan
+  answer: 10913000
+- id: sudan
+  question: Sudan
+  answer: 46874000
+- id: swaziland
+  question: Swaziland
+  answer: 1202000
+- id: tanzania
+  question: Tanzania
+  answer: 65498000
+- id: the_democratic_repuplic_of_congo
+  question: The Democratic Repuplic of Congo
+  answer: 99010000
+- id: togo
+  question: Togo
+  answer: 8849000
+- id: tunisia
+  question: Tunisia
+  answer: 12356000
+- id: uganda
+  question: Uganda
+  answer: 47250000
+- id: zambia
+  question: Zambia
+  answer: 20018000
+- id: zimbabwe
+  question: Zimbabwe
+  answer: 16321000
+data:
+  question_prefix: 'What is the population of '
+  range: 0.025

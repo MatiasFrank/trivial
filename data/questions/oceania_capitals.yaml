@@ -1,113 +1,113 @@
-data:
-  items:
-  - answers:
-    - Fagatogo
-    id: american_samoa
-    question: American Samoa
-  - answers:
-    - Canberra
-    id: australia
-    question: Australia
-  - answers:
-    - Flying Fish Cove
-    id: christmas_island
-    question: Christmas Island
-  - answers:
-    - West Island
-    id: cocos_keeling_islands
-    question: Cocos (Keeling) Islands
-  - answers:
-    - Avarua
-    id: cook_islands
-    question: Cook Islands
-  - answers:
-    - Suva
-    id: fiji_islands
-    question: Fiji Islands
-  - answers:
-    - Papeete
-    id: french_polynesia
-    question: French Polynesia
-  - answers:
-    - Aga
-    id: guam
-    question: Guam
-  - answers:
-    - Bairiki
-    id: kiribati
-    question: Kiribati
-  - answers:
-    - Majuro
-    id: marshall_islands
-    question: Marshall Islands
-  - answers:
-    - Palikir
-    id: micronesia_federated_states_of
-    question: Micronesia, Federated States of
-  - answers:
-    - Yaren
-    id: nauru
-    question: Nauru
-  - answers:
-    - Noum
-    id: new_caledonia
-    question: New Caledonia
-  - answers:
-    - Wellington
-    id: new_zealand
-    question: New Zealand
-  - answers:
-    - Alofi
-    id: niue
-    question: Niue
-  - answers:
-    - Kingston
-    id: norfolk_island
-    question: Norfolk Island
-  - answers:
-    - Garapan
-    id: northern_mariana_islands
-    question: Northern Mariana Islands
-  - answers:
-    - Ngerulmud
-    id: palau
-    question: Palau
-  - answers:
-    - Port Moresby
-    id: papua_new_guinea
-    question: Papua New Guinea
-  - answers:
-    - Adamstown
-    id: pitcairn
-    question: Pitcairn
-  - answers:
-    - Apia
-    id: samoa
-    question: Samoa
-  - answers:
-    - Honiara
-    id: solomon_islands
-    question: Solomon Islands
-  - answers:
-    - Fakaofo
-    id: tokelau
-    question: Tokelau
-  - answers:
-    - Nuku'alofa
-    id: tonga
-    question: Tonga
-  - answers:
-    - Funafuti
-    id: tuvalu
-    question: Tuvalu
-  - answers:
-    - Port-Vila
-    id: vanuatu
-    question: Vanuatu
-  - answers:
-    - Mata-Utu
-    id: wallis_and_futuna
-    question: Wallis and Futuna
-  question_prefix: 'What is the capital of '
 name: oceania_capitals
 type_: default
+items:
+- id: american_samoa
+  question: American Samoa
+  answers:
+  - Fagatogo
+- id: australia
+  question: Australia
+  answers:
+  - Canberra
+- id: christmas_island
+  question: Christmas Island
+  answers:
+  - Flying Fish Cove
+- id: cocos_keeling_islands
+  question: Cocos (Keeling) Islands
+  answers:
+  - West Island
+- id: cook_islands
+  question: Cook Islands
+  answers:
+  - Avarua
+- id: fiji_islands
+  question: Fiji Islands
+  answers:
+  - Suva
+- id: french_polynesia
+  question: French Polynesia
+  answers:
+  - Papeete
+- id: guam
+  question: Guam
+  answers:
+  - Aga
+- id: kiribati
+  question: Kiribati
+  answers:
+  - Bairiki
+- id: marshall_islands
+  question: Marshall Islands
+  answers:
+  - Majuro
+- id: micronesia_federated_states_of
+  question: Micronesia, Federated States of
+  answers:
+  - Palikir
+- id: nauru
+  question: Nauru
+  answers:
+  - Yaren
+- id: new_caledonia
+  question: New Caledonia
+  answers:
+  - Noum
+- id: new_zealand
+  question: New Zealand
+  answers:
+  - Wellington
+- id: niue
+  question: Niue
+  answers:
+  - Alofi
+- id: norfolk_island
+  question: Norfolk Island
+  answers:
+  - Kingston
+- id: northern_mariana_islands
+  question: Northern Mariana Islands
+  answers:
+  - Garapan
+- id: palau
+  question: Palau
+  answers:
+  - Ngerulmud
+- id: papua_new_guinea
+  question: Papua New Guinea
+  answers:
+  - Port Moresby
+- id: pitcairn
+  question: Pitcairn
+  answers:
+  - Adamstown
+- id: samoa
+  question: Samoa
+  answers:
+  - Apia
+- id: solomon_islands
+  question: Solomon Islands
+  answers:
+  - Honiara
+- id: tokelau
+  question: Tokelau
+  answers:
+  - Fakaofo
+- id: tonga
+  question: Tonga
+  answers:
+  - Nuku'alofa
+- id: tuvalu
+  question: Tuvalu
+  answers:
+  - Funafuti
+- id: vanuatu
+  question: Vanuatu
+  answers:
+  - Port-Vila
+- id: wallis_and_futuna
+  question: Wallis and Futuna
+  answers:
+  - Mata-Utu
+data:
+  question_prefix: 'What is the capital of '
