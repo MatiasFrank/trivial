@@ -5,6 +5,8 @@ use colored::Colorize;
 use inquire::validator::{ErrorMessage, Validation};
 use inquire::{Confirm, Text};
 use num_format::{Locale, ToFormattedString};
+use rand::seq::SliceRandom;
+use rand::thread_rng;
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, HashSet};
 use std::fmt::Debug;
@@ -24,7 +26,7 @@ pub trait QuestionFactory {
 
 pub trait QuestionSetFactory {
     fn build_set(&self, s: &Service, set_name: &str) -> Vec<QuestionID>;
-    fn depends_on(&self) -> Vec<String>;
+    fn depends_on(&self) -> &Vec<String>;
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -52,6 +54,8 @@ pub struct QuestionSetFactoryModel<T> {
 pub struct NumericRangeData {
     question_prefix: String,
     range: f64,
+    #[serde(skip)]
+    depends: Vec<String>,
 }
 
 impl QuestionFactory for NumericRangeData {
@@ -65,11 +69,11 @@ impl QuestionFactory for NumericRangeData {
 
 impl QuestionSetFactory for NumericRangeData {
     fn build_set(&self, s: &Service, set_name: &str) -> Vec<QuestionID> {
-        s.get_factory(set_name)
+        s.get_factory(set_name).clone()
     }
 
-    fn depends_on(&self) -> Vec<String> {
-        Vec::new()
+    fn depends_on(&self) -> &Vec<String> {
+        &self.depends
     }
 }
 
@@ -149,6 +153,8 @@ impl QuestionRunner for NumericRangeQuestion {
 #[derive(Deserialize, Serialize, Debug, Clone)]
 struct DefaultData {
     question_prefix: String,
+    #[serde(skip)]
+    depends: Vec<String>,
 }
 
 impl QuestionFactory for DefaultData {
@@ -161,11 +167,11 @@ impl QuestionFactory for DefaultData {
 
 impl QuestionSetFactory for DefaultData {
     fn build_set(&self, s: &Service, set_name: &str) -> Vec<QuestionID> {
-        s.get_factory(set_name)
+        s.get_factory(set_name).clone()
     }
 
-    fn depends_on(&self) -> Vec<String> {
-        Vec::new()
+    fn depends_on(&self) -> &Vec<String> {
+        &self.depends
     }
 }
 
@@ -211,8 +217,8 @@ impl QuestionSetFactory for UnionData {
         res
     }
 
-    fn depends_on(&self) -> Vec<String> {
-        self.sets.clone()
+    fn depends_on(&self) -> &Vec<String> {
+        &self.sets
     }
 }
 
@@ -226,7 +232,10 @@ struct Word {
 }
 
 #[derive(Deserialize, Serialize, Debug, Clone)]
-struct VocabData {}
+struct VocabData {
+    #[serde(skip)]
+    depends: Vec<String>,
+}
 
 impl QuestionRunner for Word {
     fn run(&self) -> Result<bool> {
@@ -270,11 +279,11 @@ impl QuestionFactory for VocabData {
 
 impl QuestionSetFactory for VocabData {
     fn build_set(&self, s: &Service, set_name: &str) -> Vec<QuestionID> {
-        s.get_factory(set_name)
+        s.get_factory(set_name).clone()
     }
 
-    fn depends_on(&self) -> Vec<String> {
-        Vec::new()
+    fn depends_on(&self) -> &Vec<String> {
+        &self.depends
     }
 }
 
@@ -286,15 +295,12 @@ fn pause_with_message(msg: &str) -> Result<()> {
     Ok(())
 }
 
-#[derive(Clone, Debug, PartialEq, Eq, Hash)]
-pub struct QuestionID {
-    pub factory: String,
-    pub name: String,
-}
+type QuestionID = i64;
 
 pub struct Question {
-    pub dbid: i64,
     pub id: QuestionID,
+    pub factory: String,
+    pub name: String,
     pub probability: f64,
     pub num_correct: u32,
     pub num_incorrect: u32,
@@ -303,10 +309,10 @@ pub struct Question {
 
 pub struct Service<'a> {
     questions: HashMap<QuestionID, Question>,
+    factories: HashMap<String, Vec<QuestionID>>,
     sets: HashMap<String, Vec<QuestionID>>,
     repo: &'a db::Repository,
     prob_computer: ProbabilityComputer,
-    // by_dbid: HashMap<i64, QuestionID>,
 }
 
 impl<'a> Service<'a> {
@@ -314,20 +320,20 @@ impl<'a> Service<'a> {
         let questionsdb = repo.get_all_questions().await?;
         let factories = load_factories(&repo.get_all_question_factories().await?)?;
         let mut questions = HashMap::new();
-        let mut by_dbid = HashMap::new();
+        let mut by_factories = HashMap::new();
         for q in questionsdb {
             let factory = factories.get(&q.factory).unwrap();
             let runner = factory.build(&q.data)?;
-            let id = QuestionID {
-                factory: q.factory.clone(),
-                name: q.name,
-            };
-            by_dbid.insert(q.id, id.clone());
+            by_factories
+                .entry(q.factory.clone())
+                .or_insert(Vec::new())
+                .push(q.id);
             questions.insert(
-                id.clone(),
+                q.id,
                 Question {
-                    dbid: q.id,
-                    id,
+                    id: q.id,
+                    factory: q.factory,
+                    name: q.name,
                     probability: q.probability,
                     num_correct: q.num_correct,
                     num_incorrect: q.num_incorrect,
@@ -339,11 +345,11 @@ impl<'a> Service<'a> {
         let mut sets = HashMap::<String, Vec<QuestionID>>::new();
         let questions_in_set = repo.get_all_question_sets().await?;
         for qset in questions_in_set {
-            let q = by_dbid.get(&qset.question_id).unwrap();
+            let q = questions.get(&qset.question_id).unwrap();
             if !sets.contains_key(&qset.name) {
                 sets.insert(qset.name.clone(), Vec::new());
             }
-            sets.get_mut(&qset.name).unwrap().push(q.clone());
+            sets.get_mut(&qset.name).unwrap().push(q.id);
         }
 
         let answers = repo
@@ -351,16 +357,15 @@ impl<'a> Service<'a> {
             .await?
             .iter()
             .map(|a| Answer {
-                question_id: by_dbid.get(&a.question_id).unwrap().clone(),
+                question_id: a.question_id,
                 time: a.time,
                 correct: a.correct,
             })
             .collect::<Vec<Answer>>();
         let prob_computer =
             ProbabilityComputer::new(answers, &questions.values().collect::<Vec<&Question>>());
-        for id in questions.keys() {
-            repo.set_probability(&id.factory, &id.name, prob_computer.get_prob(id))
-                .await?;
+        for &id in questions.keys() {
+            repo.set_probability(id, prob_computer.get_prob(id)).await?;
         }
 
         Ok(Service {
@@ -368,7 +373,7 @@ impl<'a> Service<'a> {
             sets,
             prob_computer,
             repo,
-            // by_dbid,
+            factories: by_factories,
         })
     }
 
@@ -381,12 +386,12 @@ impl<'a> Service<'a> {
             correct,
         });
         self.repo
-            .add_answer(q.dbid, now, correct, q.probability)
+            .add_answer(q.id, now, correct, q.probability)
             .await?;
         Ok(())
     }
 
-    pub fn get_random_selection(&self, set: &str, mut num: usize) -> Vec<QuestionID> {
+    pub fn get_weighted_random_selection(&self, set: &str, mut num: usize) -> Vec<QuestionID> {
         let questions: Vec<&Question> = self
             .sets
             .get(set)
@@ -425,7 +430,7 @@ impl<'a> Service<'a> {
 
     pub fn get_bottom_selection(&self, set: &str, num: usize) -> Vec<QuestionID> {
         let mut question_ids = self.sets.get(set).unwrap().clone();
-        question_ids.sort_by(|id1, id2| {
+        question_ids.sort_by(|&id1, &id2| {
             self.get(id1)
                 .probability
                 .total_cmp(&self.get(id2).probability)
@@ -433,33 +438,48 @@ impl<'a> Service<'a> {
         question_ids[..num].to_vec()
     }
 
+    pub fn get_uniform_random_selection(&self, set: &str, num: usize) -> Vec<QuestionID> {
+        let mut question_ids = self.sets.get(set).unwrap().clone();
+        question_ids.shuffle(&mut thread_rng());
+        question_ids[..num].to_vec()
+    }
+
+    pub fn get_oldest_answer(&self, set: &str, num: usize) -> Vec<QuestionID> {
+        let mut times = Vec::new();
+        for &id in self.sets.get(set).unwrap() {
+            let answers = self.prob_computer.get_answers(id);
+            if let Some(a) = answers.last() {
+                times.push((a.time, id));
+            } else {
+                times.push((DateTime::from_timestamp(0, 0).unwrap(), id));
+            }
+        }
+        times.sort();
+        times[..num].iter().map(|&(_, id)| id).collect()
+    }
+
     pub fn get_set_size(&self, name: &str) -> usize {
         self.sets.get(name).unwrap().len()
     }
 
-    pub fn get_sets(&self) -> Vec<String> {
-        self.sets.iter().map(|(name, _)| name.clone()).collect()
+    pub fn get_sets(&self) -> Vec<&String> {
+        self.sets.keys().collect()
     }
 
-    pub fn get(&self, id: &QuestionID) -> &Question {
-        self.questions.get(id).unwrap()
+    pub fn get(&self, id: QuestionID) -> &Question {
+        self.questions.get(&id).unwrap()
     }
 
-    pub fn get_factory(&self, factory: &str) -> Vec<QuestionID> {
-        self.questions
-            .keys()
-            .filter_map(|id| {
-                if id.factory == factory {
-                    Some(id.clone())
-                } else {
-                    None
-                }
-            })
-            .collect()
+    pub fn last_answer(&self, id: QuestionID) -> Option<&Answer> {
+        self.prob_computer.get_answers(id).last()
     }
 
-    pub fn get_set(&self, set: &str) -> Vec<QuestionID> {
-        self.sets.get(set).unwrap().clone()
+    pub fn get_factory(&self, factory: &str) -> &Vec<QuestionID> {
+        self.factories.get(factory).unwrap()
+    }
+
+    pub fn get_set(&self, set: &str) -> &Vec<QuestionID> {
+        self.sets.get(set).unwrap()
     }
 
     pub async fn add_question_in_set(&mut self, id: QuestionID, set: &str) -> Result<bool> {
@@ -476,7 +496,7 @@ impl<'a> Service<'a> {
         }
 
         let q = self.questions.get(&id).unwrap();
-        self.repo.insert_question_in_set(set, q.dbid).await?;
+        self.repo.insert_question_in_set(set, q.id).await?;
         s.push(id);
         Ok(true)
     }
@@ -513,10 +533,10 @@ pub fn load_factories(
     Ok(factories)
 }
 
-struct Answer {
-    question_id: QuestionID,
-    time: DateTime<Utc>,
-    correct: bool,
+pub struct Answer {
+    pub question_id: QuestionID,
+    pub time: DateTime<Utc>,
+    pub correct: bool,
 }
 
 struct ProbQuestion {
@@ -582,8 +602,12 @@ impl ProbabilityComputer {
         q.weighted_correct / q.weighted_total
     }
 
-    fn get_prob(&self, id: &QuestionID) -> f64 {
-        ProbabilityComputer::prob(self.questions.get(id).unwrap())
+    fn get_prob(&self, id: QuestionID) -> f64 {
+        ProbabilityComputer::prob(self.questions.get(&id).unwrap())
+    }
+
+    fn get_answers(&self, id: QuestionID) -> &Vec<Answer> {
+        &self.questions.get(&id).unwrap().answers
     }
 }
 

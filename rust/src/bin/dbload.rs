@@ -56,7 +56,7 @@ async fn main() -> Result<()> {
     println!("Inserted {} questions and {} factories", qcount, fcount);
 
     let mut s = Service::new(&repo).await?;
-    let edges: HashMap<&str, Vec<String>> = models
+    let edges: HashMap<&str, &Vec<String>> = models
         .sets
         .iter()
         .map(|(name, fac)| (name.as_str(), fac.depends_on()))
@@ -78,10 +78,10 @@ async fn main() -> Result<()> {
     Ok(())
 }
 
-fn topsort<'a>(edges: &'a HashMap<&'a str, Vec<String>>) -> Vec<&'a str> {
+fn topsort<'a>(edges: &'a HashMap<&'a str, &Vec<String>>) -> Vec<&'a str> {
     let mut in_degrees: HashMap<&str, usize> = edges.iter().map(|(node, _)| (*node, 0)).collect();
     for (_, es) in edges {
-        for node2 in es {
+        for node2 in es.iter() {
             *in_degrees.get_mut(node2.as_str()).unwrap() += 1;
         }
     }
@@ -97,7 +97,7 @@ fn topsort<'a>(edges: &'a HashMap<&'a str, Vec<String>>) -> Vec<&'a str> {
     while !zeros.is_empty() {
         let node = zeros.pop().unwrap();
         res.push(node);
-        for node2 in edges.get(node).unwrap() {
+        for node2 in edges.get(node).unwrap().iter() {
             let deg = in_degrees.get_mut(node2.as_str()).unwrap();
             *deg -= 1;
             if *deg == 0 {

@@ -106,7 +106,7 @@ impl Repository {
         Ok(())
     }
 
-    pub async fn set_probability(&self, factory: &str, name: &str, probability: f64) -> Result<()> {
+    pub async fn set_probability(&self, question_id: i64, probability: f64) -> Result<()> {
         sqlx::query(
             "
         UPDATE 
@@ -114,12 +114,11 @@ impl Repository {
         SET
             probability = $1
         WHERE
-            factory = $2 AND name = $3
+            id = $2
         ",
         )
         .bind(probability)
-        .bind(factory)
-        .bind(name)
+        .bind(question_id)
         .execute(&self.db)
         .await?;
         Ok(())

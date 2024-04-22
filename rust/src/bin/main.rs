@@ -1,10 +1,14 @@
 use anyhow::{Error, Result};
+use chrono::Utc;
 use clap::Parser;
+use core::fmt;
 use rand::{seq::SliceRandom, thread_rng};
 use rust::db::Repository;
 use rust::functionality::{self, pause, Service};
+use sqlx::Encode;
 use std::fmt::Debug;
-use std::str::FromStr;
+use std::ops::Div;
+use std::time::Instant;
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
@@ -14,34 +18,94 @@ struct Args {
     db: String,
 }
 
-fn get_choice(
-    service: &Service,
-    last_choice: &Option<(String, usize, String)>,
-) -> Result<(String, usize, String, bool)> {
-    if let Some((choice, num, method)) = last_choice {
+#[derive(Clone, PartialEq, Eq)]
+enum Choice {
+    Value(String),
+    Exit,
+}
+
+impl fmt::Display for Choice {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        match self {
+            Choice::Value(s) => {
+                write!(f, "{}", s)
+            }
+            Choice::Exit => {
+                write!(f, "Exit")
+            }
+        }
+    }
+}
+
+#[derive(Clone)]
+enum Method {
+    Bottom,
+    WeightedRandom,
+    UniformRandom,
+    OldestAnswer,
+}
+
+impl fmt::Display for Method {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        match self {
+            Method::Bottom => write!(f, "Bottom"),
+            Method::WeightedRandom => write!(f, "Weighted random"),
+            Method::UniformRandom => write!(f, "Uniform random"),
+            Method::OldestAnswer => write!(f, "Oldest answer"),
+        }
+    }
+}
+
+#[derive(Clone)]
+struct Choice2 {
+    choice: Choice,
+    method: Method,
+    num: usize,
+}
+
+fn get_choice(service: &Service, last_choice: &Option<Choice2>) -> Result<Choice2> {
+    if let Some(choice) = last_choice {
         if inquire::Confirm::new("Start again with same choice?").prompt()? {
-            return Ok((choice.clone(), *num, method.clone(), true));
+            return Ok(choice.clone());
         }
     }
 
-    let mut options = service.get_sets();
-    options.sort();
-    options.insert(0, String::from("Exit"));
-
-    let select = inquire::Select::new("Pick a question set", options.clone());
-    let choice = select.prompt()?;
-    if choice == "Exit" {
-        return Ok((String::new(), 0, String::new(), false));
+    let mut options = vec![Choice::Exit];
+    for s in service.get_sets() {
+        options.push(Choice::Value(s.clone()));
     }
+    let select = inquire::Select::new("Pick a question set", options);
+    let choice = match select.prompt()? {
+        Choice::Value(s) => s,
+        Choice::Exit => {
+            return Ok(Choice2 {
+                choice: Choice::Exit,
+                method: Method::Bottom,
+                num: 0,
+            })
+        }
+    };
     let size = service.get_set_size(&choice);
     let num = inquire::Text::new(&format!("Number of questions (out of {})", size))
         .with_initial_value(&format!("{}", size))
         .prompt()?
         .parse::<usize>()?;
-    let method =
-        inquire::Select::new("Selection method", vec!["Bottom", "Weighted random"]).prompt()?;
+    let method = inquire::Select::new(
+        "Selection method",
+        vec![
+            Method::Bottom,
+            Method::WeightedRandom,
+            Method::UniformRandom,
+            Method::OldestAnswer,
+        ],
+    )
+    .prompt()?;
 
-    Ok((choice, num, String::from_str(method)?, true))
+    Ok(Choice2 {
+        choice: Choice::Value(choice),
+        method,
+        num,
+    })
 }
 
 #[tokio::main]
@@ -49,31 +113,46 @@ async fn main() -> Result<(), Error> {
     let args = Args::parse();
     let url = format!("sqlite://{}", args.db);
     let db = Repository::new(&url).await?;
+    let now = Instant::now();
     let mut service = functionality::Service::new(&db).await?;
-    let mut last_choice: Option<(String, usize, String)> = None;
+    println!("Time to load: {:?}", now.elapsed());
+    let mut last_choice: Option<Choice2> = None;
     loop {
-        let (choice, num, method, cont) = get_choice(&service, &last_choice)?;
-        if !cont {
+        let choice = get_choice(&service, &last_choice)?;
+        let set = if let Choice::Value(set) = &choice.choice {
+            set
+        } else {
             return Ok(());
-        }
+        };
 
-        let mut question_ids = match method.as_str() {
-            "Weighted random" => service.get_random_selection(&choice, num),
-            "Bottom" => service.get_bottom_selection(&choice, num),
-            _ => panic!("bad choice {}", method),
+        let mut question_ids = match choice.method {
+            Method::Bottom => service.get_bottom_selection(&set, choice.num),
+            Method::WeightedRandom => service.get_weighted_random_selection(&set, choice.num),
+            Method::UniformRandom => service.get_uniform_random_selection(&set, choice.num),
+            Method::OldestAnswer => service.get_oldest_answer(&set, choice.num),
         };
         clearscreen::clear()?;
         let mut wrong = Vec::new();
         loop {
             question_ids.shuffle(&mut thread_rng());
-            for (i, id) in question_ids.iter().enumerate() {
+            for (i, &id) in question_ids.iter().enumerate() {
                 println!("---------- {}/{} ----------: ", i + 1, question_ids.len());
-                println!("prob: {:.3}", service.get(id).probability);
-                let correct = service.get(id).runner.run()?;
+                let since_str = if let Some(answer) = service.last_answer(id) {
+                    let since = Utc::now().signed_duration_since(answer.time);
+                    format!("{:?}", since.to_std()?)
+                } else {
+                    String::from("-")
+                };
+                let question = service.get(id);
+                println!(
+                    "prob: {:.3}, last answered: {}",
+                    question.probability, since_str
+                );
+                let correct = question.runner.run()?;
                 if !correct {
-                    wrong.push(id.clone());
+                    wrong.push(id);
                 }
-                service.add_answer(id.clone(), correct).await?;
+                service.add_answer(id, correct).await?;
             }
 
             if wrong.is_empty() {
@@ -96,6 +175,6 @@ async fn main() -> Result<(), Error> {
         }
         pause()?;
         clearscreen::clear()?;
-        last_choice = Some((choice, num, method));
+        last_choice = Some(choice);
     }
 }
