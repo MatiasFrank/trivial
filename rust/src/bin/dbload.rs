@@ -1,8 +1,11 @@
-use std::fs;
+use std::{collections::HashMap, fs};
 
 use anyhow::Result;
 use clap::Parser;
-use rust::{db, functionality::load_models};
+use rust::{
+    db,
+    functionality::{load_models, Service},
+};
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
@@ -52,5 +55,56 @@ async fn main() -> Result<()> {
 
     println!("Inserted {} questions and {} factories", qcount, fcount);
 
+    let mut s = Service::new(&repo).await?;
+    let edges: HashMap<&str, Vec<String>> = models
+        .sets
+        .iter()
+        .map(|(name, fac)| (name.as_str(), fac.depends_on()))
+        .collect();
+    let mut order = topsort(&edges);
+    order.reverse();
+    for set_name in order {
+        let mut scount = 0;
+        let factory = models.sets.get(set_name).unwrap();
+        let questions = factory.build_set(&s, set_name);
+        for q in questions {
+            if s.add_question_in_set(q, set_name).await? {
+                scount += 1;
+            }
+        }
+        println!("Inserted {} questions into {:?}", scount, set_name);
+    }
+
     Ok(())
+}
+
+fn topsort<'a>(edges: &'a HashMap<&'a str, Vec<String>>) -> Vec<&'a str> {
+    let mut in_degrees: HashMap<&str, usize> = edges.iter().map(|(node, _)| (*node, 0)).collect();
+    for (_, es) in edges {
+        for node2 in es {
+            *in_degrees.get_mut(node2.as_str()).unwrap() += 1;
+        }
+    }
+
+    let mut zeros = Vec::new();
+    for (&node, &count) in &in_degrees {
+        if count == 0 {
+            zeros.push(node);
+        }
+    }
+
+    let mut res = Vec::new();
+    while !zeros.is_empty() {
+        let node = zeros.pop().unwrap();
+        res.push(node);
+        for node2 in edges.get(node).unwrap() {
+            let deg = in_degrees.get_mut(node2.as_str()).unwrap();
+            *deg -= 1;
+            if *deg == 0 {
+                res.push(node2.as_str());
+            }
+        }
+    }
+
+    res
 }

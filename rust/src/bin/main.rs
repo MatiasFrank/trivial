@@ -3,7 +3,6 @@ use clap::Parser;
 use rand::{seq::SliceRandom, thread_rng};
 use rust::db::Repository;
 use rust::functionality::{self, pause, Service};
-use std::ascii::AsciiExt;
 use std::fmt::Debug;
 use std::str::FromStr;
 

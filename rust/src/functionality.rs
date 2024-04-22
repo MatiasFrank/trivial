@@ -11,6 +11,7 @@ use std::fmt::Debug;
 use std::fs;
 use std::io::{stdin, stdout, Read, Write};
 use std::path::PathBuf;
+use std::str::FromStr;
 
 pub trait QuestionRunner {
     fn run(&self) -> Result<bool>;
@@ -19,6 +20,11 @@ pub trait QuestionRunner {
 
 pub trait QuestionFactory {
     fn build(&self, data: &[u8]) -> Result<Box<dyn QuestionRunner>>;
+}
+
+pub trait QuestionSetFactory {
+    fn build_set(&self, s: &Service, set_name: &str) -> Vec<QuestionID>;
+    fn depends_on(&self) -> Vec<String>;
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -35,7 +41,14 @@ pub struct QuestionFactoryModel<T1: QuestionRunner, T2> {
     data: T2,
 }
 
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Serialize, Deserialize, Debug)]
+pub struct QuestionSetFactoryModel<T> {
+    name: String,
+    type_: String,
+    data: T,
+}
+
+#[derive(Deserialize, Serialize, Debug, Clone)]
 pub struct NumericRangeData {
     question_prefix: String,
     range: f64,
@@ -47,6 +60,16 @@ impl QuestionFactory for NumericRangeData {
         question.range = self.range;
         question.question = format!("{}{}?", self.question_prefix, question.question);
         Ok(Box::new(question) as Box<dyn QuestionRunner>)
+    }
+}
+
+impl QuestionSetFactory for NumericRangeData {
+    fn build_set(&self, s: &Service, set_name: &str) -> Vec<QuestionID> {
+        s.get_factory(set_name)
+    }
+
+    fn depends_on(&self) -> Vec<String> {
+        Vec::new()
     }
 }
 
@@ -136,6 +159,16 @@ impl QuestionFactory for DefaultData {
     }
 }
 
+impl QuestionSetFactory for DefaultData {
+    fn build_set(&self, s: &Service, set_name: &str) -> Vec<QuestionID> {
+        s.get_factory(set_name)
+    }
+
+    fn depends_on(&self) -> Vec<String> {
+        Vec::new()
+    }
+}
+
 #[derive(Deserialize, Serialize, Debug, Clone)]
 struct DefaultQuestion {
     id: String,
@@ -164,43 +197,24 @@ impl QuestionRunner for DefaultQuestion {
     }
 }
 
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Deserialize, Serialize, Debug, Clone)]
 struct UnionData {
     sets: Vec<String>,
 }
 
-// struct UnionDataFactory {
-//     name: String,
-//     data: UnionData,
-// }
+impl QuestionSetFactory for UnionData {
+    fn build_set(&self, s: &Service, _: &str) -> Vec<QuestionID> {
+        let mut res = Vec::new();
+        for set in &self.sets {
+            res.extend_from_slice(&s.get_set(set));
+        }
+        res
+    }
 
-// impl QuestionFactory for UnionDataFactory {
-//     fn build(
-//         &self,
-//         all_factories: &HashMap<String, Box<dyn QuestionFactory>>,
-//     ) -> Result<Vec<Box<dyn Question>>> {
-//         let mut res = Vec::new();
-
-//         for name in &self.data.sets {
-//             if let Some(factory) = all_factories.get(name) {
-//                 let questions = factory.build(all_factories)?;
-//                 res.extend(questions);
-//             } else {
-//                 bail!("unknown question set {}", name);
-//             }
-//         }
-
-//         Ok(res)
-//     }
-
-//     // fn depends_on(&self) -> Vec<String> {
-//     //     self.data.sets.clone()
-//     // }
-
-//     fn name(&self) -> String {
-//         self.name.clone()
-//     }
-// }
+    fn depends_on(&self) -> Vec<String> {
+        self.sets.clone()
+    }
+}
 
 #[derive(Deserialize, Serialize, Debug, Clone)]
 struct Word {
@@ -254,6 +268,16 @@ impl QuestionFactory for VocabData {
     }
 }
 
+impl QuestionSetFactory for VocabData {
+    fn build_set(&self, s: &Service, set_name: &str) -> Vec<QuestionID> {
+        s.get_factory(set_name)
+    }
+
+    fn depends_on(&self) -> Vec<String> {
+        Vec::new()
+    }
+}
+
 fn pause_with_message(msg: &str) -> Result<()> {
     let mut stdout = stdout();
     stdout.write(msg.as_bytes())?;
@@ -290,12 +314,8 @@ impl<'a> Service<'a> {
         let questionsdb = repo.get_all_questions().await?;
         let factories = load_factories(&repo.get_all_question_factories().await?)?;
         let mut questions = HashMap::new();
-        let mut sets = HashMap::new();
         let mut by_dbid = HashMap::new();
         for q in questionsdb {
-            if !sets.contains_key(&q.factory) {
-                sets.insert(q.factory.clone(), Vec::new());
-            }
             let factory = factories.get(&q.factory).unwrap();
             let runner = factory.build(&q.data)?;
             let id = QuestionID {
@@ -303,7 +323,6 @@ impl<'a> Service<'a> {
                 name: q.name,
             };
             by_dbid.insert(q.id, id.clone());
-            sets.get_mut(&q.factory).unwrap().push(id.clone());
             questions.insert(
                 id.clone(),
                 Question {
@@ -315,6 +334,16 @@ impl<'a> Service<'a> {
                     runner,
                 },
             );
+        }
+
+        let mut sets = HashMap::<String, Vec<QuestionID>>::new();
+        let questions_in_set = repo.get_all_question_sets().await?;
+        for qset in questions_in_set {
+            let q = by_dbid.get(&qset.question_id).unwrap();
+            if !sets.contains_key(&qset.name) {
+                sets.insert(qset.name.clone(), Vec::new());
+            }
+            sets.get_mut(&qset.name).unwrap().push(q.clone());
         }
 
         let answers = repo
@@ -379,7 +408,6 @@ impl<'a> Service<'a> {
                 stack.push((idx, total));
             }
             let x = rand::random::<f64>() * total;
-            println!("total: {}, x: {}", total, x);
             for (name, v) in &stack {
                 if *v >= x {
                     chosen.insert(*name);
@@ -415,6 +443,42 @@ impl<'a> Service<'a> {
 
     pub fn get(&self, id: &QuestionID) -> &Question {
         self.questions.get(id).unwrap()
+    }
+
+    pub fn get_factory(&self, factory: &str) -> Vec<QuestionID> {
+        self.questions
+            .keys()
+            .filter_map(|id| {
+                if id.factory == factory {
+                    Some(id.clone())
+                } else {
+                    None
+                }
+            })
+            .collect()
+    }
+
+    pub fn get_set(&self, set: &str) -> Vec<QuestionID> {
+        self.sets.get(set).unwrap().clone()
+    }
+
+    pub async fn add_question_in_set(&mut self, id: QuestionID, set: &str) -> Result<bool> {
+        let s = if let Some(s) = self.sets.get_mut(set) {
+            s
+        } else {
+            self.sets.insert(String::from_str(set)?, Vec::new());
+            self.sets.get_mut(set).unwrap()
+        };
+
+        // TODO Ass linear scan
+        if s.contains(&id) {
+            return Ok(false);
+        }
+
+        let q = self.questions.get(&id).unwrap();
+        self.repo.insert_question_in_set(set, q.dbid).await?;
+        s.push(id);
+        Ok(true)
     }
 }
 
@@ -526,14 +590,14 @@ impl ProbabilityComputer {
 pub struct Models {
     pub questions: Vec<db::Question>,
     pub factories: Vec<db::QuestionFactory>,
-    // sets: HashMap<String, Vec<QuestionID>>,
+    pub sets: HashMap<String, Box<dyn QuestionSetFactory>>,
 }
 
 pub fn load_models(paths: &[PathBuf]) -> Result<Models> {
     let mut models = Models {
         questions: Vec::new(),
         factories: Vec::new(),
-        // sets: HashMap::new(),
+        sets: HashMap::new(),
     };
     for p in paths {
         println!("path: {:?}", p);
@@ -545,18 +609,36 @@ pub fn load_models(paths: &[PathBuf]) -> Result<Models> {
                     QuestionFactoryModel<DefaultQuestion, DefaultData>,
                 >(&data)?;
                 parse_factory::<DefaultQuestion, DefaultData>(&mut models, &stuff)?;
+                models.sets.insert(
+                    stuff.name.clone(),
+                    Box::new(stuff.data.clone()) as Box<dyn QuestionSetFactory>,
+                );
             }
             "numeric_range" => {
                 let stuff = serde_yaml::from_slice::<
                     QuestionFactoryModel<NumericRangeQuestion, NumericRangeData>,
                 >(&data)?;
                 parse_factory::<NumericRangeQuestion, NumericRangeData>(&mut models, &stuff)?;
+                models.sets.insert(
+                    stuff.name.clone(),
+                    Box::new(stuff.data.clone()) as Box<dyn QuestionSetFactory>,
+                );
             }
             "vocab" => {
                 let stuff = serde_yaml::from_slice::<QuestionFactoryModel<Word, VocabData>>(&data)?;
                 parse_factory::<Word, VocabData>(&mut models, &stuff)?;
+                models.sets.insert(
+                    stuff.name.clone(),
+                    Box::new(stuff.data.clone()) as Box<dyn QuestionSetFactory>,
+                );
             }
-            "union" => {}
+            "union" => {
+                let stuff = serde_yaml::from_slice::<QuestionSetFactoryModel<UnionData>>(&data)?;
+                models.sets.insert(
+                    stuff.name.clone(),
+                    Box::new(stuff.data.clone()) as Box<dyn QuestionSetFactory>,
+                );
+            }
             _ => {
                 panic!("unexpected question type {:?}", set.type_);
             }
@@ -589,21 +671,3 @@ where
     });
     Ok(())
 }
-
-// fn parse_set<'de, T1, T2>(models: &mut Models, data: &'de [u8]) -> Result<()>
-// where
-//     T1: Serialize + Deserialize<'de> + Question,
-//     T2: Serialize + Deserialize<'de>,
-// {
-//     let stuff = serde_yaml::from_slice::<QuestionFactoryModel<T1, T2>>(data)?;
-//     for q in stuff.items {
-//         let data = serde_yaml::to_vec(&q)?;
-//         models.questions.push(db::Question {
-//             factory: stuff.name.clone(),
-//             name: q.name(),
-//             data,
-//             ..Default::default()
-//         });
-//     }
-//     Ok(())
-// }
