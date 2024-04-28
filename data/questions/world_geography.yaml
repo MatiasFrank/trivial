@@ -1,8 +1,8 @@
-name: world_populations
+name: world_geography
 type_: union
 data:
   sets:
     - world_populations
     - world_areas
-    - world_capitas
+    - world_capitals
 
