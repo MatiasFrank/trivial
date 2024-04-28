@@ -1,0 +1,8 @@
+name: world_populations
+type_: union
+data:
+  sets:
+    - world_populations
+    - world_areas
+    - world_capitas
+

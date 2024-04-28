@@ -1,6 +1,0 @@
-name: antarctica_populations
-type_: numeric_range
-items: []
-data:
-  question_prefix: 'What is the population of '
-  range: 0.025
