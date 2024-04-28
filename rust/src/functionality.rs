@@ -2,6 +2,7 @@ use crate::db;
 use anyhow::{bail, Result};
 use chrono::{DateTime, Utc};
 use colored::Colorize;
+use core::fmt;
 use inquire::validator::{ErrorMessage, Validation};
 use inquire::{Confirm, Text};
 use num_format::{Locale, ToFormattedString};
@@ -307,6 +308,21 @@ pub struct Question {
     pub runner: Box<dyn QuestionRunner>,
 }
 
+#[derive(Clone, Copy)]
+pub enum Selection {
+    All,
+    Practiced,
+}
+
+impl fmt::Display for Selection {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        match self {
+            Selection::All => write!(f, "All"),
+            Selection::Practiced => write!(f, "Practiced"),
+        }
+    }
+}
+
 pub struct Service<'a> {
     questions: HashMap<QuestionID, Question>,
     factories: HashMap<String, Vec<QuestionID>>,
@@ -391,26 +407,46 @@ impl<'a> Service<'a> {
         Ok(())
     }
 
-    pub fn get_weighted_random_selection(&self, set: &str, mut num: usize) -> Vec<QuestionID> {
-        let questions: Vec<&Question> = self
-            .sets
-            .get(set)
-            .unwrap()
-            .iter()
-            .map(|id| self.questions.get(id).unwrap())
-            .collect();
+    fn filter_questions(
+        &self,
+        questions: &Vec<QuestionID>,
+        selection: Selection,
+    ) -> Vec<QuestionID> {
+        match selection {
+            Selection::All => questions.clone(),
+            Selection::Practiced => questions
+                .iter()
+                .filter_map(|q| {
+                    if self.prob_computer.questions.get(q).unwrap().answers.len() > 0 {
+                        Some(*q)
+                    } else {
+                        None
+                    }
+                })
+                .collect::<Vec<QuestionID>>(),
+        }
+    }
+
+    pub fn get_weighted_random_selection(
+        &self,
+        set: &str,
+        mut num: usize,
+        selection: Selection,
+    ) -> Vec<QuestionID> {
+        let questions = self.filter_questions(self.sets.get(set).unwrap(), selection);
         let mut stack = Vec::new();
         let mut chosen = HashSet::new();
         num = std::cmp::min(num, questions.len());
         // O(nk). Can be done in O(nlog(n)) using an augmented balanced search tree
         for _ in 0..num {
             let mut total = 0.;
-            for (idx, q) in questions.iter().enumerate() {
-                if chosen.contains(&idx) {
+            for qid in questions.iter() {
+                if chosen.contains(qid) {
                     continue;
                 }
+                let q = self.get(*qid);
                 total += (1. - q.probability + 0.05).powf(1.5);
-                stack.push((idx, total));
+                stack.push((*qid, total));
             }
             let x = rand::random::<f64>() * total;
             for (name, v) in &stack {
@@ -422,14 +458,16 @@ impl<'a> Service<'a> {
             stack.clear();
         }
 
-        chosen
-            .iter()
-            .map(|&idx| questions.get(idx).unwrap().id.clone())
-            .collect()
+        chosen.iter().map(|&qid| qid).collect::<Vec<QuestionID>>()
     }
 
-    pub fn get_bottom_selection(&self, set: &str, num: usize) -> Vec<QuestionID> {
-        let mut question_ids = self.sets.get(set).unwrap().clone();
+    pub fn get_bottom_selection(
+        &self,
+        set: &str,
+        num: usize,
+        selection: Selection,
+    ) -> Vec<QuestionID> {
+        let mut question_ids = self.filter_questions(self.sets.get(set).unwrap(), selection);
         question_ids.sort_by(|&id1, &id2| {
             self.get(id1)
                 .probability
@@ -438,15 +476,26 @@ impl<'a> Service<'a> {
         question_ids[..num].to_vec()
     }
 
-    pub fn get_uniform_random_selection(&self, set: &str, num: usize) -> Vec<QuestionID> {
-        let mut question_ids = self.sets.get(set).unwrap().clone();
+    pub fn get_uniform_random_selection(
+        &self,
+        set: &str,
+        num: usize,
+        selection: Selection,
+    ) -> Vec<QuestionID> {
+        let mut question_ids = self.filter_questions(self.sets.get(set).unwrap(), selection);
         question_ids.shuffle(&mut thread_rng());
         question_ids[..num].to_vec()
     }
 
-    pub fn get_oldest_answer(&self, set: &str, num: usize) -> Vec<QuestionID> {
+    pub fn get_oldest_answer(
+        &self,
+        set: &str,
+        num: usize,
+        selection: Selection,
+    ) -> Vec<QuestionID> {
+        let question_ids = self.filter_questions(self.sets.get(set).unwrap(), selection);
         let mut times = Vec::new();
-        for &id in self.sets.get(set).unwrap() {
+        for id in question_ids {
             let answers = self.prob_computer.get_answers(id);
             if let Some(a) = answers.last() {
                 times.push((a.time, id));
@@ -458,8 +507,15 @@ impl<'a> Service<'a> {
         times[..num].iter().map(|&(_, id)| id).collect()
     }
 
-    pub fn get_set_size(&self, name: &str) -> usize {
-        self.sets.get(name).unwrap().len()
+    pub fn get_set_size(&self, name: &str, selection: Selection) -> usize {
+        let set = self.get_set(name);
+        match selection {
+            Selection::All => set.len(),
+            Selection::Practiced => set
+                .iter()
+                .filter(|&q| self.prob_computer.questions.get(q).unwrap().answers.len() > 0)
+                .count(),
+        }
     }
 
     pub fn get_sets(&self) -> Vec<&String> {
@@ -596,10 +652,7 @@ impl ProbabilityComputer {
     }
 
     fn prob(q: &ProbQuestion) -> f64 {
-        if q.weighted_total == 0. {
-            return 0.5;
-        }
-        q.weighted_correct / q.weighted_total
+        (q.weighted_correct + 1.) / (q.weighted_total + 2.)
     }
 
     fn get_prob(&self, id: QuestionID) -> f64 {

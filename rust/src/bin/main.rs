@@ -4,10 +4,8 @@ use clap::Parser;
 use core::fmt;
 use rand::{seq::SliceRandom, thread_rng};
 use rust::db::Repository;
-use rust::functionality::{self, pause, Service};
-use sqlx::Encode;
+use rust::functionality::{self, pause, Selection, Service};
 use std::fmt::Debug;
-use std::ops::Div;
 use std::time::Instant;
 
 #[derive(Parser, Debug)]
@@ -44,7 +42,6 @@ enum Method {
     UniformRandom,
     OldestAnswer,
 }
-
 impl fmt::Display for Method {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
@@ -60,6 +57,7 @@ impl fmt::Display for Method {
 struct Choice2 {
     choice: Choice,
     method: Method,
+    selection: Selection,
     num: usize,
 }
 
@@ -81,17 +79,23 @@ fn get_choice(service: &Service, last_choice: &Option<Choice2>) -> Result<Choice
             return Ok(Choice2 {
                 choice: Choice::Exit,
                 method: Method::Bottom,
+                selection: Selection::All,
                 num: 0,
             })
         }
     };
-    let size = service.get_set_size(&choice);
+    let selection = inquire::Select::new(
+        "Selection method",
+        vec![Selection::All, Selection::Practiced],
+    )
+    .prompt()?;
+    let size = service.get_set_size(&choice, selection);
     let num = inquire::Text::new(&format!("Number of questions (out of {})", size))
         .with_initial_value(&format!("{}", size))
         .prompt()?
         .parse::<usize>()?;
     let method = inquire::Select::new(
-        "Selection method",
+        "Ranking method",
         vec![
             Method::Bottom,
             Method::WeightedRandom,
@@ -104,6 +108,7 @@ fn get_choice(service: &Service, last_choice: &Option<Choice2>) -> Result<Choice
     Ok(Choice2 {
         choice: Choice::Value(choice),
         method,
+        selection,
         num,
     })
 }
@@ -126,10 +131,14 @@ async fn main() -> Result<(), Error> {
         };
 
         let mut question_ids = match choice.method {
-            Method::Bottom => service.get_bottom_selection(&set, choice.num),
-            Method::WeightedRandom => service.get_weighted_random_selection(&set, choice.num),
-            Method::UniformRandom => service.get_uniform_random_selection(&set, choice.num),
-            Method::OldestAnswer => service.get_oldest_answer(&set, choice.num),
+            Method::Bottom => service.get_bottom_selection(&set, choice.num, choice.selection),
+            Method::WeightedRandom => {
+                service.get_weighted_random_selection(&set, choice.num, choice.selection)
+            }
+            Method::UniformRandom => {
+                service.get_uniform_random_selection(&set, choice.num, choice.selection)
+            }
+            Method::OldestAnswer => service.get_oldest_answer(&set, choice.num, choice.selection),
         };
         clearscreen::clear()?;
         let mut wrong = Vec::new();
