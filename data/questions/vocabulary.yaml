@@ -248,5 +248,110 @@ items:
     translations:
       - polere
       - pudse
+  - word: interstice 
+    id: interstice
+    definition: an intervening space, especially a very small one.
+    example: sunshine filtered through the interstices of the arching trees
+    translations:
+      - mellemrum
+  - word: missive
+    id: missive
+    definition: a letter, especially a long or official one.
+    example: yet another missive from the Foreign Office
+    translations:
+      - brev (formelt)
+      - skrivelse (formelt)
+  - word: arboretum 
+    id: arboretum
+    definition: A garden with many different types of trees
+    example: The arboretum looked splendid in the summer
+    translations:
+      - arboret
+  - word: efface
+    id: efface
+    definition: erase (a mark) from a surface. make oneself appear insignificant or inconspicuous.
+    example: with time, the words are effaced by the rain
+    translations:
+      - slette
+      - udhviske
+  - word: provident
+    id: provident
+    definition: making provision for the future - PRUDENT
+    example: her provident measures kept us safe while we waited out the hurricane
+    translations:
+      - forudseende
+      - forsynlig
+      - sparsommelig
+  - word: ramify
+    id: ramify
+    definition: form branches or offshoots. 
+    example: the shrub ramifies almost from the base and can grow 1 to 3 metres high
+    translations:
+      - forgrene sig
+  - word: somniferous
+    id: somniferous
+    definition: tending to induce sleep; soporific.
+    example: lifeless actors made the experience even more somniferous for the audiences
+    translations:
+      - trættende
+  - word: licit
+    id: licit
+    definition: not forbidden; lawful. 
+    example: usage patterns differ between licit and illicit drugs
+    translations:
+      - lovlig
+  - word: adjudge
+    id: adjudge
+    definition: consider or declare to be true or the case.
+    example: she was adjudged guilty
+    translations:
+      - træffe afgørelse om
+      - (dømme) tilkende
+  - word: supine
+    id: supine
+    definition: (of a person) lying face upwards. failing to act or protest as a result of moral weakness or indolence.
+    example: they remained supine in the face of terrible wrongdoing
+    translations:
+      - liggende på ryggen
+      - modstandsløs
+  - word: philistine
+    id: philistine
+    definition: a person who is hostile or indifferent to culture and the arts
+    example: I am a complete philistine when it comes to paintings
+    translations:
+      - filister
+      - spidsborger
+  - word: betimes
+    id: betimes
+    definition: before the usual or expected time; early. (archaic)
+    example: next morning I was up betimes
+    translations:
+      - tidligt på den
+  - word: indigent
+    id: indigent
+    definition: poor; needy.
+    example: a charity for the relief of indigent artists
+    translations:
+      - ludfattig
+      - trængende
+  - word: sedulous
+    id: sedulous
+    definition: (of a person or action) showing dedication and diligence.
+    example: he watched himself with the most sedulous care
+    translations:
+      - flittig
+      - ihærdig
+  - word: beatify
+    id: beatify
+    definition: To make someone extremely happy
+    example: The suprise party beatified her
+    translations:
+      - lyksaliggøre
+  - word: dragoon
+    id: dragoon
+    definition: coerce (someone) into doing something.
+    example: she had been dragooned into helping with the housework
+    translations:
+      - dragon
 name: vocabulary
 type_: vocab
